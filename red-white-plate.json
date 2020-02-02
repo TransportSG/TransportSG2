@@ -1,0 +1,76 @@
+{
+  "11": {
+    "Rhu Cross": "Red",
+    "Lorong 1 Geylang Terminal": "White"
+  },
+  "35": {
+    "Alps Avenue": "Red",
+    "Bedok Interchange": "White"
+  },
+  "60": {
+    "Bedok Interchange": "Red",
+    "Eunos Interchange": "White"
+  },
+  "73": {
+    "Ang Mo Kio Interchange": "Red",
+    "Toa Payoh Interchange": "White"
+  },
+  "123M": {
+    "Tiong Bahru Road": "Red",
+    "HarbourFront Interchange": "White"
+  },
+  "125": {
+    "Sims Drive": "Red",
+    "St. Michael's Terminal": "White"
+  },
+  "182": {
+    "Tuas South Avenue 9": "Red",
+    "Joo Koon Interchange": "White"
+  },
+  "182M": {
+    "Tuas South Avenue 9": "Red",
+    "Joo Koon Interchange": "White"
+  },
+  "315": {
+    "Serangoon Interchange": "Red",
+    "Serangoon North Avenue 5": "White"
+  },
+
+
+  "21": {
+    "Pasir Ris Interchange": "Red",
+    "St. Michael's Terminal": "White"
+  },
+  "123": {
+    "Bukit Merah Interchange": "Red",
+    "Beach Station Bus Terminal": "White"
+  },
+  "124": {
+    "HarbourFront Interchange": "Red",
+    "St. Michael's Terminal": "White"
+  },
+  "129": {
+    "Tampines Concourse Interchange": "Red",
+    "St. Michael's Terminal": "White"
+  },
+  "131": {
+    "Bukit Merah Interchange": "Red",
+    "St. Michael's Terminal": "White"
+  },
+  "139": {
+    "Bukit Merah Interchange": "Red",
+    "Toa Payoh Interchange": "White"
+  },
+  "155": {
+    "Bedok Interchange": "Red",
+    "Toa Payoh": "White"
+  },
+  "170": {
+    "Larkin Terminal": "Red",
+    "Queen Street Terminal": "White"
+  },
+  "186": {
+    "Shenton Way Terminal": "Red",
+    "St. Michael's Terminal": "White"
+  }
+}

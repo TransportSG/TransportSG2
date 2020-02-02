@@ -1,0 +1,15 @@
+Get service KML file count:
+  https://www.mytransport.sg/content/mytransport/home/commuting/busservices.html
+  Scrape $('.Bus_Service_no option[value!=""]')
+  service number in .text(), number of route directions in last char of value
+
+Get service stops:
+  https://www.mytransport.sg/content/mytransport/ajax_lib/map_ajaxlib.getBusRouteByServiceId.{service}.html
+  Get all .bus_stop_code and .bus_stop_name
+  if service has 1 dir (from datamall data) match up
+  if service has 2 dir i % 2 == 0 means dir 1, i % 2 == 1 means dir 2
+
+Get service path:
+  https://www.mytransport.sg/kml/busroutes/{service}-{dir}.kml
+  kml > Document > Placemark > LineString > coordinates
+    split by ' ', then map split by ',', parseFloat

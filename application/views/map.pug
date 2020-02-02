@@ -1,0 +1,18 @@
+extends layout
+    
+block head
+  title TransportVic - Map
+  
+block title
+  span Map
+
+block scripts
+  script(src='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js')
+  script(src='https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js')
+  script(src='/static/scripts/map.js')
+  
+block title
+  span Transit Visualiser
+  
+block content
+  div#map(style='width: 100vw; height: 93vh')
