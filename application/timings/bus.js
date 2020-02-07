@@ -5,6 +5,7 @@ const departuresCache = new TimedCache({ defaultTtl: 1000 * 60 })
 const ltaAPI = require('../../lta-api')
 const plates = require('../../red-white-plate.json')
 const berths = require('../../bus-berths.json')
+const utils = require('../../utils')
 
 let url = '/BusArrivalv2?BusStopCode='
 
@@ -122,22 +123,28 @@ module.exports = async function getBusTimings(busStopCode, db) {
           berth = berth[destination]
       }
 
+      let serviceNumber = utils.getServiceNumber(displayService),
+      serviceVariant = utils.getServiceVariant(displayService)
+
       return {
-        service: displayService,
+        fullService: displayService,
+        serviceNumber,
+        serviceVariant,
         destination,
-        estimatedArrivalTime: moment.tz(bus.EstimatedArrival, 'Asia/Singapore'),
+        estimatedDepartureTime: moment.tz(bus.EstimatedArrival, 'Asia/Singapore'),
         wheelchairAccessible: bus.Feature === 'WAB',
         busType: bus.Type,
         seatsAvailable: bus.Load,
         position,
         plate,
-        berth
+        berth,
+        operator: serviceDepartures.Operator
       }
     }))
   })
 
   departures.forEach(departure => {
-    let id = `${departure.service}:${departure.destination}`
+    let id = `${departure.fullService}:${departure.destination}`
     if (!busTimings[id]) busTimings[id] = []
     busTimings[id].push(departure)
   })

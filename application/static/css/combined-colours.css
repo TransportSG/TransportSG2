@@ -1,0 +1,31 @@
+.sbst {
+    background-color: #b845be;
+}
+
+div.departure:nth-child(even) .sbst {
+    background-color: #9d3ba2;
+}
+
+.smrt {
+    background-color: #c63d3d;
+}
+
+div.departure:nth-child(even) .smrt {
+    background-color: #b43535;
+}
+
+.tts {
+    background-color: #4ebe45;
+}
+
+div.departure:nth-child(even) .tts {
+    background-color: #43a93b;
+}
+
+.gas {
+    background-color: #d7832c;
+}
+
+div.departure:nth-child(even) .gas {
+    background-color: #c47625;
+}

@@ -218,10 +218,19 @@
     "979": 3
   },
   "46008": {
-    "911": 7,
-    "912": 6,
+    "911": {
+      "Woodlands Avenue 2": 5,
+      "Woodlands Centre Road": 7
+    },
+    "912": {
+      "Woodlands Avenue 7": 4,
+      "Woodlands Centre Road": 6
+    },
     "912B": 6,
-    "913": 6
+    "913": {
+      "Woodlands Circle": 5,
+      "Woodlands Avenue 3": 6
+    }
   },
   "46009": {
     "161": 1,
@@ -244,11 +253,21 @@
     "903": 2,
     "903M": 2,
     "904": "1A",
-    "911": 5,
-    "912": 4,
+    "911": {
+      "Woodlands Avenue 2": 5,
+      "Woodlands Centre Road": 7
+    },
+    "912": {
+      "Woodlands Avenue 7": 4,
+      "Woodlands Centre Road": 6
+    },
     "912A": 4,
+    "912B": 6,
     "912M": 6,
-    "913": 5,
+    "913": {
+      "Woodlands Circle": 5,
+      "Woodlands Avenue 3": 6
+    },
     "913M": 5,
     "925": 9,
     "925M": 9,

@@ -1,0 +1,186 @@
+div.departure {
+  background-color: #2a2a2a;
+
+  display: flex;
+  height: calc(7vw + 7vh);
+  margin-left: auto;
+}
+
+div.departure:nth-child(even) {
+  background-color: #202020;
+}
+
+div.departure:nth-child(even) a.departureInfo.reservationsOnly {
+  background-color: #43355b;
+}
+
+a.leftContainer {
+  width: calc(5.25vw + 5.25vh);
+  height: calc(7vw + 7vh);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: #d2d2d2;
+}
+
+a.leftContainer:visited {
+  color: #d2d2d2;
+}
+
+a.leftContainer span {
+  width: calc(5.25vw + 5.25vh);
+  text-align: center;
+}
+
+a.leftContainer.serviceNumber span.serviceNumber {
+  font-size: calc(3vw + 3vh);
+  line-height: calc(3vw + 3vh);
+}
+
+a.leftContainer.serviceNumber span.serviceVariant {
+  font-size: calc(2.25vw + 2.25vh);
+  line-height: calc(1.5vw + 1.5vh);
+  margin-top: calc(0.3vw + 0.3vh);
+  margin-bottom: calc(0.3vw + 0.3vh);
+}
+
+a.leftContainer.serviceNumber span.berth {
+  font-size: calc(1vw + 1vh);
+}
+
+a.departureInfo {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  width: 100%;
+}
+
+a.departureInfo span {
+  margin-left: calc(1vw + 1vh);
+}
+
+a.departureInfo span.towards {
+  font-size: calc(1vh + 0.9vw);
+
+  color: #8f8f8f;
+}
+
+a.departureInfo span.destination {
+  font-size: calc(1.6vw + 1.6vh);
+  margin-top: calc(-0.3vw - 0.3vh);
+  line-height: calc(1.9vw + 1.9vh);
+
+  color: #c5c5c5;
+}
+
+div.timings {
+  display: flex;
+  flex-direction: row;
+  margin-left: calc(0.2vw + 0.2vh);
+}
+
+div.timing {
+  height: calc(7vw + 7vh);
+  width: calc(5vw + 5vh);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: calc(1.05vw + 1.05vh);
+  color: #101010;
+}
+
+div.timing.mini {
+  width: calc(3.25vw + 3.25vh);
+  font-size: calc(1vw + 1vh);
+}
+
+div.timing.mini > div.stats {
+  height: calc(1vw + 1vh);
+  width: calc(3.25vw + 3.25vh);
+
+  position: relative;
+  margin-top: calc(-1vw - 1vh);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+div.timing.mini > div.stats > img {
+  width: calc(1vw + 1vh);
+  margin-bottom: calc(0.75vw + 0.75vh);
+}
+
+div.timing.mini span {
+  width: calc(3.25vw + 3.25vh);
+}
+
+
+div.timing span {
+  width: calc(5vw + 5vh);
+  text-align: center;
+}
+
+
+
+
+
+
+div.departure:nth-child(odd) div.timing.seating-sea:nth-child(odd) {
+  background-color: #60bd29;
+}
+
+div.departure:nth-child(odd) div.timing.seating-sea:nth-child(even) {
+  background-color: #58ad25;
+}
+
+div.departure:nth-child(odd) div.timing.seating-sda:nth-child(odd) {
+  background-color: #be9f14;
+}
+
+div.departure:nth-child(odd) div.timing.seating-sda:nth-child(even) {
+  background-color: #d0ae16;
+}
+
+div.departure:nth-child(odd) div.timing.seating-lsd:nth-child(odd) {
+  background-color: #c93e29;
+}
+
+div.departure:nth-child(odd) div.timing.seating-lsd:nth-child(even) {
+  background-color: #bd3825;
+}
+
+
+
+div.departure:nth-child(even) div.timing.seating-sea:nth-child(even) {
+  background-color: #60bd29;
+}
+
+div.departure:nth-child(even) div.timing.seating-sea:nth-child(odd) {
+  background-color: #58ad25;
+}
+
+div.departure:nth-child(even) div.timing.seating-sda:nth-child(even) {
+  background-color: #be9f14;
+}
+
+div.departure:nth-child(even) div.timing.seating-sda:nth-child(odd) {
+  background-color: #d0ae16;
+}
+
+div.departure:nth-child(even) div.timing.seating-lsd:nth-child(even) {
+  background-color: #c93e29;
+}
+
+div.departure:nth-child(even) div.timing.seating-lsd:nth-child(odd) {
+  background-color: #bd3825;
+}
