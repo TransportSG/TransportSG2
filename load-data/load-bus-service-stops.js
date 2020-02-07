@@ -84,11 +84,11 @@ database.connect({
         hour++
       }
       if (hour == 24) {
-        hour = "00"
+        hour = '00'
       }
 
-      hour = "00" + hour
-      minute = "00" + minute
+      hour = '00' + hour
+      minute = '00' + minute
 
       return `${hour.slice(-2)}${minute.slice(-2)}`
     }
@@ -98,8 +98,8 @@ database.connect({
         stopNumber: lastStop.stopNumber + 1,
         distance: lastStop.distance + 0.3,
         stopCode: '02099',
-        stopName: "Marina Centre Terminal",
-        roadName: "Raffles Boulevard",
+        stopName: 'Marina Centre Terminal',
+        roadName: 'Raffles Boulevard',
         firstBus: {
           weekday: addOneMinute(lastStop.firstBus.weekday),
           saturday: addOneMinute(lastStop.firstBus.saturday),
@@ -118,8 +118,28 @@ database.connect({
         stopNumber: lastStop.stopNumber + 1,
         distance: lastStop.distance + 0.2,
         stopCode: '03239',
-        stopName: "Shenton Way Terminal",
-        roadName: "Shenton Way",
+        stopName: 'Shenton Way Terminal',
+        roadName: 'Shenton Way',
+        firstBus: {
+          weekday: addOneMinute(lastStop.firstBus.weekday),
+          saturday: addOneMinute(lastStop.firstBus.saturday),
+          sunday: addOneMinute(lastStop.firstBus.sunday)
+        },
+        lastBus: {
+          weekday: addOneMinute(lastStop.lastBus.weekday),
+          saturday: addOneMinute(lastStop.lastBus.saturday),
+          sunday: addOneMinute(lastStop.lastBus.sunday)
+        }
+      })
+    }
+
+    if (lastStop.stopCode === '11389') { // Block 46, BNV Ter
+      stops.push({
+        stopNumber: lastStop.stopNumber + 1,
+        distance: lastStop.distance + 0.2,
+        stopCode: '11379',
+        stopName: 'Buona Vista Terminal',
+        roadName: 'North Buona Vista Road',
         firstBus: {
           weekday: addOneMinute(lastStop.firstBus.weekday),
           saturday: addOneMinute(lastStop.firstBus.saturday),

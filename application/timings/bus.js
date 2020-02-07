@@ -13,7 +13,7 @@ module.exports = async function getBusTimings(busStopCode, db) {
   let stops = db.getCollection('stops')
 
   let cached
-  if (cached = departuresCache.get(busStopCode)) cached
+  if (cached = departuresCache.get(busStopCode)) return cached
 
   let data = await ltaAPI(url + busStopCode)
   let busTimings = {}

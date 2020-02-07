@@ -93,6 +93,7 @@ module.exports = class MainServer {
 
   configRoutes (app) {
     const routers = {
+      Next3Buses: '/bus/timings',
       Index: '/',
     }
 

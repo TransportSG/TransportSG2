@@ -79,6 +79,9 @@ database.connect({
     if (busService.DestinationCode === '03218') // Opposite MAS Building
       busService.DestinationCode = '03239'
 
+    if (busService.DestinationCode === '11389') // Block 46 (BNV Ter)
+      busService.DestinationCode = '11379'
+
     return {
       mode: 'bus',
       fullService: busService.ServiceNo,
