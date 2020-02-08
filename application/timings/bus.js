@@ -119,8 +119,8 @@ module.exports = async function getBusTimings(busStopCode, db) {
       let berth
       if (berths[busStopCode]) {
         berth = berths[busStopCode][ServiceNo]
-        if (berth[destination])
-          berth = berth[destination]
+          if (berth && berth[destination])
+            berth = berth[destination]
       }
 
       let serviceNumber = utils.getServiceNumber(displayService),

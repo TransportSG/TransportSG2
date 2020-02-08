@@ -40,3 +40,9 @@ block content
               div(class=`timing mini seating-${departure.seatsAvailable.toLowerCase()}`)
                 span #{timeDifference(departure.estimatedDepartureTime)}
                 span #{departure.estimatedDepartureTime.format('HH:mm')}
+                div.stats
+                  span #{departure.busType}
+                  if departure.wheelchairAccessible
+                    img(src='/static/images/wheelchair.svg')
+                  else
+                    img(src='/static/images/non-wheelchair.svg')
