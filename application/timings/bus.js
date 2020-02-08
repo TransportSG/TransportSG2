@@ -159,7 +159,8 @@ module.exports = async function getBusTimings(busStopCode, db) {
         position,
         plate,
         berth,
-        operator
+        operator,
+        destinationBusStopCode: service.destinationCode
       }
     }))
   })

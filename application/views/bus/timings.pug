@@ -26,7 +26,7 @@ block content
             - let berth = departures[0].berth
             if berth
               span.berth Berth#{(berth.includes && berth.includes('-')) ? 's' : ''} #{berth}
-          a.departureInfo
+          a(href=`/bus/timings/${departures[0].destinationBusStopCode}`).departureInfo
             span.towards Towards
             span.destination=destination
           if departures[0].plate
