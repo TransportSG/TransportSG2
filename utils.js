@@ -181,6 +181,8 @@ module.exports = {
     .replace(/Meth(\b)/g, 'Methodist$1')
     .replace(/KINS(\b)/g, 'Kins$1')
     .replace(/Rv(\b)/g, 'RV$1')
+    .replace(/Adm(\b)/g, 'Administration$1')
+    .replace(/Div(\b)/g, 'Divison$1')
     .replace(/(\w{4,}) St(\b)/, txt => {
       let match = txt.match(/(\w{4,}) St(\b)/)
       if (['Opposite', 'Before', 'After'].includes(match[1])) return txt
@@ -199,7 +201,7 @@ module.exports = {
     .replace(/(\b)nuh(\b)/i, '$1NUH$2')
     .replace(/(\b)ppis(\b)/i, '$1PPIS$2')
     .replace(/(\b)chij(\b)/i, '$1CHIJ$2')
-    .replace(/MSD(\b)/, 'Msd$1')
+    .replace(/Msd(\b)/, 'MSD$1')
     .replace(/Nafa(\b)/, 'NAFA$1')
     .replace('Street Kinetics', 'ST Kinetics')
     .replace('NEWEST', 'NEWest')

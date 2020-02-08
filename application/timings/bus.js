@@ -5,6 +5,7 @@ const departuresCache = new TimedCache({ defaultTtl: 1000 * 60 })
 const ltaAPI = require('../../lta-api')
 const plates = require('../../red-white-plate.json')
 const berths = require('../../bus-berths.json')
+const destinationOverrides = require('../../destination-overrides.json')
 const utils = require('../../utils')
 
 let url = '/BusArrivalv2?BusStopCode='
@@ -125,6 +126,14 @@ module.exports = async function getBusTimings(busStopCode, db) {
 
       let serviceNumber = utils.getServiceNumber(displayService),
       serviceVariant = utils.getServiceVariant(displayService)
+
+      if (destinationOverrides.services[displayService]) {
+        if (destinationOverrides.services[displayService][destination])
+          destination = destinationOverrides.services[displayService][destination]
+      }
+
+      if (destinationOverrides.generic[destination])
+        destination = destinationOverrides.generic[destination]
 
       return {
         fullService: displayService,

@@ -1,0 +1,248 @@
+{
+  "services": {
+    "1N": {
+      "Block 798": "Yishun"
+    },
+    "2N": {
+      "Block 888": "Tampines"
+    },
+    "3N": {
+      "Block 708": "Yew Tee"
+    },
+    "4N": {
+      "Block 210": "Pasir Ris"
+    },
+    "5N": {
+      "Block 924": "Jurong West"
+    },
+    "6N": {
+      "Opposite Block 201A": "Punggol"
+    },
+    "NR1": {
+      "Opposite Khatib Station Exit D": "Yishun"
+    },
+    "NR2": {
+      "Block 317": "Sembawang"
+    },
+    "NR5": {
+      "Block 685B": "Jurong West"
+    },
+    "NR6": {
+      "Block 225A": "Sengkang"
+    },
+    "NR8": {
+      "Block 531": "Bukit Batok"
+    },
+    "CT8": {
+      "Ang Mo Kio Community Hospital": "Ang Mo Kio Avenue 9",
+      "Opposite Ang Mo Kio Community Hospital": "Ang Mo Kio Avenue 9"
+    },
+    "CT18": {
+      "Block 403": "Bedok North Avenue 3",
+      "Between Blocks 139/140": "Bedok North Avenue 3"
+    },
+    "3A": {
+      "Block 747A": "Pasir Ris Drive 12"
+    },
+    "3B": {
+      "Block 738": "Pasir Ris Drive 1"
+    },
+    "10e": {
+      "Opposite Man Fatt Lam Temple": "Bedok Road",
+      "Man Fatt Lam Temple": "Bedok Road"
+    },
+    "13A": {
+      "Block 307A": "Ang Mo Kio Avenue 6"
+    },
+    "14e": {
+      "Block 403": "Bedok North Avenue 3",
+      "Orchard Station/Lucky Plaza": "Orchard Road",
+      "Between Blocks 139/140": "Bedok North Avenue 3"
+    },
+    "21A": {
+      "Before Lorong 18 Geylang": "Geylang Road",
+      "Before Tai Hoe Hotel": "Kitchener Road"
+    },
+    "37A": {
+      "Block 203B": "Sengkang East Avenue",
+      "Opposite Century Square": "Tampines Avenue 4"
+    },
+    "30e": {
+      "Opposite Heng Mui Keng Terrace": "Pasir Panjang Road",
+      "Heng Mui Keng Terrace": "Pasir Panjang Road"
+    },
+    "34B": {
+      "Before TPE": "Tampines Avenue 10"
+    },
+    "36A": {
+      "The Regent Singapore": "Tomlinson Road"
+    },
+    "36B": {
+      "Before Seaside Residences": "Siglap Road"
+    },
+    "43e": {
+      "Opposite Block 72": "Marine Parade"
+    },
+    "45A": {
+      "Opposite Block 115": "Lorong Ah Soo",
+      "Serangoon Station Exit A/Block 413": "Serangoon Station"
+    },
+    "53A": {
+      "Block 738": "Pasir Ris Drive 1"
+    },
+    "53M": {
+      "Opposite Block 232": "Hougang Avenue 1"
+    },
+    "68A": {
+      "Opposite Reebonz Building": "Tampines Avenue 11"
+    },
+    "70B": {
+      "Opposite Serenity Park": "Yio Chu Kang Road"
+    },
+    "88A": {
+      "Block 190C": "Punggol Road"
+    },
+    "89A": {
+      "Block 738": "Pasir Ris Drive 1",
+      "Airfreight Terminal Building": "Airport Cargo Road"
+    },
+    "98A": {
+      "Corp Place": "Corporation Road"
+    },
+    "98B": {
+      "Block 490": "Jurong West Avenue 1",
+      "Jurong Island Checkpoint": "Jurong Pier Way"
+    },
+    "116A": {
+      "Block 504A Carpark": "Serangoon North Avenue 4"
+    },
+    "118A": {
+      "After Punggol Road": "TPE (Aft Punggol Rd)",
+      "ITE College East Administration Block": "Simei Avenue"
+    },
+    "118B": {
+      "Opposite ITE College East Administration Block": "Simei Avenue",
+      "Before Punggol Road": "TPE (Bef Punggol Rd)"
+    },
+    "154A": {
+      "Block 151": "Yung Ho Road"
+    },
+    "196e": {
+      "Hua Xin Centre": "Marine Parade Road"
+    },
+    "240A": {
+      "Block 65": "Corporation Drive"
+    },
+    "241A": {
+      "Blk 962": "Jurong West Street 91"
+    },
+    "268B": {
+      "Opposite AMK Police Division HQ": "Ang Mo Kio Avenue 9",
+      "After Ang Mo Kio Stn Exit A": "Ang Mo Kio Station"
+    },
+    "513": {
+      "Darul Ghufran Mosque": "Tampines Avenue 5",
+      "Opposite Darul Ghufran Mosque": "Tampines Avenue 5"
+    },
+    "651": {
+      "Opposite Block 276B": "Jurong West Avenue 3",
+      "Block 276B": "Jurong West Avenue 3"
+    },
+    "652": {
+      "Opposite Sembawang Hills Foodcourt": "Upper Thomson Road",
+      "Before Sembawang Hills Foodcourt": "Upper Thomson Road"
+    },
+    "653": {
+      "Before Summerhill": "Hume Avenue",
+      "Hillington Green Condo": "Hillview Avenue"
+    },
+    "654": {
+      "Block 336B": "Anchorvale Street",
+      "Block 330": "Anchorvale Street"
+    },
+    "655": {
+      "Between Blocks 50/51": "West Coast Road",
+      "Opposite Blocks 50": "West Coast Road"
+    },
+    "656": {
+      "Block 424A Carpark": "Canberra Road",
+      "Block 508 Carpark": "Canberra Road"
+    },
+    "657": {
+      "Block 538": "Jurong West Avenue 1",
+      "Block 536": "Jurong West Avenue 1"
+    },
+    "660": {
+      "Opposite Block 968": "Buangkok Green",
+      "Block 969": "Buangkok Green"
+    },
+    "661": {
+      "Block 479": "Pasir Ris Drive 3",
+      "Opposite Block 479": "Pasir Ris Drive 3"
+    },
+    "663": {
+      "Between Blocks 405/406": "Yishun Avenue 6",
+      "Opposite Block 406": "Yishun Avenue 6"
+    },
+    "665": {
+      "Block 32": "Marsiling Drive",
+      "Block 203": "Marsiling Drive"
+    },
+    "671": {
+      "Opposite The Rivervale": "Punggol Road",
+      "The Rivervale": "Punggol Road"
+    },
+    "672": {
+      "Block 568": "Hougang Street 51",
+      "Block 574": "Hougang Street 51"
+    },
+    "700A": {
+      "Temasek Avenue": "Suntec City"
+    },
+    "850e": {
+      "Block 432C": "Yishun Street 41",
+      "Block 456": "Yishun Ring Road"
+    },
+    "851e": {
+      "After Duxton Plain Park": "New Bridge Road"
+    },
+    "868E": {
+      "Block 347": "Bukit Gombak"
+    },
+    "951E": {
+      "Block 875": "Woodlands Street 82",
+      "Block 816": "Woodlands Street 82"
+    },
+    "962B": {
+      "Opposite Sun Plaza": "Sembawang Drive",
+      "Sun Plaza/Sembawang Station": "Sembawang Station"
+    },
+    "962C": {
+      "Block 618": "Woodlands Avenue 5",
+      "Block 680": "Woodlands Avenue 6"
+    },
+    "981": {
+      "Before Senoko Drive": "Senoko Industrial Estate"
+    },
+    "982E": {
+      "Opposite Block 489A": "Choa Chu Kang Avenue 5",
+      "Block 489A": "Choa Chu Kang Avenue 5"
+    }
+  },
+  "generic": {
+    "Lagoon View": "Marine Parade Road",
+    "Changi Airport PTB2": "Changi Airport",
+    "PTB2 Basement": "Changi Airport",
+    "Marina Bay Financial Centre": "Marina Boulevard",
+    "Marina Bay Stn": "Central Boulevard",
+    "Opposite AXA Tower": "Shenton Way",
+    "Opposite MAS Building": "Shenton Way",
+    "Mapletree Anson": "Anson Road",
+    "Hub Synergy Point": "Anson Road",
+    "Kovan Hub": "Old Hougang South Interchange",
+    "Serangoon Station Exit C/Block 201": "Serangoon Central",
+    "SATS Cargo Terminal": "Changi Airfrieght Centre",
+    "3rd Cargo Agents": "Changi Airfrieght Centre",
+    "Promenade Station": "Suntec City"
+  }
+}
