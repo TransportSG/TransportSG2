@@ -1,0 +1,85 @@
+.result {
+  width: 100vw;
+  display: flex;
+  background-color: #2a2a2a;
+}
+
+.result:nth-child(even) {
+  background-color: #202020;
+}
+
+.leftContainer {
+  width: calc(5vw + 5vh);
+  height: calc(7vw + 7vh);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: #d2d2d2;
+}
+
+.busStop .leftContainer {
+  background-color: #3caa2e;
+}
+
+.busStop:nth-child(even) .leftContainer {
+  background-color: #3e8934;
+}
+
+.metroStation .leftContainer {
+  background-color: #36962a;
+}
+
+.metroStation:nth-child(even) .leftContainer {
+  background-color: #2370c5;
+}
+
+.leftContainer.miniIcon img {
+  width: calc(2.5vw + 2.5vh);
+}
+
+.leftContainer img {
+  width: calc(3.5vw + 4vh);
+}
+
+.leftContainer span.distance {
+  margin-top: calc(0.3vw + 0.3vh);
+  font-size: calc(0.8vw + 0.8vh);
+}
+
+.resultDetails {
+  width: calc(95vw - 5vh);
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: calc(1vw + 1vh);
+  font-size: calc(2vh + 1.2vw);
+}
+
+.resultDetails > span.description {
+  color: #8f8f8f;
+  font-size: calc(1.6vh + 0.9vw);
+}
+
+.resultDetails > span.name {
+  font-size: calc(2vh + 1.2vw);
+  margin-top: calc(-0.4vh - 0.2vw);
+}
+
+.left-container span {
+  width: calc(5vw + 5vh);
+  text-align: center;
+}
+
+.serviceNumber {
+  font-size: calc(3vw + 3vh);
+  margin-top: calc(-0.5vw - 0.5vh);
+}
+
+.serviceVariant {
+  font-size: calc(2vw + 2vh);
+  margin-top: calc(-0.5vw - 0.5vh);
+}

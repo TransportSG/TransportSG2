@@ -1,0 +1,7 @@
+for busStop in results.filter(stop => stop.mode === 'bus')
+  a(href=`/bus/timings/${busStop.stopCode}`).busStop.result
+    div.leftContainer
+      img(src='/static/images/clear-icons/bus.svg')
+    div.resultDetails
+      span.description Bus stop on #{busStop.roadName}
+      span.name #{busStop.stopName}

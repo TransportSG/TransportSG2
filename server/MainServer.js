@@ -93,8 +93,9 @@ module.exports = class MainServer {
 
   configRoutes (app) {
     const routers = {
-      Next3Buses: '/bus/timings',
       Index: '/',
+      Next3Buses: '/bus/timings',
+      Search: '/search'
     }
 
     Object.keys(routers).forEach(routerName => {

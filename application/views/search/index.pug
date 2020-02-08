@@ -1,0 +1,16 @@
+extends ../textbar-layout
+
+block head
+  title TransportSG - Search
+  
+block title
+  span Search
+
+block scripts
+  script(src='/static/scripts/search.js')
+  
+append style
+  link(rel='stylesheet' href='/static/css/search.css')
+
+append content
+  div#search-results
