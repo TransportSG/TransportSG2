@@ -135,19 +135,30 @@ module.exports = async function getBusTimings(busStopCode, db) {
       if (destinationOverrides.generic[destination])
         destination = destinationOverrides.generic[destination]
 
+      let wheelchairAccessible = bus.Feature === 'WAB'
+      let operator = serviceDepartures.Operator
+
+      // fix issues on nwab routes (188r and friends)
+      if (!bus.Type === 'SD')
+        wheelchairAccessible = true
+      if (operator === 'SMRT' && bus.Type !== 'BD')
+        wheelchairAccessible = true
+      if (!['SMRT', 'SBST'].includes(operator))
+        wheelchairAccessible = true
+
       return {
         fullService: displayService,
         serviceNumber,
         serviceVariant,
         destination,
         estimatedDepartureTime: moment.tz(bus.EstimatedArrival, 'Asia/Singapore'),
-        wheelchairAccessible: bus.Feature === 'WAB',
+        wheelchairAccessible,
         busType: bus.Type,
         seatsAvailable: bus.Load,
         position,
         plate,
         berth,
-        operator: serviceDepartures.Operator
+        operator
       }
     }))
   })
