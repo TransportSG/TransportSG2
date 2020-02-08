@@ -9,7 +9,7 @@
 }
 
 .leftContainer {
-  width: calc(5vw + 5vh);
+  width: calc(5.25vw + 5.25vh);
   height: calc(7vw + 7vh);
 
   display: flex;
@@ -70,16 +70,18 @@
 }
 
 .left-container span {
-  width: calc(5vw + 5vh);
+  width: calc(5.25vw + 5.25vh);
   text-align: center;
 }
 
 .serviceNumber {
   font-size: calc(3vw + 3vh);
-  margin-top: calc(-0.5vw - 0.5vh);
+  line-height: calc(3vw + 3vh);
 }
 
 .serviceVariant {
-  font-size: calc(2vw + 2vh);
-  margin-top: calc(-0.5vw - 0.5vh);
+  font-size: calc(2.25vw + 2.25vh);
+  line-height: calc(1.5vw + 1.5vh);
+  margin-top: calc(0.3vw + 0.3vh);
+  margin-bottom: calc(0.3vw + 0.3vh);
 }
