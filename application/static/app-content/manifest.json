@@ -1,13 +1,13 @@
 {
-  "name": "TransportVic",
-  "short_name": "Transport Vic",
+  "name": "TransportSG",
+  "short_name": "Transport SG",
   "start_url": "/nearby",
   "scope": "/",
   "background_color": "#1e1e1e",
   "theme_color": "#1e1e1e",
   "display": "standalone",
   "orientation": "portrait",
-  "description": "A transport app for Victoria",
+  "description": "A transport app for Singapore",
   "icons": [
     {
       "src": "/static/images/favicon/favicon512.png",
