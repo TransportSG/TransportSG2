@@ -19,7 +19,6 @@ block content
       for destination in destinations
         - let departures = timings[service][destination]
         div.departure
-          
           a(class=`leftContainer serviceNumber ${departures[0].operator.toLowerCase()}`)
             span.serviceNumber #{departures[0].serviceNumber}
             if departures[0].serviceVariant
@@ -30,6 +29,10 @@ block content
           a.departureInfo
             span.towards Towards
             span.destination=destination
+          if departures[0].plate
+            div.plateContainer
+              div(class=`plate ${departures[0].plate.toLowerCase()}`)
+                span=service
           div.timings
             for i in Array(3 - departures.length)
               div.timing.mini(style='display: none')

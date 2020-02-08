@@ -54,7 +54,6 @@ a.leftContainer.serviceNumber span.berth {
 a.departureInfo {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
 
   width: 100%;
@@ -78,10 +77,39 @@ a.departureInfo span.destination {
   color: #c5c5c5;
 }
 
+div.plateContainer {
+  margin-left: calc(0.5vw + 0.5vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%
+}
+
+div.plate {
+  font-size: calc(1.75vw + 1.5vh);
+  padding-left: calc(0.75vw + 0.75vh);
+  padding-right: calc(0.75vw + 0.75vh);
+
+  padding-top: calc(0.45vw + 0.45vh);
+  padding-bottom: calc(0.5vw + 0.5vh);
+
+  border-radius: calc(0.3vw + 0.3vh);
+}
+
+div.plate.red {
+  background-color: #c61616;
+}
+
+div.plate.white {
+  background-color: #e8e8e8;
+  color: #2d2d2d;
+}
+
+
 div.timings {
   display: flex;
   flex-direction: row;
-  margin-left: calc(0.2vw + 0.2vh);
+  margin-left: calc(0.5vw + 0.5vh);
 }
 
 div.timing {
