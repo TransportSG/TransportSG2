@@ -74,18 +74,7 @@ router.get('/:busStopCode', async (req, res) => {
     services,
     timings: mergedTimings,
     busStop,
-    timeDifference: time => {
-      const timeDifference = moment.utc(time.diff(now))
-      let prettyTime
-
-      if (+timeDifference <= 60000) prettyTime = 'Now'
-      else {
-        let minutesToDeparture = timeDifference.get('hours') * 60 + timeDifference.get('minutes')
-        prettyTime = minutesToDeparture + ' m'
-      }
-
-      return prettyTime
-    }
+    timeDifference: utils.prettyTimeToArrival
   })
 })
 

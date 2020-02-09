@@ -227,7 +227,7 @@ module.exports = {
     return cloned.format('YYYYMMDD')
   },
   getYYYYMMDDNow: () => module.exports.getYYYYMMDD(module.exports.now()),
-  now: () => moment.tz('Australia/Melbourne'),
+  now: () => moment.tz('Asia/Singapore'),
   request: async (...options) => {
     let start = +new Date()
     let url = typeof options[0] === 'string' ? options[0] : options[0].url
@@ -294,5 +294,17 @@ module.exports = {
 
       return {min: parseInt(parts[0]), max: parseInt(parts[1])}
     } else return {min: '-', max: '-'}
+  },
+  prettyTimeToArrival: time => {
+    const timeDifference = moment.utc(time.diff(module.exports.now()))
+    let prettyTime
+
+    if (+timeDifference <= 60000) prettyTime = 'Now'
+    else {
+      let minutesToDeparture = timeDifference.get('hours') * 60 + timeDifference.get('minutes')
+      prettyTime = minutesToDeparture + ' m'
+    }
+
+    return prettyTime
   }
 }

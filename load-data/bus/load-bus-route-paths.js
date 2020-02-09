@@ -1,7 +1,7 @@
 const cheerio = require('cheerio')
-const DatabaseConnection = require('../database/DatabaseConnection')
-const utils = require('../utils')
-const config = require('../config')
+const DatabaseConnection = require('../../database/DatabaseConnection')
+const utils = require('../../utils')
+const config = require('../../config')
 const async = require('async')
 const turf = require('@turf/turf')
 

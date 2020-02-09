@@ -31,23 +31,28 @@ a.leftContainer:visited {
 }
 
 a.leftContainer span {
-  width: calc(5.25vw + 5.25vh);
+  min-width: calc(5.25vw + 5.25vh);
   text-align: center;
 }
 
-a.leftContainer.serviceNumber span.serviceNumber {
+a.leftContainer span.topText {
+  font-size: calc(1vw + 1vh);
+  line-height: calc(1.1vw + 1.1vh);
+}
+
+a.leftContainer span.serviceNumber {
   font-size: calc(3vw + 3vh);
   line-height: calc(3vw + 3vh);
 }
 
-a.leftContainer.serviceNumber span.serviceVariant {
+a.leftContainer span.serviceVariant {
   font-size: calc(2.25vw + 2.25vh);
   line-height: calc(1.5vw + 1.5vh);
   margin-top: calc(0.3vw + 0.3vh);
   margin-bottom: calc(0.3vw + 0.3vh);
 }
 
-a.leftContainer.serviceNumber span.berth {
+a.leftContainer span.berth {
   margin-top: calc(0.1vw + 0.1vh);
   font-size: calc(0.9vw + 0.9vh);
 }

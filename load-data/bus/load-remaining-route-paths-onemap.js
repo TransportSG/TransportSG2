@@ -1,8 +1,8 @@
 const async = require('async')
 const polyline = require('@mapbox/polyline')
-const DatabaseConnection = require('../database/DatabaseConnection')
-const utils = require('../utils')
-const config = require('../config')
+const DatabaseConnection = require('../../database/DatabaseConnection')
+const utils = require('../../utils')
+const config = require('../../config')
 
 let authURL = 'https://developers.onemap.sg/privateapi/auth/post/getToken'
 let busRouteURL = 'https://developers.onemap.sg/publicapi/busexp/getOneBusRoute'

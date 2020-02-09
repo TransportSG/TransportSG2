@@ -29,3 +29,27 @@ div.departure:nth-child(even) .tts {
 div.departure:nth-child(even) .gas {
     background-color: #c47625;
 }
+
+div.departure .north-south-line {
+    background-color: #c63d3d;
+}
+
+div.departure:nth-child(even) .north-south-line {
+    background-color: #b43535;
+}
+
+div.departure .east-west-line {
+    background-color: #4ebe45;
+}
+
+div.departure:nth-child(even) .east-west-line {
+    background-color: #43a93b;
+}
+
+div.departure .circle-line {
+    background-color: #d7832c;
+}
+
+div.departure:nth-child(even) .circle-line {
+    background-color: #c47625;
+}

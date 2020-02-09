@@ -19,7 +19,7 @@ block content
       for destination in destinations
         - let departures = timings[service][destination]
         div.departure
-          a(class=`leftContainer serviceNumber ${departures[0].operator.toLowerCase()}`)
+          a(class=`leftContainer ${departures[0].operator.toLowerCase()}`)
             span.serviceNumber #{departures[0].serviceNumber}
             if departures[0].serviceVariant
               span.serviceVariant #{departures[0].serviceVariant}

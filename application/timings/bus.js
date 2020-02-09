@@ -1,12 +1,13 @@
 const async = require('async')
 const moment = require('moment')
 const TimedCache = require('timed-cache')
-const departuresCache = new TimedCache({ defaultTtl: 1000 * 60 })
 const ltaAPI = require('../../lta-api')
 const plates = require('../../red-white-plate.json')
 const berths = require('../../bus-berths.json')
 const destinationOverrides = require('../../destination-overrides.json')
 const utils = require('../../utils')
+
+const departuresCache = new TimedCache({ defaultTtl: 1000 * 60 })
 
 let url = '/BusArrivalv2?BusStopCode='
 

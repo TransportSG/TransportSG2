@@ -1,8 +1,8 @@
 const async = require('async')
 const turf = require('@turf/turf')
-const DatabaseConnection = require('../database/DatabaseConnection')
-const utils = require('../utils')
-const config = require('../config')
+const DatabaseConnection = require('../../database/DatabaseConnection')
+const utils = require('../../utils')
+const config = require('../../config')
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 
