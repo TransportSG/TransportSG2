@@ -7,11 +7,18 @@ router.get('/', async (req, res) => {
   res.render('search/index')
 })
 
-
 async function prioritySearch(db, query) {
   let possibleStopNames = [
     query,
     utils.expandStopName(utils.titleCase(query, true))
+  ]
+
+  let currentMRTLines = [
+    'North South Line',
+    'East West Line',
+    'Circle Line',
+    'Circle Line Extension',
+    'Changi Airport Branch Line'
   ]
 
   let search = possibleStopNames.map(name => ({stopName: new RegExp(name, 'i')}))
@@ -20,8 +27,13 @@ async function prioritySearch(db, query) {
     $or: search
   }).toArray()).filter(stop => {
     return stop.stopName.includes('Interchange') || stop.stopName.includes('Terminal')
-      || stop.stopName.includes('Depot') || stop.stopName.includes('Station')
+      || stop.stopName.includes('Depot') || stop.stopName.includes('Station') || stop.mode === 'mrt'
   }).sort((a, b) => a.stopName.length - b.stopName.length)
+  .filter(stop => {
+    if (stop.mode === 'mrt')
+      return stop.lines.some(e => currentMRTLines.includes(e))
+    return true
+  })
 
   let stopCodeMatch = await db.getCollection('stops').findDocuments({
     'stopCode': query

@@ -22,16 +22,18 @@ Object.keys(lines).forEach(lineName => {
         stopCode: [],
         roadName: null,
         stopName: stationName,
-        codedStopName: utils.encodeName(stationName)
+        codedStopName: utils.encodeName(stationName),
+        lines: []
       }
       if (position)
-      mergedStations[stationName].position = {
-        type: 'Point',
-        coordinates: [position.longitude, position.latitude]
-      }
+        mergedStations[stationName].position = {
+          type: 'Point',
+          coordinates: [position.longitude, position.latitude]
+        }
     }
 
     mergedStations[stationName].stopCode.push(stationNumber)
+    mergedStations[stationName].lines.push(lineName)
   })
 })
 

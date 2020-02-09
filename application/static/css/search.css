@@ -28,11 +28,11 @@
   background-color: #3e8934;
 }
 
-.metroStation .leftContainer {
-  background-color: #36962a;
+.mrtStation .leftContainer {
+  background-color: #3483db;
 }
 
-.metroStation:nth-child(even) .leftContainer {
+.mrtStation:nth-child(even) .leftContainer {
   background-color: #2370c5;
 }
 

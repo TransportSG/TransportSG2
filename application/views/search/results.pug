@@ -1,3 +1,11 @@
+for mrtStation in results.filter(stop => stop.mode === 'mrt')
+  a(href=`/mrt/timings/${mrtStation.codedStopName}`).mrtStation.result
+    div.leftContainer
+      img(src='/static/images/clear-icons/mrt.svg')
+    div.resultDetails
+      span.description MRT Station
+      span.name #{mrtStation.stopName}
+      
 for busStop in results.filter(stop => stop.mode === 'bus')
   a(href=`/bus/timings/${busStop.stopCode}`).busStop.result
     div.leftContainer
