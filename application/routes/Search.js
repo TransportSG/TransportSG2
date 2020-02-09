@@ -58,31 +58,26 @@ async function performSearch (db, query) {
       }
     },
     $or: [{
-      roadName: queryRegex
-    }, {
       stopName: queryRegex
     }, {
       stopName: searchRegex
     }]
   }).limit(15 - prioritySearchResults.length).toArray()).sort((a, b) => a.stopName.length - b.stopName.length)
 
-  // let lowPriorityResults = await db.getCollection('stops').findDocuments({
-  //   _id: {
-  //     $not: {
-  //       $in: excludedIDs.concat(remainingResults.map(stop => stop._id))
-  //     }
-  //   },
-  //   $or: [{
-  //     'bays.fullStopName': queryRegex
-  //   }, {
-  //     'bays.originalStopName': queryRegex
-  //   }, {
-  //     'bays.fullStopName': searchRegex
-  //   }]
-  // }).limit(15 - prioritySearchResults.length - remainingResults.length).toArray()
+  let lowPriorityResults = await db.getCollection('stops').findDocuments({
+    _id: {
+      $not: {
+        $in: excludedIDs.concat(remainingResults.map(stop => stop._id))
+      }
+    },
+    $or: [{
+      roadName: queryRegex
+    }, {
+      roadName: searchRegex
+    }]
+  }).limit(15 - prioritySearchResults.length - remainingResults.length).toArray()
 
-  // return prioritySearchResults.concat(remainingResults).concat(lowPriorityResults)
-  return prioritySearchResults.concat(remainingResults)
+  return prioritySearchResults.concat(remainingResults).concat(lowPriorityResults)
 }
 
 router.post('/', async (req, res) => {
