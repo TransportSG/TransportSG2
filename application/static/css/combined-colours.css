@@ -14,19 +14,19 @@ div.departure:nth-child(even) .smrt {
     background-color: #b43535;
 }
 
-.tts {
+.ttsg {
     background-color: #4ebe45;
 }
 
-div.departure:nth-child(even) .tts {
+div.departure:nth-child(even) .ttsg {
     background-color: #43a93b;
 }
 
-.gas {
+.gasg {
     background-color: #d7832c;
 }
 
-div.departure:nth-child(even) .gas {
+div.departure:nth-child(even) .gasg {
     background-color: #c47625;
 }
 

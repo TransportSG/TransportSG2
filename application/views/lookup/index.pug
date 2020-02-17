@@ -1,0 +1,17 @@
+extends ../textbar-layout
+
+block head
+  title TransportSG - Bus Lookup
+  
+block title
+  span Bus Lookup
+
+block scripts
+  script(src='/static/scripts/lookup.js')
+  
+append style
+  link(rel='stylesheet' href='/static/css/combined-colours.css')
+  link(rel='stylesheet' href='/static/css/lookup.css')
+
+append content
+  div#search-results

@@ -139,6 +139,9 @@ module.exports = async function getBusTimings(busStopCode, db) {
       let wheelchairAccessible = bus.Feature === 'WAB'
       let operator = serviceDepartures.Operator
 
+      if (operator === 'TTS') operator = 'TTSG'
+      if (operator === 'GAS') operator = 'GASG'
+
       // fix issues on nwab routes (188r and friends)
 
       if (bus.Type === 'SD')

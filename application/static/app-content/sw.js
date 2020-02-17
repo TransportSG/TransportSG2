@@ -1,4 +1,4 @@
-const version = "0.0.2b"
+const version = '0.0.3'
 const cacheName = `transportsg-${version}`
 
 function cacheFiles(files) {
@@ -18,7 +18,7 @@ self.addEventListener('install', e => {
     return Promise.all(cachesNames.map((storedCacheName) => {
       if (storedCacheName === cacheName || !storedCacheName.startsWith('transportsg')) return Promise.resolve()
       return caches.delete(storedCacheName).then(() => {
-        console.log("Old cache " + storedCacheName + " deleted")
+        console.log('Old cache ' + storedCacheName + ' deleted')
       })
     }))
   })

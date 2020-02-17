@@ -1,0 +1,65 @@
+- let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+
+for bus in buses
+  div(class=`bus ${operatorCSS[bus.operator]}`)
+    label(for=bus.rego)
+      span.rego=bus.rego
+    if buses.length == 1
+      input.showBusCheckbox(type='checkbox' id=bus.rego checked='hi')
+    else
+      input.showBusCheckbox(type='checkbox' id=bus.rego)
+    div.busData
+      div.deployment
+        span Deployment
+        span #{bus.depot ? bus.depot + ' ' + bus.service : 'Unknown'}
+      // Status
+      div.make
+        span Make
+        span #{bus.make}
+      div.model
+        span Model
+        span #{bus.model}
+      div.batch
+        span Batch
+        span #{bus.batch}
+      div.operator
+        span Operator
+        span #{bus.operator}
+      div.livery
+        span Livery
+        span #{bus.livery}
+      div.bodywork
+        span Bodywork
+        span #{bus.bodywork}
+      div.advertisement
+        span Advertisement
+        span #{bus.advertisement || 'N/A'}
+      div.dereg
+        span Deregistration Date
+        if bus.timeToDereg
+          div.deregInfo
+            span.deregDate #{bus.lifespanExpiry}
+            span.timeToDereg #{bus.timeToDereg}
+        else
+          span Unknown
+      div.vin
+        span VIN Number
+        span #{bus.vin || 'Unknown'}
+      div.gearbox
+        span Gearbox
+        span #{bus.gearbox || 'Unknown'}
+      div.eds
+        span EDS Model
+        span #{bus.eds || 'Unknown'}
+      div.chair
+        span Chair Model
+        span #{bus.chair || 'Unknown'}
+      div.door
+        span Door Model
+        span #{bus.door || 'Unknown'}
+      div.aircon
+        span Aircon Model
+        span #{bus.aircon || 'Unknown'}
+      div.notes
+        span Notes
+        span #{bus.notes}
