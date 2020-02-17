@@ -54,6 +54,9 @@ database.connect({
       if (databaseBus.service && !busData.service) {
         delete busData.service
       }
+      await buses.updateDocument(search, {
+        $set: busData
+      })
     } else {
       await buses.insertDocument(busData)
     }
