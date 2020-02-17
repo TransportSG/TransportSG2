@@ -30,6 +30,7 @@ async function fetchURL(url, buses) {
       else lastAdvert = advert
 
       let [depot, service] = deployment.split(' ')
+      service = service || ''
 
       let update = {
         rego,
