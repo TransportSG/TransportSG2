@@ -65,8 +65,8 @@ database.connect({
 
 
 let urls = [
-  'https://sgwiki.com/wiki/BYD_C6'
-  'https://sgwiki.com/wiki/Yutong_ZK6128BEVG'
+  'https://sgwiki.com/wiki/BYD_C6',
+  'https://sgwiki.com/wiki/Yutong_ZK6128BEVG',
   'https://sgwiki.com/wiki/BYD_K9_(Gemilang)',
   'https://sgwiki.com/wiki/Volvo_B5LH',
   'https://sgwiki.com/wiki/Volvo_B8L_(Wright_Eclipse_Gemini_3)',
