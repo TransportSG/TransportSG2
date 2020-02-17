@@ -43,9 +43,20 @@ database.connect({
       rego: busData.rego
     }
 
-    await buses.replaceDocument(search, busData, {
-      upsert: true
-    })
+    let databaseBus = buses.findDocument(search)
+    if (databaseBus) {
+      if (databaseBus.advertisement && !busData.advertisement) {
+        delete busData.advertisement
+      }
+      if (databaseBus.depot && !busData.depot) {
+        delete busData.depot
+      }
+      if (databaseBus.service && !busData.service) {
+        delete busData.service
+      }
+    } else {
+      await buses.insertDocument(busData)
+    }
   }
 
   async function parseBusData(busData) {
