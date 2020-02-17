@@ -9,7 +9,7 @@ const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 
 let operator = process.argv[2]
 let fileData = fs.readFileSync('data/' + operator + '.csv').toString()
-let header = 'id,checksum,make,model,bodywork,operator,vin,lifespanExpiry,livery,notes,depot,service,batch,gearbox,eds,chair,door,aircon,advertisement,registrationDate\n'
+let header = 'id,checksum,make,model,bodywork,operator,vin,lifespanExpiry,roadTaxExpiry,livery,notes,depot,service,batch,gearbox,eds,chair,door,aircon,advertisement,registrationDate\n'
 fileData = header + fileData.slice(fileData.indexOf('\n') + 1)
 
 database.connect({

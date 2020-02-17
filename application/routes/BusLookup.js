@@ -6,7 +6,7 @@ const moment = require('moment')
 let operatorCSS = {
   'SBS Transit': 'sbst',
   'SMRT Buses': 'smrt',
-  'Tower Transit': 'ttsg',
+  'Tower Transit Singapore': 'ttsg',
   'Go Ahead Singapore': 'gasg'
 }
 
