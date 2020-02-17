@@ -43,7 +43,7 @@ database.connect({
       rego: busData.rego
     }
 
-    let databaseBus = buses.findDocument(search)
+    let databaseBus = await buses.findDocument(search)
     if (databaseBus) {
       if (databaseBus.advertisement && !busData.advertisement) {
         delete busData.advertisement
