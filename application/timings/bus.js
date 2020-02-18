@@ -18,6 +18,14 @@ module.exports = async function getBusTimings(busStopCode, db) {
   let cached
   if (cached = departuresCache.get(busStopCode)) return cached
 
+  let originalBusStopCode = busStopCode
+
+  if (busStopCode === '02099') {
+    busStopCode = '02101'
+  }
+
+  let subtract30s = busStopCode != originalBusStopCode
+
   let data = await ltaAPI(url + busStopCode)
   let busTimings = {}
 
@@ -53,13 +61,26 @@ module.exports = async function getBusTimings(busStopCode, db) {
         destinationCode: DestinationCode
       })
 
-      if (!service) console.log({
+      if (!service) {
+        service = await services.findDocument({
+          fullService: ServiceNo,
+          originCode: OriginCode
+        })
+      }
+
+      if (!service) return void console.log({
         fullService: ServiceNo,
         originCode: OriginCode,
         destinationCode: DestinationCode
       })
 
-      let destination = service.stops.slice(-1)[0].stopName
+      let destinationStop = service.stops.slice(-1)[0]
+
+      if (destinationStop.stopCode !== DestinationCode) {
+        destinationStop = service.stops.find(stop => stop.stopCode === DestinationCode)
+      }
+
+      let destination = destinationStop.stopName
 
       if (service.loopingPoint) {
         let {loopingStops} = service
@@ -151,12 +172,16 @@ module.exports = async function getBusTimings(busStopCode, db) {
       if (!['SMRT', 'SBST'].includes(operator))
         wheelchairAccessible = true
 
+        let estimatedDepartureTime = moment.tz(bus.EstimatedArrival, 'Asia/Singapore')
+        if (subtract30s)
+          estimatedDepartureTime.subtract(30, 'seconds')
+
       return {
         fullService: displayService,
         serviceNumber,
         serviceVariant,
         destination,
-        estimatedDepartureTime: moment.tz(bus.EstimatedArrival, 'Asia/Singapore'),
+        estimatedDepartureTime,
         wheelchairAccessible,
         busType: bus.Type,
         seatsAvailable: bus.Load,
@@ -175,6 +200,6 @@ module.exports = async function getBusTimings(busStopCode, db) {
     busTimings[id].push(departure)
   })
 
-  departuresCache.put(busStopCode, busTimings)
+  departuresCache.put(originalBusStopCode, busTimings)
   return busTimings
 }
