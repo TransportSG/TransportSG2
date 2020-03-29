@@ -58,7 +58,7 @@ database.connect({
         $set: busData
       })
     } else {
-      await buses.insertDocument(busData)
+      await buses.createDocument(busData)
     }
   }
 
