@@ -97,5 +97,6 @@ let urls = [
   'https://sgwiki.com/wiki/Alexander_Dennis_Enviro500_(Batch_2)',
   'https://sgwiki.com/wiki/MAN_NG363F',
   'https://sgwiki.com/wiki/Mercedes-Benz_OC500LE',
-  'https://sgwiki.com/wiki/Mercedes-Benz_O405G_(Hispano_Habit)'
+  'https://sgwiki.com/wiki/Mercedes-Benz_O405G_(Hispano_Habit)',
+  'https://sgwiki.com/wiki/Mercedes-Benz_O530_Citaro_Hybrid'
 ]
