@@ -1,6 +1,7 @@
 const csvParse = require('csv-parse')
 const fs = require('fs')
 const async = require('async')
+const path = require('path')
 const utils = require('../utils')
 const DatabaseConnection = require('../database/DatabaseConnection')
 const config = require('../config')
@@ -8,7 +9,7 @@ const config = require('../config')
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 
 let operator = process.argv[2]
-let fileData = fs.readFileSync('data/' + operator + '.csv').toString()
+let fileData = fs.readFileSync(path.join(__dirname, 'data', operator + '.csv')).toString()
 let header = 'id,checksum,make,model,bodywork,operator,vin,lifespanExpiry,roadTaxExpiry,livery,notes,depot,service,batch,gearbox,eds,chair,door,aircon,advertisement,registrationDate\n'
 fileData = header + fileData.slice(fileData.indexOf('\n') + 1)
 
