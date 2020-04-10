@@ -42,8 +42,14 @@ for bus in buses
             span.timeToDereg #{bus.timeToDereg}
         else
           span Unknown
+      div.regDate
+        span Registration Date
+        span #{bus.registrationDate || 'N/A'}
+      div.roadTax
+        span Road Tax Expiry
+        span #{bus.roadTaxExpiry || 'N/A'}
       div.vin
-        span VIN Number
+        span VIN
         span #{bus.vin || 'Unknown'}
       div.gearbox
         span Gearbox
