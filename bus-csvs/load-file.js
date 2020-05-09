@@ -45,6 +45,7 @@ database.connect({
     }
 
     let databaseBus = await buses.findDocument(search)
+
     if (databaseBus) {
       if (databaseBus.advertisement && !busData.advertisement) {
         delete busData.advertisement
