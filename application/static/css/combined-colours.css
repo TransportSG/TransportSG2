@@ -30,6 +30,46 @@ div.departure:nth-child(even) .gasg {
     background-color: #c47625;
 }
 
+.tibs {
+    background-color: #d4ce24;
+}
+
+div.bus:nth-child(even) .tibs {
+    background-color: #c3bd23;
+}
+
+.sbs {
+    background-color: #76b7e9;
+}
+
+div.bus:nth-child(even) .sbs {
+    background-color: #4291cd;
+}
+
+.lta {
+    background-color: #e0e0e0;
+}
+
+div.bus:nth-child(even) .lta {
+    background-color: #c9c9c9;
+}
+
+.css {
+    background-color: #ccac78;
+}
+
+div.bus:nth-child(even) .css {
+    background-color: #b49755;
+}
+
+.sentosa {
+    background-color: #ea8814;
+}
+
+div.bus:nth-child(even) .sentosa {
+    background-color: #bd6e10;
+}
+
 div.departure .north-south-line {
     background-color: #c63d3d;
 }

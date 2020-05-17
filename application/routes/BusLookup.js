@@ -7,7 +7,11 @@ let operatorCSS = {
   'SBS Transit': 'sbst',
   'SMRT Buses': 'smrt',
   'Tower Transit Singapore': 'ttsg',
-  'Go Ahead Singapore': 'gasg'
+  'Go Ahead Singapore': 'gasg',
+  'LTA Storage': 'lta',
+  'Trans Island Buses': 'tibs',
+  'Singapore Bus Services': 'sbs',
+  'Sentosa': 'sentosa',
 }
 
 async function findBusesByRegoNumber(number, db) {
