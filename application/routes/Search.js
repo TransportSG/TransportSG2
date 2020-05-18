@@ -13,14 +13,6 @@ async function prioritySearch(db, query) {
     utils.expandStopName(utils.titleCase(query, true))
   ]
 
-  let currentMRTLines = [
-    'North South Line',
-    'East West Line',
-    'Circle Line',
-    'Circle Line Extension',
-    'Changi Airport Branch Line'
-  ]
-
   let search = possibleStopNames.map(name => ({stopName: new RegExp(name, 'i')}))
 
   let priorityStopsByName = (await db.getCollection('stops').findDocuments({
@@ -29,11 +21,6 @@ async function prioritySearch(db, query) {
     return stop.stopName.includes('Interchange') || stop.stopName.includes('Terminal')
       || stop.stopName.includes('Depot') || stop.stopName.includes('Station') || stop.mode === 'mrt'
   }).sort((a, b) => a.stopName.length - b.stopName.length)
-  .filter(stop => {
-    if (stop.mode === 'mrt')
-      return stop.lines.some(e => currentMRTLines.includes(e)) && stop.operational
-    return true
-  })
 
   let stopCodeMatch = await db.getCollection('stops').findDocuments({
     'stopCode': query
@@ -42,7 +29,7 @@ async function prioritySearch(db, query) {
   return stopCodeMatch.concat(priorityStopsByName)
 }
 
-async function performSearch (db, query) {
+async function performSearch(db, query) {
   let search
 
   let prioritySearchResults = await prioritySearch(db, query)
@@ -77,7 +64,20 @@ async function performSearch (db, query) {
     }]
   }).limit(15 - prioritySearchResults.length - remainingResults.length).toArray()
 
-  return prioritySearchResults.concat(remainingResults).concat(lowPriorityResults)
+  let currentMRTLines = [
+    'North South Line',
+    'East West Line',
+    'Circle Line',
+    'Circle Line Extension',
+    'Changi Airport Branch Line'
+  ]
+
+  return prioritySearchResults.concat(remainingResults).concat(lowPriorityResults).filter(stop => {
+    if (stop.mode === 'mrt') {
+      return stop.lines.some(e => currentMRTLines.includes(e)) && stop.operational
+    }
+    return true
+  })
 }
 
 router.post('/', async (req, res) => {
