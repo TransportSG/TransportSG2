@@ -23,7 +23,8 @@ Object.keys(lines).forEach(lineName => {
         roadName: null,
         stopName: stationName,
         codedStopName: utils.encodeName(stationName),
-        lines: []
+        lines: [],
+        operational: station.hasOwnProperty('operational') ? station.operational : true
       }
       if (position)
         mergedStations[stationName].position = {

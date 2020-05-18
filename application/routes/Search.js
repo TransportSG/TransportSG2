@@ -31,7 +31,7 @@ async function prioritySearch(db, query) {
   }).sort((a, b) => a.stopName.length - b.stopName.length)
   .filter(stop => {
     if (stop.mode === 'mrt')
-      return stop.lines.some(e => currentMRTLines.includes(e))
+      return stop.lines.some(e => currentMRTLines.includes(e)) && stop.operational
     return true
   })
 

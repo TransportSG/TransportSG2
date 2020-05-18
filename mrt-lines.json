@@ -5,6 +5,7 @@
     "stations": [{
         "stationName": "Jurong East",
         "chineseStationName": "裕廊东",
+        "tamilStationName": "ஜூரோங் கிழக்கு",
         "stationNumber": "NS1",
         "stationCode": "JUR",
         "position": {
@@ -15,6 +16,7 @@
       {
         "stationName": "Bukit Batok",
         "chineseStationName": "武吉巴督",
+        "tamilStationName": " புக்கிட் பாத்தோக்",
         "stationNumber": "NS2",
         "stationCode": "BBT",
         "position": {
@@ -25,6 +27,7 @@
       {
         "stationName": "Bukit Gombak",
         "chineseStationName": "武吉甘柏",
+        "tamilStationName": "புக்கிட் கோம்பாக்",
         "stationNumber": "NS3",
         "stationCode": "BGB",
         "position": {
@@ -33,8 +36,15 @@
         }
       },
       {
+        "stationName": "Brickland",
+        "chineseStationName": "红砖",
+        "tamilStationName": "பிரிக்லேன்ட்",
+        "stationNumber": "NS3A"
+      },
+      {
         "stationName": "Choa Chu Kang",
         "chineseStationName": "蔡厝港",
+        "tamilStationName": "சுவா சூ காங்",
         "stationNumber": "NS4",
         "stationCode": "CCK",
         "position": {
@@ -45,6 +55,7 @@
       {
         "stationName": "Yew Tee",
         "chineseStationName": "油池",
+        "tamilStationName": "இயூ டீ",
         "stationNumber": "NS5",
         "stationCode": "YWT",
         "position": {
@@ -55,12 +66,14 @@
       {
         "stationName": "Sungei Kadui",
         "chineseStationName": "双溪加株",
+        "tamilStationName": "சுங்கை கியாடுத்",
         "stationNumber": "NS6",
         "operational": false
       },
       {
         "stationName": "Kranji",
         "chineseStationName": "克兰芝",
+        "tamilStationName": "கிராஞ்சி",
         "stationNumber": "NS7",
         "stationCode": "KRJ",
         "position": {
@@ -71,6 +84,7 @@
       {
         "stationName": "Marsiling",
         "chineseStationName": "马西岭",
+        "tamilStationName": "மார்சிலிங்",
         "stationNumber": "NS8",
         "stationCode": "MSL",
         "position": {
@@ -81,6 +95,7 @@
       {
         "stationName": "Woodlands",
         "chineseStationName": "兀兰",
+        "tamilStationName": "ஊட்லண்ட்ஸ்",
         "stationNumber": "NS9",
         "stationCode": "WDL",
         "position": {
@@ -91,6 +106,7 @@
       {
         "stationName": "Admiralty",
         "chineseStationName": "海军部",
+        "tamilStationName": "அட்மிரல்ட்டி",
         "stationNumber": "NS10",
         "stationCode": "ADM",
         "position": {
@@ -101,6 +117,7 @@
       {
         "stationName": "Sembawang",
         "chineseStationName": "三巴旺",
+        "tamilStationName": "செம்பாவாங்",
         "stationNumber": "NS11",
         "stationCode": "SBW",
         "position": {
@@ -111,6 +128,7 @@
       {
         "stationName": "Canberra",
         "chineseStationName": "堪培拉",
+        "tamilStationName": "கான்பரா",
         "stationNumber": "NS12",
         "operational": false,
         "stationCode": "CAN"
@@ -118,6 +136,7 @@
       {
         "stationName": "Yishun",
         "chineseStationName": "义顺",
+        "tamilStationName": "யீஷூன்",
         "stationNumber": "NS13",
         "stationCode": "YIS",
         "position": {
@@ -128,6 +147,7 @@
       {
         "stationName": "Khatib",
         "chineseStationName": "卡迪",
+        "tamilStationName": "காதிப்",
         "stationNumber": "NS14",
         "stationCode": "KTB",
         "position": {
@@ -138,6 +158,7 @@
       {
         "stationName": "Yio Chu Kang",
         "chineseStationName": "杨厝港",
+        "tamilStationName": "இயோ சூ காங்",
         "stationNumber": "NS15",
         "stationCode": "YCK",
         "position": {
@@ -148,6 +169,7 @@
       {
         "stationName": "Ang Mo Kio",
         "chineseStationName": "宏茂桥",
+        "tamilStationName": "அங் மோ கியோ",
         "stationNumber": "NS16",
         "stationCode": "AMK",
         "position": {
@@ -158,6 +180,7 @@
       {
         "stationName": "Bishan",
         "chineseStationName": "碧山",
+        "tamilStationName": "பீஷான்",
         "stationNumber": "NS17",
         "stationCode": "CBSH",
         "position": {
@@ -168,6 +191,7 @@
       {
         "stationName": "Braddell",
         "chineseStationName": "布莱德",
+        "tamilStationName": "பிரேடல்",
         "stationNumber": "NS18",
         "stationCode": "BDL",
         "position": {
@@ -178,6 +202,7 @@
       {
         "stationName": "Toa Payoh",
         "chineseStationName": "大巴窑",
+        "tamilStationName": "தோ பாயோ",
         "stationNumber": "NS19",
         "stationCode": "TAP",
         "position": {
@@ -188,6 +213,7 @@
       {
         "stationName": "Novena",
         "chineseStationName": "诺维娜",
+        "tamilStationName": "நொவீனா",
         "stationNumber": "NS20",
         "stationCode": "NOV",
         "position": {
@@ -198,6 +224,7 @@
       {
         "stationName": "Newton",
         "chineseStationName": "纽顿",
+        "tamilStationName": "நியூட்டன்",
         "stationNumber": "NS21",
         "stationCode": "NEW",
         "position": {
@@ -208,6 +235,7 @@
       {
         "stationName": "Orchard",
         "chineseStationName": "乌节",
+        "tamilStationName": "ஆர்ச்சர்ட்",
         "stationNumber": "NS22",
         "stationCode": "ORC",
         "position": {
@@ -218,6 +246,7 @@
       {
         "stationName": "Somerset",
         "chineseStationName": "索美塞",
+        "tamilStationName": "சாமர்செட்",
         "stationNumber": "NS23",
         "stationCode": "SOM",
         "position": {
@@ -228,6 +257,7 @@
       {
         "stationName": "Dhoby Ghaut",
         "chineseStationName": "多美歌",
+        "tamilStationName": "டோபி காட்",
         "stationNumber": "NS24",
         "stationCode": "CDBG",
         "position": {
@@ -238,6 +268,7 @@
       {
         "stationName": "City Hall",
         "chineseStationName": "政府大厦",
+        "tamilStationName": "நகர மண்டபம்",
         "stationNumber": "NS25",
         "stationCode": "CTH",
         "position": {
@@ -248,6 +279,7 @@
       {
         "stationName": "Raffles Place",
         "chineseStationName": "莱佛士坊",
+        "tamilStationName": "ராஃபிள்ஸ் பிளேஸ்",
         "stationNumber": "NS26",
         "stationCode": "RFP",
         "position": {
@@ -258,6 +290,7 @@
       {
         "stationName": "Marina Bay",
         "chineseStationName": "滨海湾",
+        "tamilStationName": "மரீனா பே",
         "stationNumber": "NS27",
         "stationCode": "CMRB",
         "position": {
@@ -268,6 +301,7 @@
       {
         "stationName": "Marina South Pier",
         "chineseStationName": "滨海南码头",
+        "tamilStationName": "மரினா சவுத் படகுத்துறை",
         "stationNumber": "NS28",
         "stationCode": "MSP",
         "position": {
@@ -283,6 +317,7 @@
     "stations": [{
         "stationName": "Pasir Ris",
         "chineseStationName": "巴西立",
+        "tamilStationName": "பாசிர் ரிஸ்",
         "stationNumber": "EW1",
         "stationCode": "PSR",
         "position": {
@@ -293,6 +328,7 @@
       {
         "stationName": "Tampines",
         "chineseStationName": "淡滨尼",
+        "tamilStationName": "தெம்பினிஸ்",
         "stationNumber": "EW2",
         "stationCode": "TAM",
         "position": {
@@ -303,6 +339,7 @@
       {
         "stationName": "Simei",
         "chineseStationName": "四美",
+        "tamilStationName": "ஸீமெய்",
         "stationNumber": "EW3",
         "stationCode": "SIM",
         "position": {
@@ -313,6 +350,7 @@
       {
         "stationName": "Tanah Merah",
         "chineseStationName": "丹那美拉",
+        "tamilStationName": "தானா மேரா",
         "stationNumber": "EW4",
         "stationCode": "TNM",
         "position": {
@@ -323,6 +361,7 @@
       {
         "stationName": "Bedok",
         "chineseStationName": "勿洛",
+        "tamilStationName": "பிடோக்",
         "stationNumber": "EW5",
         "stationCode": "BDK",
         "position": {
@@ -333,6 +372,7 @@
       {
         "stationName": "Kembangan",
         "chineseStationName": "景万岸",
+        "tamilStationName": "கெம்பாங்கான்",
         "stationNumber": "EW6",
         "stationCode": "KEM",
         "position": {
@@ -343,6 +383,7 @@
       {
         "stationName": "Eunos",
         "chineseStationName": "友诺士",
+        "tamilStationName": "யூனுஸ்",
         "stationNumber": "EW7",
         "stationCode": "EUN",
         "position": {
@@ -353,6 +394,7 @@
       {
         "stationName": "Paya Lebar",
         "chineseStationName": "巴耶利峇",
+        "tamilStationName": "பாய லேபார்",
         "stationNumber": "EW8",
         "stationCode": "CPYL",
         "position": {
@@ -363,6 +405,7 @@
       {
         "stationName": "Aljunied",
         "chineseStationName": "阿裕尼",
+        "tamilStationName": "அல்ஜூனிட்",
         "stationNumber": "EW9",
         "stationCode": "ALJ",
         "position": {
@@ -373,6 +416,7 @@
       {
         "stationName": "Kallang",
         "chineseStationName": "加冷",
+        "tamilStationName": "காலாங்",
         "stationNumber": "EW10",
         "stationCode": "KAL",
         "position": {
@@ -383,6 +427,7 @@
       {
         "stationName": "Lavender",
         "chineseStationName": "劳明达",
+        "tamilStationName": "லவண்டர்",
         "stationNumber": "EW11",
         "stationCode": "LVR",
         "position": {
@@ -393,6 +438,7 @@
       {
         "stationName": "Bugis",
         "chineseStationName": "武吉士",
+        "tamilStationName": "பூகிஸ்",
         "stationNumber": "EW12",
         "stationCode": "BGS",
         "position": {
@@ -403,6 +449,7 @@
       {
         "stationName": "City Hall",
         "chineseStationName": "政府大厦",
+        "tamilStationName": "நகர மண்டபம்",
         "stationNumber": "EW13",
         "stationCode": "CTH",
         "position": {
@@ -413,6 +460,7 @@
       {
         "stationName": "Raffles Place",
         "chineseStationName": "莱佛士坊",
+        "tamilStationName": "ராஃபிள்ஸ் பிளேஸ்",
         "stationNumber": "EW14",
         "stationCode": "RFP",
         "position": {
@@ -423,6 +471,7 @@
       {
         "stationName": "Tanjong Pagar",
         "chineseStationName": "丹戎巴葛",
+        "tamilStationName": "தஞ்சோங் பகார்",
         "stationNumber": "EW15",
         "stationCode": "TPG",
         "position": {
@@ -433,6 +482,7 @@
       {
         "stationName": "Outram Park",
         "chineseStationName": "欧南园",
+        "tamilStationName": "ஊட்ரம் பார்க்",
         "stationNumber": "EW16",
         "stationCode": "OTP",
         "position": {
@@ -443,6 +493,7 @@
       {
         "stationName": "Tiong Bahru",
         "chineseStationName": "中峇鲁",
+        "tamilStationName": "தியோங் பாரு",
         "stationNumber": "EW17",
         "stationCode": "TIB",
         "position": {
@@ -453,6 +504,7 @@
       {
         "stationName": "Redhill",
         "chineseStationName": "红山",
+        "tamilStationName": "ரெட்ஹில்",
         "stationNumber": "EW18",
         "stationCode": "RDH",
         "position": {
@@ -463,6 +515,7 @@
       {
         "stationName": "Queenstown",
         "chineseStationName": "女皇镇",
+        "tamilStationName": "குவீன்ஸ்டவுன்",
         "stationNumber": "EW19",
         "stationCode": "QUE",
         "position": {
@@ -473,6 +526,7 @@
       {
         "stationName": "Commonwealth",
         "chineseStationName": "联邦",
+        "tamilStationName": "காமன்வெல்த்",
         "stationNumber": "EW20",
         "stationCode": "COM",
         "position": {
@@ -483,6 +537,7 @@
       {
         "stationName": "Buona Vista",
         "chineseStationName": "波那维斯达",
+        "tamilStationName": "புவன விஸ்தா",
         "stationNumber": "EW21",
         "stationCode": "CBNV",
         "position": {
@@ -493,6 +548,7 @@
       {
         "stationName": "Dover",
         "chineseStationName": "杜弗",
+        "tamilStationName": "டோவெர்",
         "stationNumber": "EW22",
         "stationCode": "DVR",
         "position": {
@@ -503,6 +559,7 @@
       {
         "stationName": "Clementi",
         "chineseStationName": "金文泰",
+        "tamilStationName": "கிளிமெண்டி",
         "stationNumber": "EW23",
         "stationCode": "CLE",
         "position": {
@@ -513,6 +570,7 @@
       {
         "stationName": "Jurong East",
         "chineseStationName": "裕廊东",
+        "tamilStationName": "ஜூரோங் கிழக்கு",
         "stationNumber": "EW24",
         "stationCode": "JUR",
         "position": {
@@ -523,6 +581,7 @@
       {
         "stationName": "Chinese Garden",
         "chineseStationName": "裕华园",
+        "tamilStationName": "சீனத் தோட்டம்",
         "stationNumber": "EW25",
         "stationCode": "CNG",
         "position": {
@@ -533,6 +592,7 @@
       {
         "stationName": "Lakeside",
         "chineseStationName": "湖畔",
+        "tamilStationName": "ஏரிக்கரை",
         "stationNumber": "EW26",
         "stationCode": "LKS",
         "position": {
@@ -543,6 +603,7 @@
       {
         "stationName": "Boon Lay",
         "chineseStationName": "文礼",
+        "tamilStationName": "பூன் லே",
         "stationNumber": "EW27",
         "stationCode": "BNL",
         "position": {
@@ -553,6 +614,7 @@
       {
         "stationName": "Pioneer",
         "chineseStationName": "先驱",
+        "tamilStationName": "பயனியர்",
         "stationNumber": "EW28",
         "stationCode": "PNR",
         "position": {
@@ -563,6 +625,7 @@
       {
         "stationName": "Joo Koon",
         "chineseStationName": "裕群",
+        "tamilStationName": "ஜூ கூன்",
         "stationNumber": "EW29",
         "stationCode": "JKN",
         "position": {
@@ -572,7 +635,8 @@
       },
       {
         "stationName": "Gul Circle",
-        "chineseStationName": "卡尔圈 站",
+        "chineseStationName": "卡尔圈",
+        "tamilStationName": "கல் சர்க்கல்",
         "stationNumber": "EW30",
         "stationCode": "GCL",
         "position": {
@@ -582,7 +646,8 @@
       },
       {
         "stationName": "Tuas Crescent",
-        "chineseStationName": "大士弯站",
+        "chineseStationName": "大士弯",
+        "tamilStationName": "துவாஸ் கிரசண்ட்",
         "stationNumber": "EW31",
         "stationCode": "TCR",
         "position": {
@@ -592,7 +657,8 @@
       },
       {
         "stationName": "Tuas West Road",
-        "chineseStationName": "大 士 西 路站",
+        "chineseStationName": "大士西路",
+        "tamilStationName": "துவாஸ் வெஸ்ட் ரோடு",
         "stationNumber": "EW32",
         "stationCode": "TWR",
         "position": {
@@ -602,7 +668,8 @@
       },
       {
         "stationName": "Tuas Link",
-        "chineseStationName": "大士连路站",
+        "chineseStationName": "大士连路",
+        "tamilStationName": "துவாஸ் லிங்க்",
         "stationNumber": "EW33",
         "stationCode": "TLK",
         "position": {
@@ -618,6 +685,7 @@
     "stations": [{
         "stationName": "Expo",
         "chineseStationName": "博览",
+        "tamilStationName": "எக்ஸ்போ",
         "stationNumber": "CG1",
         "stationCode": "XPO",
         "position": {
@@ -628,6 +696,7 @@
       {
         "stationName": "Changi Airport",
         "chineseStationName": "樟宜机场",
+        "tamilStationName": "சாங்கி விமானநிலையம்",
         "stationNumber": "CG2",
         "stationCode": "CGA",
         "position": {
@@ -643,6 +712,7 @@
     "stations": [{
         "stationName": "HarbourFront",
         "chineseStationName": "港湾",
+        "tamilStationName": "துறைமுகம்",
         "stationNumber": "NE1",
         "position": {
           "latitude": 1.016275772214301,
@@ -652,6 +722,7 @@
       {
         "stationName": "Outram Park",
         "chineseStationName": "欧南园",
+        "tamilStationName": "ஊட்ரம் பார்க்",
         "stationNumber": "NE3",
         "position": {
           "latitude": 1.016275901476982,
@@ -661,6 +732,7 @@
       {
         "stationName": "Chinatown",
         "chineseStationName": "牛车水",
+        "tamilStationName": "சைனாடவுன்",
         "stationNumber": "NE4",
         "position": {
           "latitude": 1.016275943035248,
@@ -670,6 +742,7 @@
       {
         "stationName": "Clarke Quay",
         "chineseStationName": "克拉码头",
+        "tamilStationName": "கிளார்க் கீ",
         "stationNumber": "NE5",
         "position": {
           "latitude": 1.016275979450926,
@@ -679,6 +752,7 @@
       {
         "stationName": "Dhoby Ghaut",
         "chineseStationName": "多美歌",
+        "tamilStationName": "டோபி காட்",
         "stationNumber": "NE6",
         "position": {
           "latitude": 1.016276081818376,
@@ -688,6 +762,7 @@
       {
         "stationName": "Little India",
         "chineseStationName": "小印度",
+        "tamilStationName": "லிட்டில் இந்தியா",
         "stationNumber": "NE7",
         "position": {
           "latitude": 1.016276145981571,
@@ -697,6 +772,7 @@
       {
         "stationName": "Farrer Park",
         "chineseStationName": "花拉公园",
+        "tamilStationName": "ஃபேரர் பார்க்",
         "stationNumber": "NE8",
         "position": {
           "latitude": 1.016276196265375,
@@ -706,6 +782,7 @@
       {
         "stationName": "Boon Keng",
         "chineseStationName": "文庆",
+        "tamilStationName": "பூன் கெங்",
         "stationNumber": "NE9",
         "position": {
           "latitude": 1.016276259900053,
@@ -715,6 +792,7 @@
       {
         "stationName": "Potong Pasir",
         "chineseStationName": "波东巴西",
+        "tamilStationName": "போத்தோங் பாசிர்",
         "stationNumber": "NE10",
         "position": {
           "latitude": 1.016276368281836,
@@ -724,6 +802,7 @@
       {
         "stationName": "Woodleigh",
         "chineseStationName": "兀里",
+        "tamilStationName": "உட்லீ",
         "stationNumber": "NE11",
         "position": {
           "latitude": 1.016276438918136,
@@ -733,6 +812,7 @@
       {
         "stationName": "Serangoon",
         "chineseStationName": "实龙岗",
+        "tamilStationName": "சிராங்கூன்",
         "stationNumber": "NE12",
         "stationCode": "CSER",
         "position": {
@@ -743,6 +823,7 @@
       {
         "stationName": "Kovan",
         "chineseStationName": "高文",
+        "tamilStationName": "கோவன்",
         "stationNumber": "NE13",
         "position": {
           "latitude": 1.016276628744951,
@@ -752,6 +833,7 @@
       {
         "stationName": "Hougang",
         "chineseStationName": "后港",
+        "tamilStationName": "ஹவ்காங்",
         "stationNumber": "NE14",
         "position": {
           "latitude": 1.016276729252468,
@@ -761,6 +843,7 @@
       {
         "stationName": "Buangkok",
         "chineseStationName": "万国",
+        "tamilStationName": "புவாங்கோக்",
         "stationNumber": "NE15",
         "position": {
           "latitude": 1.016276834027975,
@@ -770,6 +853,7 @@
       {
         "stationName": "Sengkang",
         "chineseStationName": "盛港",
+        "tamilStationName": "செங்காங்",
         "stationNumber": "NE16",
         "position": {
           "latitude": 1.016276913764771,
@@ -779,6 +863,7 @@
       {
         "stationName": "Punggol",
         "chineseStationName": "榜鹅",
+        "tamilStationName": "பொங்கோல்",
         "stationNumber": "NE17",
         "position": {
           "latitude": 1.016277029998392,
@@ -788,6 +873,7 @@
       {
         "stationName": "Punggol Coast",
         "chineseStationName": "榜鹅海岸",
+        "tamilStationName": "பொங்கோல் கோஸ்ட்",
         "stationNumber": "NE18",
         "operational": false
       }
@@ -799,6 +885,7 @@
     "stations": [{
         "stationName": "Dhoby Ghaut",
         "chineseStationName": "多美歌",
+        "tamilStationName": "டோபி காட்",
         "stationNumber": "CC1",
         "stationCode": "CDBG",
         "position": {
@@ -809,6 +896,7 @@
       {
         "stationName": "Bras Basah",
         "chineseStationName": "百胜",
+        "tamilStationName": "பிராஸ் பாசா",
         "stationNumber": "CC2",
         "stationCode": "CBBS",
         "position": {
@@ -819,6 +907,7 @@
       {
         "stationName": "Esplanade",
         "chineseStationName": "滨海中心",
+        "tamilStationName": "எஸ்பிளனேட்",
         "stationNumber": "CC3",
         "stationCode": "CEPN",
         "position": {
@@ -829,6 +918,7 @@
       {
         "stationName": "Promenade",
         "chineseStationName": "宝门廊",
+        "tamilStationName": "புரொமனாட்",
         "stationNumber": "CC4",
         "stationCode": "CPMN",
         "position": {
@@ -839,6 +929,7 @@
       {
         "stationName": "Nicoll Highway",
         "chineseStationName": "尼诰大道",
+        "tamilStationName": "நிக்கல் நெடுஞ்சாலை",
         "stationNumber": "CC5",
         "stationCode": "CNCH",
         "position": {
@@ -849,6 +940,7 @@
       {
         "stationName": "Stadium",
         "chineseStationName": "体育场",
+        "tamilStationName": "ஸ்டேடியம்",
         "stationNumber": "CC6",
         "stationCode": "CSDM",
         "position": {
@@ -859,6 +951,7 @@
       {
         "stationName": "Mountbatten",
         "chineseStationName": "蒙巴登",
+        "tamilStationName": "மவுண்ட்பேட்டன்",
         "stationNumber": "CC7",
         "stationCode": "CMBT",
         "position": {
@@ -869,6 +962,7 @@
       {
         "stationName": "Dakota",
         "chineseStationName": "达科达",
+        "tamilStationName": "டகோட்டா",
         "stationNumber": "CC8",
         "stationCode": "CDKT",
         "position": {
@@ -879,6 +973,7 @@
       {
         "stationName": "Paya Lebar",
         "chineseStationName": "巴耶利峇",
+        "tamilStationName": "பாய லேபார்",
         "stationNumber": "CC9",
         "stationCode": "CPYL",
         "position": {
@@ -889,6 +984,7 @@
       {
         "stationName": "MacPherson",
         "chineseStationName": "麦波申",
+        "tamilStationName": "மெக்பர்சன்",
         "stationNumber": "CC10",
         "stationCode": "CMPS",
         "position": {
@@ -899,6 +995,7 @@
       {
         "stationName": "Tai Seng",
         "chineseStationName": "大成",
+        "tamilStationName": "தை செங்",
         "stationNumber": "CC11",
         "stationCode": "CTSG",
         "position": {
@@ -909,6 +1006,7 @@
       {
         "stationName": "Bartley",
         "chineseStationName": "巴特礼",
+        "tamilStationName": "பார்ட்லி",
         "stationNumber": "CC12",
         "stationCode": "CBLY",
         "position": {
@@ -919,6 +1017,7 @@
       {
         "stationName": "Serangoon",
         "chineseStationName": "实龙岗",
+        "tamilStationName": "சிராங்கூன்",
         "stationNumber": "CC13",
         "stationCode": "CSER",
         "position": {
@@ -929,6 +1028,7 @@
       {
         "stationName": "Lorong Chuan",
         "chineseStationName": "罗弄泉",
+        "tamilStationName": "லோரோங் சுவான்",
         "stationNumber": "CC14",
         "stationCode": "CLRC",
         "position": {
@@ -939,6 +1039,7 @@
       {
         "stationName": "Bishan",
         "chineseStationName": "碧山",
+        "tamilStationName": "பீஷான்",
         "stationNumber": "CC15",
         "stationCode": "CBSH",
         "position": {
@@ -949,6 +1050,7 @@
       {
         "stationName": "Marymount",
         "chineseStationName": "玛丽蒙",
+        "tamilStationName": "மேரிமவுண்ட்",
         "stationNumber": "CC16",
         "stationCode": "CMRM",
         "position": {
@@ -959,6 +1061,7 @@
       {
         "stationName": "Caldecott",
         "chineseStationName": "加利谷",
+        "tamilStationName": "கால்டிகாட்",
         "stationNumber": "CC17",
         "stationCode": "CCDT",
         "position": {
@@ -969,6 +1072,7 @@
       {
         "stationName": "Bukit Brown",
         "chineseStationName": "武吉布朗",
+        "tamilStationName": "புக்கிட் பிரவுன்",
         "stationNumber": "CC18",
         "stationCode": "BKB",
         "operational": false,
@@ -979,7 +1083,9 @@
       },
       {
         "stationName": "Botanic Gardens",
+        "malayStationName": "Kebun Bunga",
         "chineseStationName": "植物园",
+        "tamilStationName": "பூ மலை",
         "stationNumber": "CC19",
         "stationCode": "CBTN",
         "position": {
@@ -990,6 +1096,7 @@
       {
         "stationName": "Farrer Road",
         "chineseStationName": "花拉路",
+        "tamilStationName": "ஃபேரர் சாலை",
         "stationNumber": "CC20",
         "stationCode": "CFRR",
         "position": {
@@ -1000,6 +1107,7 @@
       {
         "stationName": "Holland Village",
         "chineseStationName": "荷兰村",
+        "tamilStationName": "ஹாலந்து வில்லேஜ்",
         "stationNumber": "CC21",
         "stationCode": "CHLV",
         "position": {
@@ -1010,6 +1118,7 @@
       {
         "stationName": "Buona Vista",
         "chineseStationName": "波那维斯达",
+        "tamilStationName": "புவன விஸ்தா",
         "stationNumber": "CC22",
         "stationCode": "CBNV",
         "position": {
@@ -1020,6 +1129,7 @@
       {
         "stationName": "one-north",
         "chineseStationName": "纬壹",
+        "tamilStationName": "ஒன்-நார்த்",
         "stationNumber": "CC23",
         "stationCode": "CONH",
         "position": {
@@ -1030,6 +1140,7 @@
       {
         "stationName": "Kent Ridge",
         "chineseStationName": "肯特岗",
+        "tamilStationName": "கெண்ட் ரிஜ்",
         "stationNumber": "CC24",
         "stationCode": "CKRG",
         "position": {
@@ -1040,6 +1151,7 @@
       {
         "stationName": "Haw Par Villa",
         "chineseStationName": "虎豹别墅",
+        "tamilStationName": "ஹா பர் வில்லா",
         "stationNumber": "CC25",
         "stationCode": "CHPV",
         "position": {
@@ -1050,6 +1162,7 @@
       {
         "stationName": "Pasir Panjang",
         "chineseStationName": "巴西班让",
+        "tamilStationName": "பாசிர் பாஞ்சாங்",
         "stationNumber": "CC26",
         "stationCode": "CPPJ",
         "position": {
@@ -1060,6 +1173,7 @@
       {
         "stationName": "Labrador Park",
         "chineseStationName": "拉柏多公园",
+        "tamilStationName": "லாப்ரடார் பூங்கா",
         "stationNumber": "CC27",
         "stationCode": "CLBD",
         "position": {
@@ -1070,6 +1184,7 @@
       {
         "stationName": "Telok Blangah",
         "chineseStationName": "直落布兰雅",
+        "tamilStationName": "தெலுக் பிளாங்கா",
         "stationNumber": "CC28",
         "stationCode": "CTLB",
         "position": {
@@ -1080,6 +1195,7 @@
       {
         "stationName": "HarbourFront",
         "chineseStationName": "港湾",
+        "tamilStationName": "துறைமுகம்",
         "stationNumber": "CC29",
         "stationCode": "CHBF",
         "position": {
@@ -1090,17 +1206,23 @@
       {
         "stationName": "Keppel",
         "chineseStationName": "吉宝",
-        "stationNumber": "CC30"
+        "tamilStationName": "கெப்பல்",
+        "stationNumber": "CC30",
+        "operational": false
       },
       {
         "stationName": "Cantoment",
         "chineseStationName": "广东民",
-        "stationNumber": "CC31"
+        "tamilStationName": "கெண்டொன்மன்",
+        "stationNumber": "CC31",
+        "operational": false
       },
       {
         "stationName": "Prince Edward Road",
         "chineseStationName": "爱德华太子路",
-        "stationNumber": "CC32"
+        "tamilStationName": "பிரின்ஸ் எட்வர்ட் ரோடு",
+        "stationNumber": "CC32",
+        "operational": false
       }
     ]
   },
@@ -1110,6 +1232,7 @@
     "stations": [{
         "stationName": "Bayfront",
         "chineseStationName": "海湾舫",
+        "tamilStationName": "பேஃபிரண்ட்",
         "stationNumber": "CE1",
         "stationCode": "CBFT",
         "position": {
@@ -1120,6 +1243,7 @@
       {
         "stationName": "Marina Bay",
         "chineseStationName": "滨海湾",
+        "tamilStationName": "மரீனா பே",
         "stationNumber": "CE2",
         "stationCode": "CMRB",
         "position": {
@@ -1135,6 +1259,7 @@
     "stations": [{
         "stationName": "Bukit Panjang",
         "chineseStationName": "武吉班让",
+        "tamilStationName": "புக்கிட் பாஞ்சாங்",
         "stationNumber": "DT1",
         "position": {
           "latitude": 1.016276798885066,
@@ -1144,6 +1269,7 @@
       {
         "stationName": "Cashew",
         "chineseStationName": "凯秀",
+        "tamilStationName": "கேஷ்யூ",
         "stationNumber": "DT2",
         "position": {
           "latitude": 1.016276711776946,
@@ -1153,6 +1279,7 @@
       {
         "stationName": "Hillview",
         "chineseStationName": "山景",
+        "tamilStationName": "ஹில்வியூ",
         "stationNumber": "DT3",
         "position": {
           "latitude": 1.016276648248053,
@@ -1160,14 +1287,16 @@
         }
       },
       {
-        "stationName": "Hume Avenue",
-        "chineseStationName": "休谟大道",
+        "stationName": "Hume",
+        "chineseStationName": "休谟",
+        "tamilStationName": "ஹியூம்",
         "stationNumber": "DT4",
         "operational": false
       },
       {
         "stationName": "Beauty World",
         "chineseStationName": "美世界",
+        "tamilStationName": "பியூட்டி வோர்ல்ட்",
         "stationNumber": "DT5",
         "position": {
           "latitude": 1.016276457238231,
@@ -1177,6 +1306,7 @@
       {
         "stationName": "King Albert Park",
         "chineseStationName": "阿尔柏王园",
+        "tamilStationName": "கிங் ஆல்பர்ட் பார்க்",
         "stationNumber": "DT6",
         "position": {
           "latitude": 1.016276406979144,
@@ -1186,6 +1316,7 @@
       {
         "stationName": "Sixth Avenue",
         "chineseStationName": "第六道",
+        "tamilStationName": "சிக்ஸ்த் அவென்யூ",
         "stationNumber": "DT7",
         "position": {
           "latitude": 1.016276362867363,
@@ -1195,6 +1326,7 @@
       {
         "stationName": "Tan Kah Kee",
         "chineseStationName": "陈嘉庚",
+        "tamilStationName": "டான் கா கீ",
         "stationNumber": "DT8",
         "position": {
           "latitude": 1.016276318532151,
@@ -1203,9 +1335,10 @@
       },
       {
         "stationName": "Botanic Gardens",
+        "malayStationName": "Kebun Bunga",
         "chineseStationName": "植物园",
+        "tamilStationName": "பூ மலை",
         "stationNumber": "DT9",
-        "stationCode": "CBTN",
         "position": {
           "latitude": 1.016276287254511,
           "longitude": 103.58268453992913
@@ -1214,6 +1347,7 @@
       {
         "stationName": "Stevens",
         "chineseStationName": "史蒂芬",
+        "tamilStationName": "ஸ்டீவன்ஸ்",
         "stationNumber": "DT10",
         "position": {
           "latitude": 1.01627626593288,
@@ -1223,6 +1357,7 @@
       {
         "stationName": "Newton",
         "chineseStationName": "纽顿",
+        "tamilStationName": "நியூட்டன்",
         "stationNumber": "DT11",
         "stationCode": "NEW",
         "position": {
@@ -1233,6 +1368,7 @@
       {
         "stationName": "Little India",
         "chineseStationName": "小印度",
+        "tamilStationName": "லிட்டில் இந்தியா",
         "stationNumber": "DT12",
         "position": {
           "latitude": 1.016276149581957,
@@ -1242,6 +1378,7 @@
       {
         "stationName": "Rochor",
         "chineseStationName": "梧槽",
+        "tamilStationName": "ரோச்சோர்",
         "stationNumber": "DT13",
         "position": {
           "latitude": 1.016276119905984,
@@ -1251,6 +1388,7 @@
       {
         "stationName": "Bugis",
         "chineseStationName": "武吉士",
+        "tamilStationName": "பூகிஸ்",
         "stationNumber": "DT14",
         "stationCode": "BGS",
         "position": {
@@ -1261,6 +1399,7 @@
       {
         "stationName": "Promenade",
         "chineseStationName": "宝门廊",
+        "tamilStationName": "புரொமனாட்",
         "stationNumber": "DT15",
         "stationCode": "CPMN",
         "position": {
@@ -1271,6 +1410,7 @@
       {
         "stationName": "Bayfront",
         "chineseStationName": "海湾舫",
+        "tamilStationName": "பேஃபிரண்ட்",
         "stationNumber": "DT16",
         "position": {
           "latitude": 1.016275920565796,
@@ -1280,6 +1420,7 @@
       {
         "stationName": "Downtown",
         "chineseStationName": "市中心",
+        "tamilStationName": "டௌன்டவுன்",
         "stationNumber": "DT17",
         "position": {
           "latitude": 1.016275898607242,
@@ -1289,6 +1430,7 @@
       {
         "stationName": "Telok Ayer",
         "chineseStationName": "直落亚逸",
+        "tamilStationName": "தெலுக் ஆயர்",
         "stationNumber": "DT18",
         "position": {
           "latitude": 1.016275924318081,
@@ -1298,6 +1440,7 @@
       {
         "stationName": "Chinatown",
         "chineseStationName": "牛车水",
+        "tamilStationName": "சைனாடவுன்",
         "stationNumber": "DT19",
         "position": {
           "latitude": 1.016275946557454,
@@ -1307,6 +1450,7 @@
       {
         "stationName": "Fort Canning",
         "chineseStationName": "福康宁",
+        "tamilStationName": "ஃபோர்ட் கெனிங்",
         "stationNumber": "DT20",
         "position": {
           "latitude": 1.016276016463862,
@@ -1316,6 +1460,7 @@
       {
         "stationName": "Bencoolen",
         "chineseStationName": "明古连",
+        "tamilStationName": "பென்கூலன்",
         "stationNumber": "DT21",
         "position": {
           "latitude": 1.016276074214461,
@@ -1325,6 +1470,7 @@
       {
         "stationName": "Jalan Besar",
         "chineseStationName": "惹兰勿刹",
+        "tamilStationName": "ஜாலான் புசார்",
         "stationNumber": "DT22",
         "position": {
           "latitude": 1.016276133357361,
@@ -1334,6 +1480,7 @@
       {
         "stationName": "Bendemeer",
         "chineseStationName": "明地迷亚",
+        "tamilStationName": "பெண்டிமியர்",
         "stationNumber": "DT23",
         "position": {
           "latitude": 1.016276208140275,
@@ -1343,6 +1490,7 @@
       {
         "stationName": "Geylang Bahru",
         "chineseStationName": "芽笼峇鲁",
+        "tamilStationName": "கேலாங் பாரு",
         "stationNumber": "DT24",
         "position": {
           "latitude": 1.016276278990366,
@@ -1352,6 +1500,7 @@
       {
         "stationName": "Mattar",
         "chineseStationName": "玛达",
+        "tamilStationName": "மாத்தார்",
         "stationNumber": "DT25",
         "position": {
           "latitude": 1.016276327570277,
@@ -1361,8 +1510,8 @@
       {
         "stationName": "MacPherson",
         "chineseStationName": "麦波申",
+        "tamilStationName": "மெக்பர்சன்",
         "stationNumber": "DT26",
-        "stationCode": "CMPS",
         "position": {
           "latitude": 1.016276320341217,
           "longitude": 103.58268519775994
@@ -1371,6 +1520,7 @@
       {
         "stationName": "Ubi",
         "chineseStationName": "乌美",
+        "tamilStationName": "உபி",
         "stationNumber": "DT27",
         "position": {
           "latitude": 1.016276355436735,
@@ -1380,6 +1530,7 @@
       {
         "stationName": "Kaki Bukit",
         "chineseStationName": "加基武吉",
+        "tamilStationName": "காக்கி புக்கிட்",
         "stationNumber": "DT28",
         "position": {
           "latitude": 1.01627640075583,
@@ -1389,6 +1540,7 @@
       {
         "stationName": "Bedok North",
         "chineseStationName": "勿洛北",
+        "tamilStationName": "பிடோக் நார்த்",
         "stationNumber": "DT29",
         "position": {
           "latitude": 1.016276398726033,
@@ -1398,6 +1550,7 @@
       {
         "stationName": "Bedok Reservoir",
         "chineseStationName": "勿洛蓄水池",
+        "tamilStationName": "பிடோக் ரெசவோர்",
         "stationNumber": "DT30",
         "position": {
           "latitude": 1.01627641560876,
@@ -1407,6 +1560,7 @@
       {
         "stationName": "Tampines West",
         "chineseStationName": "淡滨尼西",
+        "tamilStationName": "தெம்பினிஸ் வெஸ்ட்",
         "stationNumber": "DT31",
         "position": {
           "latitude": 1.016276496168571,
@@ -1416,8 +1570,8 @@
       {
         "stationName": "Tampines",
         "chineseStationName": "淡滨尼",
+        "tamilStationName": "தெம்பினிஸ்",
         "stationNumber": "DT32",
-        "stationCode": "TAM",
         "position": {
           "latitude": 1.016276582647637,
           "longitude": 103.58268568029479
@@ -1426,6 +1580,7 @@
       {
         "stationName": "Tampines East",
         "chineseStationName": "淡滨尼东",
+        "tamilStationName": "தெம்பினிஸ் ஈஸ்ட்",
         "stationNumber": "DT33",
         "position": {
           "latitude": 1.016276592730794,
@@ -1435,6 +1590,7 @@
       {
         "stationName": "Upper Changi",
         "chineseStationName": "樟宜上段",
+        "tamilStationName": "அப்பர் சாங்கி",
         "stationNumber": "DT34",
         "position": {
           "latitude": 1.016276462019708,
@@ -1444,8 +1600,8 @@
       {
         "stationName": "Expo",
         "chineseStationName": "博览",
+        "tamilStationName": "எக்ஸ்போ",
         "stationNumber": "DT35",
-        "stationCode": "XPO",
         "position": {
           "latitude": 1.016276404545263,
           "longitude": 103.58268585384543
@@ -1454,11 +1610,13 @@
       {
         "stationName": "Xilin",
         "chineseStationName": "锡林",
+        "tamilStationName": "சீலின்",
         "stationNumber": "DT36"
       },
       {
         "stationName": "Sungei Bedok",
         "chineseStationName": "双溪勿洛",
+        "tamilStationName": "சங்கை பிடோக்",
         "stationNumber": "DT37"
       }
     ]
@@ -1469,8 +1627,8 @@
     "stations": [{
         "stationName": "Choa Chu Kang",
         "chineseStationName": "蔡厝港",
+        "tamilStationName": "சுவா சூ காங்",
         "stationNumber": "BP1",
-        "stationCode": "CCK",
         "position": {
           "latitude": 1.01627685163559,
           "longitude": 103.58268389679593
@@ -1479,6 +1637,7 @@
       {
         "stationName": "South View",
         "chineseStationName": "南山",
+        "tamilStationName": "சவுத் வியூ",
         "stationNumber": "BP2",
         "position": {
           "latitude": 1.016276810595689,
@@ -1488,6 +1647,7 @@
       {
         "stationName": "Keat Hong",
         "chineseStationName": "吉丰",
+        "tamilStationName": "கியட் ஹோங்",
         "stationNumber": "BP3",
         "position": {
           "latitude": 1.016276795264749,
@@ -1497,6 +1657,7 @@
       {
         "stationName": "Teck Whye",
         "chineseStationName": "德惠",
+        "tamilStationName": "டெக் வாய்",
         "stationNumber": "BP4",
         "position": {
           "latitude": 1.016276777921649,
@@ -1506,6 +1667,7 @@
       {
         "stationName": "Phoenix",
         "chineseStationName": "凤凰",
+        "tamilStationName": "ஃபீனிக்ஸ்",
         "stationNumber": "BP5",
         "position": {
           "latitude": 1.016276795416456,
@@ -1515,6 +1677,7 @@
       {
         "stationName": "Bukit Panjang",
         "chineseStationName": "武吉班让",
+        "tamilStationName": "புக்கிட் பாஞ்சாங்",
         "stationNumber": "BP6",
         "position": {
           "latitude": 1.016276789008537,
@@ -1524,6 +1687,7 @@
       {
         "stationName": "Petir",
         "chineseStationName": "柏提",
+        "tamilStationName": "பெட்டீர்",
         "stationNumber": "BP7",
         "position": {
           "latitude": 1.01627678756807,
@@ -1533,6 +1697,7 @@
       {
         "stationName": "Pending",
         "chineseStationName": "秉定",
+        "tamilStationName": "பெண்டிங்",
         "stationNumber": "BP8",
         "position": {
           "latitude": 1.016276773034189,
@@ -1542,6 +1707,7 @@
       {
         "stationName": "Bangkit",
         "chineseStationName": "万吉",
+        "tamilStationName": "பங்கிட்",
         "stationNumber": "BP9",
         "position": {
           "latitude": 1.016276808079156,
@@ -1551,6 +1717,7 @@
       {
         "stationName": "Fajar",
         "chineseStationName": "法嘉",
+        "tamilStationName": "ஃபஜார்",
         "stationNumber": "BP10",
         "position": {
           "latitude": 1.016276848800187,
@@ -1560,6 +1727,7 @@
       {
         "stationName": "Segar",
         "chineseStationName": "实加",
+        "tamilStationName": "செகார்",
         "stationNumber": "BP11",
         "position": {
           "latitude": 1.01627687820304,
@@ -1569,6 +1737,7 @@
       {
         "stationName": "Jelapang",
         "chineseStationName": "泽拉邦",
+        "tamilStationName": "ஜெலப்பாங்",
         "stationNumber": "BP12",
         "position": {
           "latitude": 1.016276868530922,
@@ -1578,6 +1747,7 @@
       {
         "stationName": "Senja",
         "chineseStationName": "信佳",
+        "tamilStationName": "சென்ஜா",
         "stationNumber": "BP13",
         "position": {
           "latitude": 1.016276832258077,
@@ -1587,6 +1757,7 @@
       {
         "stationName": "Ten Mile Junction",
         "chineseStationName": "十里广场",
+        "tamilStationName": "பத்தாம் கல் சந்திப்பு",
         "stationNumber": "BP14",
         "position": {
           "latitude": 1.016276810811589,
@@ -1601,11 +1772,13 @@
     "stations": [{
         "stationName": "Sengkang",
         "chineseStationName": "盛港",
+        "tamilStationName": "செங்காங்",
         "stationNumber": "STC"
       },
       {
         "stationName": "Compassvale",
         "chineseStationName": "康埔桦",
+        "tamilStationName": "கம்பஸ்வேல்",
         "stationNumber": "SE1",
         "position": {
           "latitude": 1.016276939076018,
@@ -1615,6 +1788,7 @@
       {
         "stationName": "Rumbia",
         "chineseStationName": "棕美",
+        "tamilStationName": "ரூம்பியா",
         "stationNumber": "SE2",
         "position": {
           "latitude": 1.016276911727113,
@@ -1624,6 +1798,7 @@
       {
         "stationName": "Bakau",
         "chineseStationName": "码高",
+        "tamilStationName": "பக்காவ்",
         "stationNumber": "SE3",
         "position": {
           "latitude": 1.016276881197487,
@@ -1633,6 +1808,7 @@
       {
         "stationName": "Kangkar",
         "chineseStationName": "港脚",
+        "tamilStationName": "கங்கார்",
         "stationNumber": "SE4",
         "position": {
           "latitude": 1.016276843991702,
@@ -1642,6 +1818,7 @@
       {
         "stationName": "Ranggung",
         "chineseStationName": "兰岗",
+        "tamilStationName": "ரங்கோங்",
         "stationNumber": "SE5",
         "position": {
           "latitude": 1.016276846291235,
@@ -1656,6 +1833,7 @@
     "stations": [{
         "stationName": "Sengkang",
         "chineseStationName": "盛港",
+        "tamilStationName": "செங்காங்",
         "stationNumber": "STC",
         "position": {
           "latitude": 1.016276912993665,
@@ -1665,6 +1843,7 @@
       {
         "stationName": "Cheng Lim",
         "chineseStationName": "振林",
+        "tamilStationName": "செங் லிம்",
         "stationNumber": "SW1",
         "position": {
           "latitude": 1.016276955210357,
@@ -1674,6 +1853,7 @@
       {
         "stationName": "Farmway",
         "chineseStationName": "农道",
+        "tamilStationName": "ஃபாம்வே",
         "stationNumber": "SW2",
         "position": {
           "latitude": 1.016276963279188,
@@ -1683,6 +1863,7 @@
       {
         "stationName": "Kupang",
         "chineseStationName": "古邦",
+        "tamilStationName": "கூப்பாங்",
         "stationNumber": "SW3",
         "position": {
           "latitude": 1.016276972702665,
@@ -1692,6 +1873,7 @@
       {
         "stationName": "Thanggam",
         "chineseStationName": "丹甘",
+        "tamilStationName": "தங்கம்",
         "stationNumber": "SW4",
         "position": {
           "latitude": 1.016276964607671,
@@ -1701,6 +1883,7 @@
       {
         "stationName": "Fernvale",
         "chineseStationName": "芬微",
+        "tamilStationName": "ஃபொ்ன்வேல்",
         "stationNumber": "SW5",
         "position": {
           "latitude": 1.016276915481005,
@@ -1710,6 +1893,7 @@
       {
         "stationName": "Layar",
         "chineseStationName": "拉雅",
+        "tamilStationName": "லாயார்",
         "stationNumber": "SW6",
         "position": {
           "latitude": 1.016276917237628,
@@ -1719,6 +1903,7 @@
       {
         "stationName": "Tongkang",
         "chineseStationName": "同港",
+        "tamilStationName": "தொங்காங்",
         "stationNumber": "SW7",
         "position": {
           "latitude": 1.016276892535682,
@@ -1728,6 +1913,7 @@
       {
         "stationName": "Renjong",
         "chineseStationName": "仁宗",
+        "tamilStationName": "ரெஞ்சோங்",
         "stationNumber": "SW8",
         "position": {
           "latitude": 1.016276868808341,
@@ -1742,11 +1928,13 @@
     "stations": [{
         "stationName": "Punggol",
         "chineseStationName": "榜鹅",
+        "tamilStationName": "பொங்கோல்",
         "stationNumber": "PTC"
       },
       {
         "stationName": "Cove",
         "chineseStationName": "海湾",
+        "tamilStationName": "கோவ்",
         "stationNumber": "PE1",
         "position": {
           "latitude": 1.016276982389003,
@@ -1756,6 +1944,7 @@
       {
         "stationName": "Meridian",
         "chineseStationName": "丽园",
+        "tamilStationName": "மெரிடியன்",
         "stationNumber": "PE2",
         "position": {
           "latitude": 1.016276960958433,
@@ -1765,6 +1954,7 @@
       {
         "stationName": "Coral Edge",
         "chineseStationName": "珊瑚",
+        "tamilStationName": "கோரல் எட்ஜ்",
         "stationNumber": "PE3",
         "position": {
           "latitude": 1.016276933804678,
@@ -1774,6 +1964,7 @@
       {
         "stationName": "Riviera",
         "chineseStationName": "里维拉",
+        "tamilStationName": "ரிவியாரா",
         "stationNumber": "PE4",
         "position": {
           "latitude": 1.016276939371433,
@@ -1783,6 +1974,7 @@
       {
         "stationName": "Kadaloor",
         "chineseStationName": "卡达鲁",
+        "tamilStationName": "கடலூர்",
         "stationNumber": "PE5",
         "position": {
           "latitude": 1.016276985135397,
@@ -1792,6 +1984,7 @@
       {
         "stationName": "Osais",
         "chineseStationName": "绿洲",
+        "tamilStationName": "ஓய்சிஸ்",
         "stationNumber": "PE6",
         "position": {
           "latitude": 1.016277009566924,
@@ -1801,6 +1994,7 @@
       {
         "stationName": "Damai",
         "chineseStationName": "达迈",
+        "tamilStationName": "டாமாய்",
         "stationNumber": "PE7",
         "position": {
           "latitude": 1.016277036225937,
@@ -1815,6 +2009,7 @@
     "stations": [{
         "stationName": "Punggol",
         "chineseStationName": "榜鹅",
+        "tamilStationName": "பொங்கோல்",
         "stationNumber": "PTC",
         "position": {
           "latitude": 1.016277035858629,
@@ -1824,6 +2019,7 @@
       {
         "stationName": "Sam Kee",
         "chineseStationName": "三记",
+        "tamilStationName": "சாம் கீ",
         "stationNumber": "PW1",
         "position": {
           "latitude": 1.016277075814713,
@@ -1833,6 +2029,7 @@
       {
         "stationName": "Teck Lee",
         "chineseStationName": "德利",
+        "tamilStationName": "டெக் லீ",
         "stationNumber": "PW2",
         "operational": false,
         "position": {
@@ -1843,6 +2040,7 @@
       {
         "stationName": "Punggol Point",
         "chineseStationName": "榜鹅坊",
+        "tamilStationName": "பொங்கோல் பாயிண்ட்",
         "stationNumber": "PW3",
         "position": {
           "latitude": 1.016277141253839,
@@ -1852,6 +2050,7 @@
       {
         "stationName": "Samudera",
         "chineseStationName": "山姆",
+        "tamilStationName": "சமுத்திரா",
         "stationNumber": "PW4",
         "position": {
           "latitude": 1.016277132688215,
@@ -1861,6 +2060,7 @@
       {
         "stationName": "Nibong",
         "chineseStationName": "尼蒙",
+        "tamilStationName": "நிபொங்",
         "stationNumber": "PW5",
         "position": {
           "latitude": 1.016277096229895,
@@ -1870,6 +2070,7 @@
       {
         "stationName": "Sumang",
         "chineseStationName": "苏芒",
+        "tamilStationName": "சுமாங்",
         "stationNumber": "PW6",
         "position": {
           "latitude": 1.016277065317414,
@@ -1879,6 +2080,7 @@
       {
         "stationName": "Soo Teck",
         "chineseStationName": "树德",
+        "tamilStationName": "சூ டெக்",
         "stationNumber": "PW7",
         "position": {
           "latitude": 1.016277034895307,
@@ -1893,6 +2095,7 @@
     "stations": [{
         "stationName": "Woodlands North",
         "chineseStationName": "兀兰北",
+        "tamilStationName": "உட்லண்ட்ஸ் நார்த்",
         "stationNumber": "TE1",
         "stationCode": "WDN",
         "position": {
@@ -1903,6 +2106,7 @@
       {
         "stationName": "Woodlands",
         "chineseStationName": "兀兰",
+        "tamilStationName": "ஊட்லண்ட்ஸ்",
         "stationNumber": "TE2",
         "stationCode": "WDL",
         "position": {
@@ -1913,6 +2117,7 @@
       {
         "stationName": "Woodlands South",
         "chineseStationName": "兀兰南",
+        "tamilStationName": "உட்லண்ட்ஸ் சவுத்",
         "stationNumber": "TE3",
         "stationCode": "WDS",
         "position": {
@@ -1923,6 +2128,7 @@
       {
         "stationName": "Springleaf",
         "chineseStationName": "春叶",
+        "tamilStationName": "ஸ்பிரிங்லீஃவ்",
         "stationNumber": "TE4",
         "stationCode": "SPL",
         "operational": false
@@ -1930,6 +2136,7 @@
       {
         "stationName": "Lentor",
         "chineseStationName": "伦多",
+        "tamilStationName": "லென்ட்டோர்",
         "stationNumber": "TE5",
         "stationCode": "LTR",
         "operational": false
@@ -1937,6 +2144,7 @@
       {
         "stationName": "Mayflower",
         "chineseStationName": "美华",
+        "tamilStationName": "மேஃபிளவர்",
         "stationNumber": "TE6",
         "stationCode": "MFL",
         "operational": false
@@ -1944,6 +2152,7 @@
       {
         "stationName": "Bright Hill",
         "chineseStationName": "光明山",
+        "tamilStationName": "பிரைட் ஹில்",
         "stationNumber": "TE7",
         "stationCode": "BRH",
         "operational": false
@@ -1951,6 +2160,7 @@
       {
         "stationName": "Upper Thomson",
         "chineseStationName": "汤申上段",
+        "tamilStationName": "அப்பர் தாம்சன்",
         "stationNumber": "TE8",
         "stationCode": "UTS",
         "operational": false
@@ -1958,6 +2168,7 @@
       {
         "stationName": "Caldecott",
         "chineseStationName": "加利谷",
+        "tamilStationName": "கால்டிகாட்",
         "stationNumber": "TE9",
         "stationCode": "CDT",
         "operational": false
@@ -1965,6 +2176,7 @@
       {
         "stationName": "Mount Pleasant",
         "chineseStationName": "快乐山",
+        "tamilStationName": "மவுண்ட் பிளசண்ட்",
         "stationNumber": "TE10",
         "stationCode": "MPL",
         "operational": false
@@ -1972,6 +2184,7 @@
       {
         "stationName": "Stevens",
         "chineseStationName": "史蒂芬",
+        "tamilStationName": "ஸ்டீவன்ஸ்",
         "stationNumber": "TE11",
         "stationCode": "STV",
         "operational": false
@@ -1979,6 +2192,7 @@
       {
         "stationName": "Napier",
         "chineseStationName": "纳比雅",
+        "tamilStationName": "நேப்பியர்",
         "stationNumber": "TE12",
         "stationCode": "NPR",
         "operational": false
@@ -1986,6 +2200,7 @@
       {
         "stationName": "Orchard Boulevard",
         "chineseStationName": "乌节林荫道",
+        "tamilStationName": "ஆர்ச்சர்ட் பொலிவார்ட்",
         "stationNumber": "TE13",
         "stationCode": "OBV",
         "operational": false
@@ -1993,6 +2208,7 @@
       {
         "stationName": "Orchard",
         "chineseStationName": "乌节",
+        "tamilStationName": "ஆர்ச்சர்ட்",
         "stationNumber": "TE14",
         "stationCode": "ORC",
         "operational": false
@@ -2000,6 +2216,7 @@
       {
         "stationName": "Great World",
         "chineseStationName": "大世界",
+        "tamilStationName": "கிரேட் வோர்ல்ட்",
         "stationNumber": "TE15",
         "stationCode": "GRW",
         "operational": false
@@ -2007,6 +2224,7 @@
       {
         "stationName": "Havelock",
         "chineseStationName": "合乐",
+        "tamilStationName": "ஹவ்லாக்",
         "stationNumber": "TE16",
         "stationCode": "HVL",
         "operational": false
@@ -2014,6 +2232,7 @@
       {
         "stationName": "Outram Park",
         "chineseStationName": "欧南园",
+        "tamilStationName": "ஊட்ரம் பார்க்",
         "stationNumber": "TE17",
         "stationCode": "OTP",
         "operational": false
@@ -2021,6 +2240,7 @@
       {
         "stationName": "Maxwell",
         "chineseStationName": "麦士威",
+        "tamilStationName": "மெச்ஸ்வெல்",
         "stationNumber": "TE18",
         "stationCode": "MAX",
         "operational": false
@@ -2028,6 +2248,7 @@
       {
         "stationName": "Shenton Way",
         "chineseStationName": "珊顿道",
+        "tamilStationName": "ஷென்ட்டன் வே",
         "stationNumber": "TE19",
         "stationCode": "SHW",
         "operational": false
@@ -2035,6 +2256,7 @@
       {
         "stationName": "Marina Bay",
         "chineseStationName": "滨海湾",
+        "tamilStationName": "மரீனா பே",
         "stationNumber": "TE20",
         "stationCode": "MRB",
         "operational": false
@@ -2042,68 +2264,88 @@
       {
         "stationName": "Marina South",
         "chineseStationName": "滨海南",
+        "tamilStationName": "மரீனா சவுத்",
         "stationNumber": "TE21",
         "stationCode": "MRS",
         "operational": false
       },
       {
         "stationName": "Gardens By The Bay",
+        "malayStationName": "Taman di Pesisiran",
         "chineseStationName": "滨海湾花园",
+        "tamilStationName": "கரையோரப் பூந்தோட்டங்கள்",
         "stationNumber": "TE22",
         "stationCode": "GRB",
         "operational": false
       },
       {
+        "stationName": "Founder's Memorial",
+        "malayStationName": "Peringatan Pengasas",
+        "chineseStationName": "建国先贤纪念园",
+        "tamilStationName": "தேச நிறுவனர்கள் நினைவிட நிலையம்",
+        "stationNumber": "TE22A",
+        "operational": false
+      },
+      {
         "stationName": "Tanjong Rhu",
         "chineseStationName": "丹戎禺",
+        "tamilStationName": "தஞ்சோங் ரூ",
         "stationNumber": "TE23",
         "operational": false
       },
       {
         "stationName": "Katong Park",
         "chineseStationName": "加东公园",
+        "tamilStationName": "காத்தோங் பார்க்",
         "stationNumber": "TE24",
         "operational": false
       },
       {
         "stationName": "Tanjong Katong",
         "chineseStationName": "丹戎加东",
+        "tamilStationName": "தஞ்சோங் காத்தோங்",
         "stationNumber": "TE25",
         "operational": false
       },
       {
         "stationName": "Marine Parade",
         "chineseStationName": "马林百列",
+        "tamilStationName": "மரீன் பரேட்",
         "stationNumber": "TE26",
         "operational": false
       },
       {
         "stationName": "Marine Terrace",
         "chineseStationName": "马林台",
+        "tamilStationName": "மரீன் டெரஸ்",
         "stationNumber": "TE27",
         "operational": false
       },
       {
         "stationName": "Siglap",
         "chineseStationName": "实乞纳",
+        "tamilStationName": "சிக்லாப்",
         "stationNumber": "TE28",
         "operational": false
       },
       {
         "stationName": "Bayshore",
         "chineseStationName": "碧湾",
+        "tamilStationName": "பேஷோர்",
         "stationNumber": "TE29",
         "operational": false
       },
       {
         "stationName": "Bedok South",
         "chineseStationName": "勿洛南",
+        "tamilStationName": "பிடோக் சவுத்",
         "stationNumber": "TE30",
         "operational": false
       },
       {
         "stationName": "Sungei Bedok",
         "chineseStationName": "双溪勿洛",
+        "tamilStationName": "சுங்கை பிடோக்",
         "stationNumber": "TE31",
         "operational": false
       }
@@ -2113,38 +2355,37 @@
     "name": "Jurong Region Line (East)",
     "chineseName": "裕廊区域线（东）",
     "stations": [{
-        "stationName": "Tengah",
-        "chineseStationName": "登加",
-        "stationNumber": "JS3",
-        "operational": false
-      },
-      {
         "stationName": "Tengah Plantation",
         "chineseStationName": "登加种植",
+        "tamilStationName": "",
         "stationNumber": "JE1",
         "operational": false
       },
       {
         "stationName": "Tengah Park",
         "chineseStationName": "登加园",
+        "tamilStationName": "",
         "stationNumber": "JE2",
         "operational": false
       },
       {
         "stationName": "Bukit Batok West",
         "chineseStationName": "武吉巴督西",
+        "tamilStationName": "புக்கிட் பாத்தோக் வெஸ்ட்",
         "stationNumber": "JE3",
         "operational": false
       },
       {
         "stationName": "Toh Guan",
         "chineseStationName": "卓源",
+        "tamilStationName": "",
         "stationNumber": "JE4",
         "operational": false
       },
       {
         "stationName": "Jurong East",
         "chineseStationName": "裕廊东",
+        "tamilStationName": "ஜூரோங் கிழக்கு",
         "stationNumber": "JE5",
         "stationCode": "JUR",
         "operational": false
@@ -2152,13 +2393,106 @@
       {
         "stationName": "Jurong Town Hall",
         "chineseStationName": "裕廊镇大会堂",
+        "tamilStationName": "",
         "stationNumber": "JE6",
         "operational": false
       },
       {
         "stationName": "Pandan Reservoir",
         "chineseStationName": "班丹蓄水池",
+        "tamilStationName": "",
         "stationNumber": "JE7",
+        "operational": false
+      }
+    ]
+  },
+  "Jurong Region Line (South)": {
+    "name": "Jurong Region Line (South)",
+    "chineseName": "裕廊区域线（南）",
+    "stations": [{
+        "stationName": "Choa Chu Kang",
+        "chineseStationName": "蔡厝港",
+        "tamilStationName": "சுவா சூ காங்",
+        "stationNumber": "JS1",
+        "stationCode": "CCK",
+        "operational": false
+      },
+      {
+        "stationName": "Choa Chu Kang West",
+        "chineseStationName": "蔡厝港西",
+        "tamilStationName": "சுவா சூ காங் வெஸ்ட்",
+        "stationNumber": "JS2",
+        "operational": false
+      },
+      {
+        "stationName": "Tengah",
+        "chineseStationName": "登加",
+        "tamilStationName": "",
+        "stationNumber": "JS3",
+        "operational": false
+      },
+      {
+        "stationName": "Hong Kah",
+        "chineseStationName": "丰嘉",
+        "tamilStationName": "",
+        "stationNumber": "JS4",
+        "operational": false
+      },
+      {
+        "stationName": "Corporation",
+        "chineseStationName": "企业",
+        "tamilStationName": "",
+        "stationNumber": "JS5",
+        "operational": false
+      },
+      {
+        "stationName": "Jurong West",
+        "chineseStationName": "裕廊西",
+        "tamilStationName": "ஜூரோங் வெஸ்ட்",
+        "stationNumber": "JS6",
+        "operational": false
+      },
+      {
+        "stationName": "Bahar Junction",
+        "chineseStationName": "巴哈路口",
+        "tamilStationName": "",
+        "stationNumber": "JS7",
+        "operational": false
+      },
+      {
+        "stationName": "Boon Lay",
+        "chineseStationName": "文礼",
+        "tamilStationName": "பூன் லே",
+        "stationNumber": "JS8",
+        "stationCode": "BNL",
+        "operational": false
+      },
+      {
+        "stationName": "Enterprise",
+        "chineseStationName": "事业",
+        "tamilStationName": "",
+        "stationNumber": "JS9",
+        "operational": false
+      },
+      {
+        "stationName": "Tukang",
+        "chineseStationName": "都康",
+        "tamilStationName": "",
+        "stationNumber": "JS10",
+        "operational": false
+      },
+      {
+        "stationName": "Jurong Hill",
+        "chineseStationName": "裕廊山",
+        "tamilStationName": "",
+        "stationNumber": "JS11",
+        "operational": false
+      },
+      {
+        "stationName": "Jurong Pier",
+        "chineseStationName": "裕廊渡头",
+        "tamilStationName": "",
+        "stationNumber": "JS12",
         "operational": false
       }
     ]
@@ -2167,106 +2501,37 @@
     "name": "Jurong Region Line (West)",
     "chineseName": "裕廊区域线（西）",
     "stations": [{
-        "stationName": "Choa Chu Kang",
-        "chineseStationName": "蔡厝港",
-        "stationNumber": "JS1",
-        "stationCode": "CCK",
-        "operational": false
-      },
-      {
-        "stationName": "Choa Chu Kang West",
-        "chineseStationName": "蔡厝港西",
-        "stationNumber": "JS2",
-        "operational": false
-      },
-      {
-        "stationName": "Tengah",
-        "chineseStationName": "登加",
-        "stationNumber": "JS3",
-        "operational": false
-      },
-      {
-        "stationName": "Hong Kah",
-        "chineseStationName": "丰嘉",
-        "stationNumber": "JS4",
-        "operational": false
-      },
-      {
-        "stationName": "Corporation",
-        "chineseStationName": "企业",
-        "stationNumber": "JS5",
-        "operational": false
-      },
-      {
-        "stationName": "Jurong West",
-        "chineseStationName": "裕廊西",
-        "stationNumber": "JS6",
-        "operational": false
-      },
-      {
-        "stationName": "Bahar Junction",
-        "chineseStationName": "巴哈路口",
-        "stationNumber": "JS7",
-        "operational": false
-      },
-      {
-        "stationName": "Boon Lay",
-        "chineseStationName": "文礼",
-        "stationNumber": "JS8",
-        "stationCode": "BNL",
-        "operational": false
-      },
-      {
-        "stationName": "Enterprise",
-        "chineseStationName": "事业",
-        "stationNumber": "JS9",
-        "operational": false
-      },
-      {
-        "stationName": "Tukang",
-        "chineseStationName": "都康",
-        "stationNumber": "JS10",
-        "operational": false
-      },
-      {
-        "stationName": "Jurong Hill",
-        "chineseStationName": "裕廊山",
-        "stationNumber": "JS11",
-        "operational": false
-      },
-      {
-        "stationName": "Jurong Pier",
-        "chineseStationName": "裕廊渡头",
-        "stationNumber": "JS12",
-        "operational": false
-      },
-      {
         "stationName": "Gek Poh",
         "chineseStationName": "玉宝",
+        "tamilStationName": "",
         "stationNumber": "JW1",
         "operational": false
       },
       {
         "stationName": "Tawas",
         "chineseStationName": "大华士",
+        "tamilStationName": "",
         "stationNumber": "JW2",
         "operational": false
       },
       {
         "stationName": "Nanyang Gateway",
         "chineseStationName": "南洋门",
+        "tamilStationName": "",
         "stationNumber": "JW3",
         "operational": false
       },
       {
         "stationName": "Nanyang Cresent",
         "chineseStationName": "南洋弯",
+        "tamilStationName": "",
         "stationNumber": "JW4",
         "operational": false
       },
       {
         "stationName": "Pang Kang Hill",
         "chineseStationName": "秉光山",
+        "tamilStationName": "",
         "stationNumber": "JW5",
         "operational": false
       }
