@@ -90,10 +90,12 @@ async function getDepartures(stationData) {
     if (minToNextTrain === 'Arr') minToNextTrain = 0.5
 
     let platformNumber = platform.platform_ID.slice(-1)
-    let isCCLPlatform = platform.platform_ID.length === 6
+    let isCCLPlatform = platform.platform_ID.length === 6 && platform.platform_ID[0] === 'C'
+    let isTELPlatform = platform.platform_ID.length === 6 && platform.platform_ID[0] === 'T'
 
     let routeName
     if (isCCLPlatform) routeName = 'Circle Line'
+    else if (isTELPlatform) routeName = 'Thomson-East Coast Line'
     else
       Object.keys(lineDestinations).forEach(line => {
         if (lineDestinations[line].includes(platform.next_train_destination) ||

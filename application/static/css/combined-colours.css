@@ -93,3 +93,11 @@ div.departure .circle-line {
 div.departure:nth-child(even) .circle-line {
     background-color: #c47625;
 }
+
+div.departure .thomson-east-coast-line {
+    background-color: #9D5B25;
+}
+
+div.departure:nth-child(even) .thomson-east-coast-line {
+    background-color: #844b1d;
+}
