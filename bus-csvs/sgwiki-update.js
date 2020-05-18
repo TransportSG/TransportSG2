@@ -89,6 +89,7 @@ let urls = [
   'https://sgwiki.com/wiki/MAN_ND323F_(Batch_2)',
   'https://sgwiki.com/wiki/MAN_ND323F_(Batch_3)',
   'https://sgwiki.com/wiki/MAN_ND323F_(Batch_4)',
+  'https://sgwiki.com/wiki/MAN_ND323F_(Batch_5)',
   'https://sgwiki.com/wiki/Scania_K230UB_(Euro_IV_Batch_1)',
   'https://sgwiki.com/wiki/Scania_K230UB_(Euro_IV_Batch_2)',
   'https://sgwiki.com/wiki/Scania_K230UB_(Euro_V_Batch_1)',
