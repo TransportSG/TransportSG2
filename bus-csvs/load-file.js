@@ -55,6 +55,8 @@ database.connect({
     } else if (service.includes('(A)')) {
       busData.service = service.replace('(A)', '').trim()
       status = 'Accident'
+    } else if (busData.operator === 'LTA Storage') {
+      status = 'In Storage'
     } else if (service === 'Not Registered') {
       busData.depot = busData.service = ''
       status = 'Unregistered'

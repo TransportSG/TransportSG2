@@ -24,7 +24,18 @@ async function findBusesByRegoNumber(number, buses) {
 }
 
 async function applyDeregDateInfo(bus, buses) {
-  if (!bus.lifespanExpiry) return bus
+  if (!bus.lifespanExpiry) {
+    if (!bus.status) {
+      bus.status = 'Retired'
+      await buses.updateDocument({ _id: bus._id }, {
+        $set: {
+          status: 'Retired'
+        }
+      })
+    }
+    return bus
+  }
+
   let deregDate = moment.tz(bus.lifespanExpiry, 'DDMMMYYYY', 'Asia/Singapore')
   deregDate.add(1, 'day')
   let now = utils.now()
@@ -55,6 +66,15 @@ async function applyDeregDateInfo(bus, buses) {
         status: 'Retired'
       }
     })
+  } else {
+    if (!bus.status) {
+      bus.status = 'Active'
+      await buses.updateDocument({ _id: bus._id }, {
+        $set: {
+          status: 'Active'
+        }
+      })
+    }
   }
   return bus
 }
