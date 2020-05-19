@@ -11,8 +11,10 @@ for bus in buses
     div.busData
       div.deployment
         span Deployment
-        span #{bus.depot ? bus.depot + ' ' + bus.service : 'Unknown'}
-      // Status
+        span #{bus.depot !== 'Unknown' ? bus.depot + ' ' + bus.service : 'Unknown'}
+      div.status
+        span Status
+        span #{bus.status}
       div.make
         span Make
         span #{bus.make}

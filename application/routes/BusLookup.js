@@ -1,6 +1,7 @@
 const express = require('express')
 const utils = require('../../utils')
 const router = new express.Router()
+const async = require('async')
 const moment = require('moment')
 
 let operatorCSS = {
@@ -14,9 +15,7 @@ let operatorCSS = {
   'Sentosa': 'sentosa',
 }
 
-async function findBusesByRegoNumber(number, db) {
-  let buses = db.getCollection('buses')
-
+async function findBusesByRegoNumber(number, buses) {
   let busMatches = await buses.findDocuments({
     id: number
   }).toArray()
@@ -24,7 +23,7 @@ async function findBusesByRegoNumber(number, db) {
   return busMatches
 }
 
-function applyDeregDateInfo(bus) {
+async function applyDeregDateInfo(bus, buses) {
   if (!bus.lifespanExpiry) return bus
   let deregDate = moment.tz(bus.lifespanExpiry, 'DDMMMYYYY', 'Asia/Singapore')
   deregDate.add(1, 'day')
@@ -47,7 +46,16 @@ function applyDeregDateInfo(bus) {
 
   if (msDiff === 0) bus.timeToDereg = 'Today'
 
-  if (difference.years() < 0) bus.timeToDereg += ' ago'
+  if (difference.years() < 0) {
+    bus.timeToDereg += ' ago'
+
+    bus.status = 'Retired'
+    await buses.updateDocument({ _id: bus._id }, {
+      $set: {
+        status: 'Retired'
+      }
+    })
+  }
   return bus
 }
 
@@ -56,8 +64,9 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-  let busMatches = await findBusesByRegoNumber(req.body.query, res.db)
-  busMatches = busMatches.map(applyDeregDateInfo)
+  let buses = res.db.getCollection('buses')
+  let busMatches = await findBusesByRegoNumber(req.body.query, buses)
+  busMatches = await async.map(busMatches, async bus => applyDeregDateInfo(bus, buses))
 
   res.render('lookup/results', {
     buses: busMatches,

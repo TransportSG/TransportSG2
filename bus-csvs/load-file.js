@@ -44,6 +44,24 @@ database.connect({
       rego: busData.rego
     }
 
+    let status
+    let {service} = busData
+    if (service.includes('(R)')) {
+      busData.service = service.replace('(R)', '').trim()
+      status = 'Retired'
+    } else if (service.includes('(L)')) {
+      busData.service = service.replace('(L)', '').trim()
+      status = 'Layup'
+    } else if (service.includes('(A)')) {
+      busData.service = service.replace('(A)', '').trim()
+      status = 'Accident'
+    } else if (service === 'Not Registered') {
+      busData.depot = busData.service = ''
+      status = 'Unregistered'
+    }
+
+    busData.status = status
+
     let databaseBus = await buses.findDocument(search)
 
     if (databaseBus) {
