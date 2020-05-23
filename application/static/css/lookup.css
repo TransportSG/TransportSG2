@@ -25,53 +25,53 @@ input.showBusCheckbox:checked + .busData {
 }
 
 div.busData > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: calc(2vw + 2vh);
-    background-color: #171717;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: calc(2vw + 2vh);
+  background-color: #171717;
 }
 
 div.busData > div:nth-child(even) {
-    background-color: #1e1e1e;
+  background-color: #1e1e1e;
 }
 
 div.busData > div > span:nth-child(1) {
-    margin-left: calc(1vw + 1vh);
-    max-width: 50vw;
-    line-height: calc(3.7vw + 3.7vh);
+  margin-left: calc(1vw + 1vh);
+  max-width: 50vw;
+  line-height: calc(3.7vw + 3.7vh);
 }
 
 div.busData > div > span:nth-child(2) {
-    margin-right: calc(1vw + 1vh);
-    font-size: calc(1.5vw + 1.5vh);
-    max-width: 50vw;
-    text-align: right;
-    line-height: calc(2.5vw + 2.5vh);
+  margin-right: calc(1vw + 1vh);
+  font-size: calc(1.5vw + 1.5vh);
+  max-width: 50vw;
+  text-align: right;
+  line-height: calc(2.5vw + 2.5vh);
 }
 
 div.deregInfo {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 
-    margin-right: calc(1vw + 1vh);
-    font-size: calc(1.5vw + 1.5vh);
-    max-width: 50vw;
-    text-align: right;
+  margin-right: calc(1vw + 1vh);
+  font-size: calc(1.5vw + 1.5vh);
+  max-width: 50vw;
+  text-align: right;
 
-    margin-top: calc(-0.4vw - 0.4vh);
+  margin-top: calc(-0.4vw - 0.4vh);
 }
 
 span.deregDate {
-    display: inline-block;
-    font-size: calc((100vw + 100vh) * 0.018) !important;
-    margin-right: 0 !important;
+  display: inline-block;
+  font-size: calc((100vw + 100vh) * 0.018) !important;
+  margin-right: 0 !important;
 }
 
 span.timeToDereg {
-    display: inline-block;
-    font-size: calc((100vw + 100vh) * 0.01) !important;
-    margin-right: 0 !important;
-    margin-top: calc(-0.4vw - 0.4vh);
+  display: inline-block;
+  font-size: calc((100vw + 100vh) * 0.01) !important;
+  margin-right: 0 !important;
+  margin-top: calc(-0.4vw - 0.4vh);
 }

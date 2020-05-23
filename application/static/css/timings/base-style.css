@@ -43,6 +43,7 @@ a.leftContainer span.topText {
 a.leftContainer span.serviceNumber {
   font-size: calc(3vw + 3vh);
   line-height: calc(3vw + 3vh);
+  letter-spacing: calc(-0.15vw - 0.15vh);
 }
 
 a.leftContainer span.serviceVariant {
