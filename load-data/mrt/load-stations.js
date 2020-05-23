@@ -27,10 +27,7 @@ Object.keys(lines).forEach(lineName => {
         operational: station.hasOwnProperty('operational') ? station.operational : true
       }
       if (position)
-        mergedStations[stationName].position = {
-          type: 'Point',
-          coordinates: [position.longitude, position.latitude]
-        }
+        mergedStations[stationName].position = position
     }
 
     mergedStations[stationName].stopCode.push(stationNumber)

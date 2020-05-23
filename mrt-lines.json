@@ -2,15 +2,19 @@
   "North South Line": {
     "name": "North South Line",
     "chineseName": "南北线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Jurong East",
         "chineseStationName": "裕廊东",
         "tamilStationName": "ஜூரோங் கிழக்கு",
         "stationNumber": "NS1",
         "stationCode": "JUR",
         "position": {
-          "latitude": 1.016276384228009,
-          "longitude": 103.58268387646248
+          "type": "Point",
+          "coordinates": [
+            103.74228654400498,
+            1.333152619894062
+          ]
         }
       },
       {
@@ -20,8 +24,11 @@
         "stationNumber": "NS2",
         "stationCode": "BBT",
         "position": {
-          "latitude": 1.016276527858616,
-          "longitude": 103.58268394186034
+          "type": "Point",
+          "coordinates": [
+            103.74956676385261,
+            1.34903410857667
+          ]
         }
       },
       {
@@ -31,8 +38,11 @@
         "stationNumber": "NS3",
         "stationCode": "BGB",
         "position": {
-          "latitude": 1.016276615833913,
-          "longitude": 103.58268396275805
+          "type": "Point",
+          "coordinates": [
+            103.75189350208232,
+            1.358761857261443
+          ]
         }
       },
       {
@@ -48,8 +58,11 @@
         "stationNumber": "NS4",
         "stationCode": "CCK",
         "position": {
-          "latitude": 1.01627685638633,
-          "longitude": 103.5826838948838
+          "type": "Point",
+          "coordinates": [
+            103.74455373124138,
+            1.384836359965823
+          ]
         }
       },
       {
@@ -59,12 +72,15 @@
         "stationNumber": "NS5",
         "stationCode": "YWT",
         "position": {
-          "latitude": 1.016276966478907,
-          "longitude": 103.58268392240524
+          "type": "Point",
+          "coordinates": [
+            103.74740511413823,
+            1.397535017793409
+          ]
         }
       },
       {
-        "stationName": "Sungei Kadui",
+        "stationName": "Sungei Kadut",
         "chineseStationName": "双溪加株",
         "tamilStationName": "சுங்கை கியாடுத்",
         "stationNumber": "NS6",
@@ -77,8 +93,11 @@
         "stationNumber": "NS7",
         "stationCode": "KRJ",
         "position": {
-          "latitude": 1.016277216478036,
-          "longitude": 103.58268405499942
+          "type": "Point",
+          "coordinates": [
+            103.7621654109005,
+            1.425177698770445
+          ]
         }
       },
       {
@@ -88,8 +107,11 @@
         "stationNumber": "NS8",
         "stationCode": "MSL",
         "position": {
-          "latitude": 1.016277282836615,
-          "longitude": 103.58268416196385
+          "type": "Point",
+          "coordinates": [
+            103.77407146126235,
+            1.432514420635639
+          ]
         }
       },
       {
@@ -99,8 +121,11 @@
         "stationNumber": "NS9",
         "stationCode": "WDL",
         "position": {
-          "latitude": 1.01627732228173,
-          "longitude": 103.5826842734911
+          "type": "Point",
+          "coordinates": [
+            103.78793080705852,
+            1.436066981292872
+          ]
         }
       },
       {
@@ -110,8 +135,11 @@
         "stationNumber": "NS10",
         "stationCode": "ADM",
         "position": {
-          "latitude": 1.016277355842435,
-          "longitude": 103.58268440378907
+          "type": "Point",
+          "coordinates": [
+            103.80098800081261,
+            1.440585001085408
+          ]
         }
       },
       {
@@ -121,8 +149,11 @@
         "stationNumber": "NS11",
         "stationCode": "SBW",
         "position": {
-          "latitude": 1.016277432417122,
-          "longitude": 103.58268457501046
+          "type": "Point",
+          "coordinates": [
+            103.82004614054858,
+            1.449050821227291
+          ]
         }
       },
       {
@@ -131,7 +162,14 @@
         "tamilStationName": "கான்பரா",
         "stationNumber": "NS12",
         "operational": false,
-        "stationCode": "CAN"
+        "stationCode": "CAN",
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.82971180000004,
+            1.443136700000026
+          ]
+        }
       },
       {
         "stationName": "Yishun",
@@ -140,8 +178,11 @@
         "stationNumber": "NS13",
         "stationCode": "YIS",
         "position": {
-          "latitude": 1.016277255103468,
-          "longitude": 103.58268470942197
+          "type": "Point",
+          "coordinates": [
+            103.83500504619488,
+            1.429443080810797
+          ]
         }
       },
       {
@@ -151,8 +192,11 @@
         "stationNumber": "NS14",
         "stationCode": "KTB",
         "position": {
-          "latitude": 1.0162771460391,
-          "longitude": 103.58268469123558
+          "type": "Point",
+          "coordinates": [
+            103.83297990773862,
+            1.417383370153544
+          ]
         }
       },
       {
@@ -162,8 +206,11 @@
         "stationNumber": "NS15",
         "stationCode": "YCK",
         "position": {
-          "latitude": 1.016276823848975,
-          "longitude": 103.582684798781
+          "type": "Point",
+          "coordinates": [
+            103.84494728975451,
+            1.381756046113001
+          ]
         }
       },
       {
@@ -173,8 +220,11 @@
         "stationNumber": "NS16",
         "stationCode": "AMK",
         "position": {
-          "latitude": 1.016276716931143,
-          "longitude": 103.58268484021522
+          "type": "Point",
+          "coordinates": [
+            103.84955813143833,
+            1.369933175238476
+          ]
         }
       },
       {
@@ -184,8 +234,11 @@
         "stationNumber": "NS17",
         "stationCode": "CBSH",
         "position": {
-          "latitude": 1.016276544250355,
-          "longitude": 103.58268482752298
+          "type": "Point",
+          "coordinates": [
+            103.84814396447484,
+            1.35083898769384
+          ]
         }
       },
       {
@@ -195,8 +248,11 @@
         "stationNumber": "NS18",
         "stationCode": "BDL",
         "position": {
-          "latitude": 1.016276450491884,
-          "longitude": 103.58268481543605
+          "type": "Point",
+          "coordinates": [
+            103.84679784541261,
+            1.340471684451096
+          ]
         }
       },
       {
@@ -206,8 +262,11 @@
         "stationNumber": "NS19",
         "stationCode": "TAP",
         "position": {
-          "latitude": 1.016276379566324,
-          "longitude": 103.58268482176585
+          "type": "Point",
+          "coordinates": [
+            103.8475017643405,
+            1.332628987123198
+          ]
         }
       },
       {
@@ -217,8 +276,11 @@
         "stationNumber": "NS20",
         "stationCode": "NOV",
         "position": {
-          "latitude": 1.016276269338828,
-          "longitude": 103.58268478874614
+          "type": "Point",
+          "coordinates": [
+            103.84382561881563,
+            1.320440790847896
+          ]
         }
       },
       {
@@ -228,8 +290,11 @@
         "stationNumber": "NS21",
         "stationCode": "NEW",
         "position": {
-          "latitude": 1.016276195894616,
-          "longitude": 103.58268473627962
+          "type": "Point",
+          "coordinates": [
+            103.83798529963302,
+            1.312320099555636
+          ]
         }
       },
       {
@@ -239,8 +304,11 @@
         "stationNumber": "NS22",
         "stationCode": "ORC",
         "position": {
-          "latitude": 1.016276120475391,
-          "longitude": 103.58268468468
+          "type": "Point",
+          "coordinates": [
+            103.83224145206776,
+            1.303981012436874
+          ]
         }
       },
       {
@@ -250,8 +318,11 @@
         "stationNumber": "NS23",
         "stationCode": "SOM",
         "position": {
-          "latitude": 1.016276086829414,
-          "longitude": 103.58268474607986
+          "type": "Point",
+          "coordinates": [
+            103.83907516234413,
+            1.300260055065435
+          ]
         }
       },
       {
@@ -261,8 +332,11 @@
         "stationNumber": "NS24",
         "stationCode": "CDBG",
         "position": {
-          "latitude": 1.01627607273769,
-          "longitude": 103.58268480933155
+          "type": "Point",
+          "coordinates": [
+            103.84623911230817,
+            1.298842816475938
+          ]
         }
       },
       {
@@ -272,8 +346,11 @@
         "stationNumber": "NS25",
         "stationCode": "CTH",
         "position": {
-          "latitude": 1.01627602060542,
-          "longitude": 103.58268486747171
+          "type": "Point",
+          "coordinates": [
+            103.85258589234445,
+            1.29293624284609
+          ]
         }
       },
       {
@@ -283,8 +360,11 @@
         "stationNumber": "NS26",
         "stationCode": "RFP",
         "position": {
-          "latitude": 1.016275940924981,
-          "longitude": 103.5826848573777
+          "type": "Point",
+          "coordinates": [
+            103.8514617120914,
+            1.284125610573202
+          ]
         }
       },
       {
@@ -294,8 +374,11 @@
         "stationNumber": "NS27",
         "stationCode": "CMRB",
         "position": {
-          "latitude": 1.016275871307396,
-          "longitude": 103.58268488555895
+          "type": "Point",
+          "coordinates": [
+            103.85509398222223,
+            1.276150636616983
+          ]
         }
       },
       {
@@ -305,8 +388,11 @@
         "stationNumber": "NS28",
         "stationCode": "MSP",
         "position": {
-          "latitude": 1.016275825275558,
-          "longitude": 103.58268495979212
+          "type": "Point",
+          "coordinates": [
+            103.86285976963767,
+            1.271336711329166
+          ]
         }
       }
     ]
@@ -314,15 +400,19 @@
   "East West Line": {
     "name": "East West Line",
     "chineseName": "东西线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Pasir Ris",
         "chineseStationName": "巴西立",
         "tamilStationName": "பாசிர் ரிஸ்",
         "stationNumber": "EW1",
         "stationCode": "PSR",
         "position": {
-          "latitude": 1.016276744589436,
-          "longitude": 103.58268573605449
+          "type": "Point",
+          "coordinates": [
+            103.94926811824571,
+            1.372983773579487
+          ]
         }
       },
       {
@@ -332,8 +422,11 @@
         "stationNumber": "EW2",
         "stationCode": "TAM",
         "position": {
-          "latitude": 1.016276566587049,
-          "longitude": 103.58268569905732
+          "type": "Point",
+          "coordinates": [
+            103.9430604974614,
+            1.355077428995993
+          ]
         }
       },
       {
@@ -343,8 +436,11 @@
         "stationNumber": "EW3",
         "stationCode": "SIM",
         "position": {
-          "latitude": 1.016276475266584,
-          "longitude": 103.5826857729437
+          "type": "Point",
+          "coordinates": [
+            103.95337169417601,
+            1.343202894930724
+          ]
         }
       },
       {
@@ -354,8 +450,11 @@
         "stationNumber": "EW4",
         "stationCode": "TNM",
         "position": {
-          "latitude": 1.016276330421859,
-          "longitude": 103.58268570983687
+          "type": "Point",
+          "coordinates": [
+            103.94634646062302,
+            1.327187134538352
+          ]
         }
       },
       {
@@ -365,8 +464,11 @@
         "stationNumber": "EW5",
         "stationCode": "BDK",
         "position": {
-          "latitude": 1.016276301406122,
-          "longitude": 103.58268556283551
+          "type": "Point",
+          "coordinates": [
+            103.92998449462084,
+            1.323979968887743
+          ]
         }
       },
       {
@@ -376,8 +478,11 @@
         "stationNumber": "EW6",
         "stationCode": "KEM",
         "position": {
-          "latitude": 1.016276274790491,
-          "longitude": 103.58268540978615
+          "type": "Point",
+          "coordinates": [
+            103.9129493883637,
+            1.321038248851081
+          ]
         }
       },
       {
@@ -387,8 +492,11 @@
         "stationNumber": "EW7",
         "stationCode": "EUN",
         "position": {
-          "latitude": 1.016276263395132,
-          "longitude": 103.58268532266533
+          "type": "Point",
+          "coordinates": [
+            103.90325246673856,
+            1.319778951553634
+          ]
         }
       },
       {
@@ -398,8 +506,11 @@
         "stationNumber": "EW8",
         "stationCode": "CPYL",
         "position": {
-          "latitude": 1.016276248313516,
-          "longitude": 103.58268523109577
+          "type": "Point",
+          "coordinates": [
+            103.89217884546737,
+            1.317430267976784
+          ]
         }
       },
       {
@@ -409,8 +520,11 @@
         "stationNumber": "EW9",
         "stationCode": "ALJ",
         "position": {
-          "latitude": 1.016276233117965,
-          "longitude": 103.58268513986584
+          "type": "Point",
+          "coordinates": [
+            103.88290604466071,
+            1.316432611657835
+          ]
         }
       },
       {
@@ -420,8 +534,11 @@
         "stationNumber": "EW10",
         "stationCode": "KAL",
         "position": {
-          "latitude": 1.016276188401122,
-          "longitude": 103.58268503637265
+          "type": "Point",
+          "coordinates": [
+            103.87138654135956,
+            1.31148890964216
+          ]
         }
       },
       {
@@ -431,8 +548,11 @@
         "stationNumber": "EW11",
         "stationCode": "LVR",
         "position": {
-          "latitude": 1.016276151028047,
-          "longitude": 103.58268495949243
+          "type": "Point",
+          "coordinates": [
+            103.86282920810694,
+            1.30735702009556
+          ]
         }
       },
       {
@@ -442,8 +562,11 @@
         "stationNumber": "EW12",
         "stationCode": "BGS",
         "position": {
-          "latitude": 1.01627608869521,
-          "longitude": 103.5826848955027
+          "type": "Point",
+          "coordinates": [
+            103.85570641401686,
+            1.300465076315248
+          ]
         }
       },
       {
@@ -453,8 +576,11 @@
         "stationNumber": "EW13",
         "stationCode": "CTH",
         "position": {
-          "latitude": 1.01627602060542,
-          "longitude": 103.58268486747171
+          "type": "Point",
+          "coordinates": [
+            103.85258589234445,
+            1.29293624284609
+          ]
         }
       },
       {
@@ -464,8 +590,11 @@
         "stationNumber": "EW14",
         "stationCode": "RFP",
         "position": {
-          "latitude": 1.016275940924981,
-          "longitude": 103.5826848573777
+          "type": "Point",
+          "coordinates": [
+            103.8514617120914,
+            1.284125610573202
+          ]
         }
       },
       {
@@ -475,8 +604,11 @@
         "stationNumber": "EW15",
         "stationCode": "TPG",
         "position": {
-          "latitude": 1.016275872150387,
-          "longitude": 103.58268480709258
+          "type": "Point",
+          "coordinates": [
+            103.84586422934751,
+            1.276521246693037
+          ]
         }
       },
       {
@@ -486,8 +618,11 @@
         "stationNumber": "EW16",
         "stationCode": "OTP",
         "position": {
-          "latitude": 1.016275916312071,
-          "longitude": 103.58268474655424
+          "type": "Point",
+          "coordinates": [
+            103.83912649758389,
+            1.281404978130134
+          ]
         }
       },
       {
@@ -497,8 +632,11 @@
         "stationNumber": "EW17",
         "stationCode": "TIB",
         "position": {
-          "latitude": 1.016275959607983,
-          "longitude": 103.58268463777532
+          "type": "Point",
+          "coordinates": [
+            103.82701943092407,
+            1.286193392858977
+          ]
         }
       },
       {
@@ -508,8 +646,11 @@
         "stationNumber": "EW18",
         "stationCode": "RDH",
         "position": {
-          "latitude": 1.016275990071658,
-          "longitude": 103.58268454610656
+          "type": "Point",
+          "coordinates": [
+            103.81681667014932,
+            1.28956272640245
+          ]
         }
       },
       {
@@ -519,8 +660,11 @@
         "stationNumber": "EW19",
         "stationCode": "QUE",
         "position": {
-          "latitude": 1.016276037978735,
-          "longitude": 103.58268444788162
+          "type": "Point",
+          "coordinates": [
+            103.8058843338923,
+            1.294860932794984
+          ]
         }
       },
       {
@@ -530,8 +674,11 @@
         "stationNumber": "EW20",
         "stationCode": "COM",
         "position": {
-          "latitude": 1.016276106503873,
-          "longitude": 103.5826843797757
+          "type": "Point",
+          "coordinates": [
+            103.79830451562927,
+            1.302438735327167
+          ]
         }
       },
       {
@@ -541,8 +688,11 @@
         "stationNumber": "EW21",
         "stationCode": "CBNV",
         "position": {
-          "latitude": 1.016276149407532,
-          "longitude": 103.58268430688155
+          "type": "Point",
+          "coordinates": [
+            103.7906534100508,
+            1.306491669107775
+          ]
         }
       },
       {
@@ -552,8 +702,11 @@
         "stationNumber": "EW22",
         "stationCode": "DVR",
         "position": {
-          "latitude": 1.016276187579845,
-          "longitude": 103.58268420307479
+          "type": "Point",
+          "coordinates": [
+            103.77863784163823,
+            1.311405292925305
+          ]
         }
       },
       {
@@ -563,8 +716,11 @@
         "stationNumber": "EW23",
         "stationCode": "CLE",
         "position": {
-          "latitude": 1.016276219667952,
-          "longitude": 103.58268408322877
+          "type": "Point",
+          "coordinates": [
+            103.76529887432667,
+            1.314954492423591
+          ]
         }
       },
       {
@@ -574,8 +730,11 @@
         "stationNumber": "EW24",
         "stationCode": "JUR",
         "position": {
-          "latitude": 1.016276384228009,
-          "longitude": 103.58268387646248
+          "type": "Point",
+          "coordinates": [
+            103.74228654400498,
+            1.333152619894062
+          ]
         }
       },
       {
@@ -585,8 +744,11 @@
         "stationNumber": "EW25",
         "stationCode": "CNG",
         "position": {
-          "latitude": 1.016276467423954,
-          "longitude": 103.5826837893983
+          "type": "Point",
+          "coordinates": [
+            103.73259673807367,
+            1.342352820874741
+          ]
         }
       },
       {
@@ -596,8 +758,11 @@
         "stationNumber": "EW26",
         "stationCode": "LKS",
         "position": {
-          "latitude": 1.016276484656718,
-          "longitude": 103.58268368475063
+          "type": "Point",
+          "coordinates": [
+            103.72094926847905,
+            1.344259249394694
+          ]
         }
       },
       {
@@ -607,8 +772,11 @@
         "stationNumber": "EW27",
         "stationCode": "BNL",
         "position": {
-          "latitude": 1.016276433503072,
-          "longitude": 103.58268355102392
+          "type": "Point",
+          "coordinates": [
+            103.70606462259627,
+            1.338604054503271
+          ]
         }
       },
       {
@@ -618,8 +786,11 @@
         "stationNumber": "EW28",
         "stationCode": "PNR",
         "position": {
-          "latitude": 1.016276424298059,
-          "longitude": 103.58268347247241
+          "type": "Point",
+          "coordinates": [
+            103.69732151293637,
+            1.337586882204746
+          ]
         }
       },
       {
@@ -629,8 +800,11 @@
         "stationNumber": "EW29",
         "stationCode": "JKN",
         "position": {
-          "latitude": 1.016276335027269,
-          "longitude": 103.5826833022562
+          "type": "Point",
+          "coordinates": [
+            103.67837514285083,
+            1.327717173091677
+          ]
         }
       },
       {
@@ -640,8 +814,11 @@
         "stationNumber": "EW30",
         "stationCode": "GCL",
         "position": {
-          "latitude": 1.01627626074927,
-          "longitude": 103.58268314213902
+          "type": "Point",
+          "coordinates": [
+            103.66055295590827,
+            1.319505214938203
+          ]
         }
       },
       {
@@ -651,8 +828,11 @@
         "stationNumber": "EW31",
         "stationCode": "TCR",
         "position": {
-          "latitude": 1.016276274499559,
-          "longitude": 103.5826830390189
+          "type": "Point",
+          "coordinates": [
+            103.64907547830921,
+            1.321026553242262
+          ]
         }
       },
       {
@@ -662,8 +842,11 @@
         "stationNumber": "EW32",
         "stationCode": "TWR",
         "position": {
-          "latitude": 1.016276355546322,
-          "longitude": 103.5826829540068
+          "type": "Point",
+          "coordinates": [
+            103.63961405603067,
+            1.329989089049132
+          ]
         }
       },
       {
@@ -673,8 +856,11 @@
         "stationNumber": "EW33",
         "stationCode": "TLK",
         "position": {
-          "latitude": 1.016276450272968,
-          "longitude": 103.58268292942356
+          "type": "Point",
+          "coordinates": [
+            103.63687867834913,
+            1.340463765648204
+          ]
         }
       }
     ]
@@ -682,15 +868,19 @@
   "Changi Airport Branch Line": {
     "name": "Changi Airport Branch Line",
     "chineseName": "樟宜机场支线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Expo",
         "chineseStationName": "博览",
         "tamilStationName": "எக்ஸ்போ",
         "stationNumber": "CG1",
         "stationCode": "XPO",
         "position": {
-          "latitude": 1.016276397017173,
-          "longitude": 103.5826858464114
+          "type": "Point",
+          "coordinates": [
+            103.96237570744738,
+            1.335382137333549
+          ]
         }
       },
       {
@@ -700,8 +890,11 @@
         "stationNumber": "CG2",
         "stationCode": "CGA",
         "position": {
-          "latitude": 1.016276602910966,
-          "longitude": 103.5826860873271
+          "type": "Point",
+          "coordinates": [
+            103.9883646585056,
+            1.357314545330975
+          ]
         }
       }
     ]
@@ -709,14 +902,18 @@
   "North East Line": {
     "name": "North East Line",
     "chineseName": "东北线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "HarbourFront",
         "chineseStationName": "港湾",
         "tamilStationName": "துறைமுகம்",
         "stationNumber": "NE1",
         "position": {
-          "latitude": 1.016275772214301,
-          "longitude": 103.5826845876891
+          "type": "Point",
+          "coordinates": [
+            103.82144306908833,
+            1.265472639862093
+          ]
         }
       },
       {
@@ -725,8 +922,11 @@
         "tamilStationName": "ஊட்ரம் பார்க்",
         "stationNumber": "NE3",
         "position": {
-          "latitude": 1.016275901476982,
-          "longitude": 103.5826847505826
+          "type": "Point",
+          "coordinates": [
+            103.83912649758389,
+            1.281404978130134
+          ]
         }
       },
       {
@@ -735,8 +935,11 @@
         "tamilStationName": "சைனாடவுன்",
         "stationNumber": "NE4",
         "position": {
-          "latitude": 1.016275943035248,
-          "longitude": 103.5826847851879
+          "type": "Point",
+          "coordinates": [
+            103.84445120071658,
+            1.28474896906149
+          ]
         }
       },
       {
@@ -745,8 +948,11 @@
         "tamilStationName": "கிளார்க் கீ",
         "stationNumber": "NE5",
         "position": {
-          "latitude": 1.016275979450926,
-          "longitude": 103.58268481329239
+          "type": "Point",
+          "coordinates": [
+            103.84655520929543,
+            1.288386024201138
+          ]
         }
       },
       {
@@ -755,8 +961,11 @@
         "tamilStationName": "டோபி காட்",
         "stationNumber": "NE6",
         "position": {
-          "latitude": 1.016276081818376,
-          "longitude": 103.58268480369786
+          "type": "Point",
+          "coordinates": [
+            103.84623911230817,
+            1.298842816475938
+          ]
         }
       },
       {
@@ -765,8 +974,11 @@
         "tamilStationName": "லிட்டில் இந்தியா",
         "stationNumber": "NE7",
         "position": {
-          "latitude": 1.016276145981571,
-          "longitude": 103.58268484105737
+          "type": "Point",
+          "coordinates": [
+            103.84964696657269,
+            1.306800025312331
+          ]
         }
       },
       {
@@ -775,8 +987,11 @@
         "tamilStationName": "ஃபேரர் பார்க்",
         "stationNumber": "NE8",
         "position": {
-          "latitude": 1.016276196265375,
-          "longitude": 103.58268488175472
+          "type": "Point",
+          "coordinates": [
+            103.8541771415317,
+            1.312359840212133
+          ]
         }
       },
       {
@@ -785,8 +1000,11 @@
         "tamilStationName": "பூன் கெங்",
         "stationNumber": "NE9",
         "position": {
-          "latitude": 1.016276259900053,
-          "longitude": 103.58268494921744
+          "type": "Point",
+          "coordinates": [
+            103.8616865018701,
+            1.31939570602305
+          ]
         }
       },
       {
@@ -795,8 +1013,11 @@
         "tamilStationName": "போத்தோங் பாசிர்",
         "stationNumber": "NE10",
         "position": {
-          "latitude": 1.016276368281836,
-          "longitude": 103.5826850154171
+          "type": "Point",
+          "coordinates": [
+            103.86905566527258,
+            1.331379524619291
+          ]
         }
       },
       {
@@ -805,8 +1026,11 @@
         "tamilStationName": "உட்லீ",
         "stationNumber": "NE11",
         "position": {
-          "latitude": 1.016276438918136,
-          "longitude": 103.58268503124809
+          "type": "Point",
+          "coordinates": [
+            103.87081830937527,
+            1.339190045525149
+          ]
         }
       },
       {
@@ -816,8 +1040,11 @@
         "stationNumber": "NE12",
         "stationCode": "CSER",
         "position": {
-          "latitude": 1.016276534038896,
-          "longitude": 103.58268505600678
+          "type": "Point",
+          "coordinates": [
+            103.87357484685863,
+            1.349707875379258
+          ]
         }
       },
       {
@@ -826,8 +1053,11 @@
         "tamilStationName": "கோவன்",
         "stationNumber": "NE13",
         "position": {
-          "latitude": 1.016276628744951,
-          "longitude": 103.58268515923112
+          "type": "Point",
+          "coordinates": [
+            103.88506485633647,
+            1.360179171179148
+          ]
         }
       },
       {
@@ -836,8 +1066,11 @@
         "tamilStationName": "ஹவ்காங்",
         "stationNumber": "NE14",
         "position": {
-          "latitude": 1.016276729252468,
-          "longitude": 103.58268522495074
+          "type": "Point",
+          "coordinates": [
+            103.892380518912,
+            1.371292291678535
+          ]
         }
       },
       {
@@ -846,8 +1079,11 @@
         "tamilStationName": "புவாங்கோக்",
         "stationNumber": "NE15",
         "position": {
-          "latitude": 1.016276834027975,
-          "longitude": 103.58268523160056
+          "type": "Point",
+          "coordinates": [
+            103.8931215647856,
+            1.382877858147222
+          ]
         }
       },
       {
@@ -856,8 +1092,11 @@
         "tamilStationName": "செங்காங்",
         "stationNumber": "NE16",
         "position": {
-          "latitude": 1.016276913764771,
-          "longitude": 103.58268525282588
+          "type": "Point",
+          "coordinates": [
+            103.8954846941606,
+            1.391694626098985
+          ]
         }
       },
       {
@@ -866,8 +1105,11 @@
         "tamilStationName": "பொங்கோல்",
         "stationNumber": "NE17",
         "position": {
-          "latitude": 1.016277029998392,
-          "longitude": 103.5826853120061
+          "type": "Point",
+          "coordinates": [
+            103.90207263840723,
+            1.404546727787945
+          ]
         }
       },
       {
@@ -882,15 +1124,19 @@
   "Circle Line": {
     "name": "Circle Line",
     "chineseName": "环线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Dhoby Ghaut",
         "chineseStationName": "多美歌",
         "tamilStationName": "டோபி காட்",
         "stationNumber": "CC1",
         "stationCode": "CDBG",
         "position": {
-          "latitude": 1.016276074017532,
-          "longitude": 103.58268481044514
+          "type": "Point",
+          "coordinates": [
+            103.84623911230817,
+            1.298842816475938
+          ]
         }
       },
       {
@@ -900,8 +1146,11 @@
         "stationNumber": "CC2",
         "stationCode": "CBBS",
         "position": {
-          "latitude": 1.016276056104134,
-          "longitude": 103.5826848502321
+          "type": "Point",
+          "coordinates": [
+            103.85066737177839,
+            1.29686168652761
+          ]
         }
       },
       {
@@ -911,8 +1160,11 @@
         "stationNumber": "CC3",
         "stationCode": "CEPN",
         "position": {
-          "latitude": 1.016276024092544,
-          "longitude": 103.58268489369004
+          "type": "Point",
+          "coordinates": [
+            103.85550410552689,
+            1.293321607611235
+          ]
         }
       },
       {
@@ -922,8 +1174,11 @@
         "stationNumber": "CC4",
         "stationCode": "CPMN",
         "position": {
-          "latitude": 1.016276023159882,
-          "longitude": 103.58268494306023
+          "type": "Point",
+          "coordinates": [
+            103.8609991558873,
+            1.293218051489324
+          ]
         }
       },
       {
@@ -933,8 +1188,11 @@
         "stationNumber": "CC5",
         "stationCode": "CNCH",
         "position": {
-          "latitude": 1.016276082386177,
-          "longitude": 103.58268496675547
+          "type": "Point",
+          "coordinates": [
+            103.86363701849632,
+            1.299766835267975
+          ]
         }
       },
       {
@@ -944,8 +1202,11 @@
         "stationNumber": "CC6",
         "stationCode": "CSDM",
         "position": {
-          "latitude": 1.016276110192499,
-          "longitude": 103.58268507199126
+          "type": "Point",
+          "coordinates": [
+            103.87535033517888,
+            1.302840629633221
+          ]
         }
       },
       {
@@ -955,8 +1216,11 @@
         "stationNumber": "CC7",
         "stationCode": "CMBT",
         "position": {
-          "latitude": 1.016276140595493,
-          "longitude": 103.58268513647717
+          "type": "Point",
+          "coordinates": [
+            103.88252808081009,
+            1.306201904831233
+          ]
         }
       },
       {
@@ -966,8 +1230,11 @@
         "stationNumber": "CC8",
         "stationCode": "CDKT",
         "position": {
-          "latitude": 1.016276160321442,
-          "longitude": 103.5826851915911
+          "type": "Point",
+          "coordinates": [
+            103.888662603932,
+            1.308382639266994
+          ]
         }
       },
       {
@@ -977,8 +1244,11 @@
         "stationNumber": "CC9",
         "stationCode": "CPYL",
         "position": {
-          "latitude": 1.016276242146855,
-          "longitude": 103.58268522317636
+          "type": "Point",
+          "coordinates": [
+            103.89217884546737,
+            1.317430267976784
+          ]
         }
       },
       {
@@ -988,8 +1258,11 @@
         "stationNumber": "CC10",
         "stationCode": "CMPS",
         "position": {
-          "latitude": 1.016276322769974,
-          "longitude": 103.58268520617318
+          "type": "Point",
+          "coordinates": [
+            103.88935059010909,
+            1.326076882922539
+          ]
         }
       },
       {
@@ -999,8 +1272,11 @@
         "stationNumber": "CC11",
         "stationCode": "CTSG",
         "position": {
-          "latitude": 1.016276404956105,
-          "longitude": 103.5826851873698
+          "type": "Point",
+          "coordinates": [
+            103.88819486115328,
+            1.335433322222911
+          ]
         }
       },
       {
@@ -1010,8 +1286,11 @@
         "stationNumber": "CC12",
         "stationCode": "CBLY",
         "position": {
-          "latitude": 1.016276471827593,
-          "longitude": 103.58268511157206
+          "type": "Point",
+          "coordinates": [
+            103.87975890622816,
+            1.342828337737576
+          ]
         }
       },
       {
@@ -1021,8 +1300,11 @@
         "stationNumber": "CC13",
         "stationCode": "CSER",
         "position": {
-          "latitude": 1.01627654206315,
-          "longitude": 103.58268504516408
+          "type": "Point",
+          "coordinates": [
+            103.87357484685863,
+            1.349707875379258
+          ]
         }
       },
       {
@@ -1032,8 +1314,11 @@
         "stationNumber": "CC14",
         "stationCode": "CLRC",
         "position": {
-          "latitude": 1.016276551253932,
-          "longitude": 103.58268497134561
+          "type": "Point",
+          "coordinates": [
+            103.86415193804751,
+            1.351612171025627
+          ]
         }
       },
       {
@@ -1043,8 +1328,11 @@
         "stationNumber": "CC15",
         "stationCode": "CBSH",
         "position": {
-          "latitude": 1.016276548498765,
-          "longitude": 103.58268483660105
+          "type": "Point",
+          "coordinates": [
+            103.84814396447484,
+            1.35083898769384
+          ]
         }
       },
       {
@@ -1054,8 +1342,11 @@
         "stationNumber": "CC16",
         "stationCode": "CMRM",
         "position": {
-          "latitude": 1.016276524965815,
-          "longitude": 103.58268474917242
+          "type": "Point",
+          "coordinates": [
+            103.8394231325699,
+            1.348707263018222
+          ]
         }
       },
       {
@@ -1065,8 +1356,11 @@
         "stationNumber": "CC17",
         "stationCode": "CCDT",
         "position": {
-          "latitude": 1.016276425190298,
-          "longitude": 103.58268475013865
+          "type": "Point",
+          "coordinates": [
+            103.83952982076408,
+            1.337674508044336
+          ]
         }
       },
       {
@@ -1077,8 +1371,11 @@
         "stationCode": "BKB",
         "operational": false,
         "position": {
-          "latitude": 1.016276389501516,
-          "longitude": 103.58268467071625
+          "type": "Point",
+          "coordinates": [
+            103.83068955013682,
+            1.333728882321439
+          ]
         }
       },
       {
@@ -1089,8 +1386,11 @@
         "stationNumber": "CC19",
         "stationCode": "CBTN",
         "position": {
-          "latitude": 1.016276284415959,
-          "longitude": 103.58268452960706
+          "type": "Point",
+          "coordinates": [
+            103.81498275034426,
+            1.322110192984762
+          ]
         }
       },
       {
@@ -1100,8 +1400,11 @@
         "stationNumber": "CC20",
         "stationCode": "CFRR",
         "position": {
-          "latitude": 1.016276242814093,
-          "longitude": 103.58268446315535
+          "type": "Point",
+          "coordinates": [
+            103.80758610574655,
+            1.317510611895763
+          ]
         }
       },
       {
@@ -1111,8 +1414,11 @@
         "stationNumber": "CC21",
         "stationCode": "CHLV",
         "position": {
-          "latitude": 1.016276191476357,
-          "longitude": 103.58268436078772
+          "type": "Point",
+          "coordinates": [
+            103.7961918238618,
+            1.311834790402129
+          ]
         }
       },
       {
@@ -1122,8 +1428,11 @@
         "stationNumber": "CC22",
         "stationCode": "CBNV",
         "position": {
-          "latitude": 1.016276143151531,
-          "longitude": 103.58268431103173
+          "type": "Point",
+          "coordinates": [
+            103.7906534100508,
+            1.306491669107775
+          ]
         }
       },
       {
@@ -1133,8 +1442,11 @@
         "stationNumber": "CC23",
         "stationCode": "CONH",
         "position": {
-          "latitude": 1.016276082269809,
-          "longitude": 103.58268428232294
+          "type": "Point",
+          "coordinates": [
+            103.78745750783135,
+            1.299759878591983
+          ]
         }
       },
       {
@@ -1144,8 +1456,11 @@
         "stationNumber": "CC24",
         "stationCode": "CKRG",
         "position": {
-          "latitude": 1.016276025318188,
-          "longitude": 103.58268425693649
+          "type": "Point",
+          "coordinates": [
+            103.78463142679291,
+            1.293462633144502
+          ]
         }
       },
       {
@@ -1155,8 +1470,11 @@
         "stationNumber": "CC25",
         "stationCode": "CHPV",
         "position": {
-          "latitude": 1.016275926556016,
-          "longitude": 103.58268423159913
+          "type": "Point",
+          "coordinates": [
+            103.78181045132067,
+            1.282542156642898
+          ]
         }
       },
       {
@@ -1166,8 +1484,11 @@
         "stationNumber": "CC26",
         "stationCode": "CPPJ",
         "position": {
-          "latitude": 1.016275869329208,
-          "longitude": 103.58268431731415
+          "type": "Point",
+          "coordinates": [
+            103.79135031315467,
+            1.276213522685332
+          ]
         }
       },
       {
@@ -1177,8 +1498,11 @@
         "stationNumber": "CC27",
         "stationCode": "CLBD",
         "position": {
-          "latitude": 1.0162758342411,
-          "longitude": 103.58268442144065
+          "type": "Point",
+          "coordinates": [
+            103.80293962041992,
+            1.272332731596471
+          ]
         }
       },
       {
@@ -1188,8 +1512,11 @@
         "stationNumber": "CC28",
         "stationCode": "CTLB",
         "position": {
-          "latitude": 1.016275819961362,
-          "longitude": 103.58268448261714
+          "type": "Point",
+          "coordinates": [
+            103.80974863683595,
+            1.270753211458576
+          ]
         }
       },
       {
@@ -1199,8 +1526,11 @@
         "stationNumber": "CC29",
         "stationCode": "CHBF",
         "position": {
-          "latitude": 1.016275772214301,
-          "longitude": 103.5826845876891
+          "type": "Point",
+          "coordinates": [
+            103.82144306908833,
+            1.265472639862093
+          ]
         }
       },
       {
@@ -1229,15 +1559,19 @@
   "Circle Line Extension": {
     "name": "Circle Line Extension",
     "chineseName": "环线延长线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Bayfront",
         "chineseStationName": "海湾舫",
         "tamilStationName": "பேஃபிரண்ட்",
         "stationNumber": "CE1",
         "stationCode": "CBFT",
         "position": {
-          "latitude": 1.016275920565796,
-          "longitude": 103.58268492582343
+          "type": "Point",
+          "coordinates": [
+            103.85907976513259,
+            1.281873788491535
+          ]
         }
       },
       {
@@ -1247,8 +1581,11 @@
         "stationNumber": "CE2",
         "stationCode": "CMRB",
         "position": {
-          "latitude": 1.016275868805222,
-          "longitude": 103.58268489001729
+          "type": "Point",
+          "coordinates": [
+            103.85509398222223,
+            1.276150636616983
+          ]
         }
       }
     ]
@@ -1256,14 +1593,18 @@
   "Downtown Line": {
     "name": "Downtown Line",
     "chineseName": "滨海市区线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Bukit Panjang",
         "chineseStationName": "武吉班让",
         "tamilStationName": "புக்கிட் பாஞ்சாங்",
         "stationNumber": "DT1",
         "position": {
-          "latitude": 1.016276798885066,
-          "longitude": 103.58268404936874
+          "type": "Point",
+          "coordinates": [
+            103.76153511473322,
+            1.379002116717665
+          ]
         }
       },
       {
@@ -1272,8 +1613,11 @@
         "tamilStationName": "கேஷ்யூ",
         "stationNumber": "DT2",
         "position": {
-          "latitude": 1.016276711776946,
-          "longitude": 103.58268407776015
+          "type": "Point",
+          "coordinates": [
+            103.76469442231104,
+            1.369369831064341
+          ]
         }
       },
       {
@@ -1282,8 +1626,11 @@
         "tamilStationName": "ஹில்வியூ",
         "stationNumber": "DT3",
         "position": {
-          "latitude": 1.016276648248053,
-          "longitude": 103.58268410223724
+          "type": "Point",
+          "coordinates": [
+            103.76741825445677,
+            1.362344868527857
+          ]
         }
       },
       {
@@ -1299,8 +1646,11 @@
         "tamilStationName": "பியூட்டி வோர்ல்ட்",
         "stationNumber": "DT5",
         "position": {
-          "latitude": 1.016276457238231,
-          "longitude": 103.58268417750615
+          "type": "Point",
+          "coordinates": [
+            103.77579428529512,
+            1.341223175711347
+          ]
         }
       },
       {
@@ -1309,8 +1659,11 @@
         "tamilStationName": "கிங் ஆல்பர்ட் பார்க்",
         "stationNumber": "DT6",
         "position": {
-          "latitude": 1.016276406979144,
-          "longitude": 103.58268424949696
+          "type": "Point",
+          "coordinates": [
+            103.78380665887376,
+            1.335665120759763
+          ]
         }
       },
       {
@@ -1319,8 +1672,11 @@
         "tamilStationName": "சிக்ஸ்த் அவென்யூ",
         "stationNumber": "DT7",
         "position": {
-          "latitude": 1.016276362867363,
-          "longitude": 103.58268437024857
+          "type": "Point",
+          "coordinates": [
+            103.79724631666134,
+            1.33078638736398
+          ]
         }
       },
       {
@@ -1329,8 +1685,11 @@
         "tamilStationName": "டான் கா கீ",
         "stationNumber": "DT8",
         "position": {
-          "latitude": 1.016276318532151,
-          "longitude": 103.58268446077854
+          "type": "Point",
+          "coordinates": [
+            103.80732220761243,
+            1.325883208922442
+          ]
         }
       },
       {
@@ -1340,8 +1699,11 @@
         "tamilStationName": "பூ மலை",
         "stationNumber": "DT9",
         "position": {
-          "latitude": 1.016276287254511,
-          "longitude": 103.58268453992913
+          "type": "Point",
+          "coordinates": [
+            103.81498275034426,
+            1.322110192984762
+          ]
         }
       },
       {
@@ -1350,8 +1712,11 @@
         "tamilStationName": "ஸ்டீவன்ஸ்",
         "stationNumber": "DT10",
         "position": {
-          "latitude": 1.01627626593288,
-          "longitude": 103.58268462881189
+          "type": "Point",
+          "coordinates": [
+            103.82602440224409,
+            1.320065557006726
+          ]
         }
       },
       {
@@ -1361,8 +1726,11 @@
         "stationNumber": "DT11",
         "stationCode": "NEW",
         "position": {
-          "latitude": 1.016276207533603,
-          "longitude": 103.58268473471269
+          "type": "Point",
+          "coordinates": [
+            103.83798529963302,
+            1.312320099555636
+          ]
         }
       },
       {
@@ -1371,8 +1739,11 @@
         "tamilStationName": "லிட்டில் இந்தியா",
         "stationNumber": "DT12",
         "position": {
-          "latitude": 1.016276149581957,
-          "longitude": 103.58268483151251
+          "type": "Point",
+          "coordinates": [
+            103.84964696657269,
+            1.306800025312331
+          ]
         }
       },
       {
@@ -1381,8 +1752,11 @@
         "tamilStationName": "ரோச்சோர்",
         "stationNumber": "DT13",
         "position": {
-          "latitude": 1.016276119905984,
-          "longitude": 103.58268486598871
+          "type": "Point",
+          "coordinates": [
+            103.85242168070482,
+            1.303916483964584
+          ]
         }
       },
       {
@@ -1392,8 +1766,11 @@
         "stationNumber": "DT14",
         "stationCode": "BGS",
         "position": {
-          "latitude": 1.016276080427205,
-          "longitude": 103.58268490594256
+          "type": "Point",
+          "coordinates": [
+            103.85570641401686,
+            1.300465076315248
+          ]
         }
       },
       {
@@ -1403,8 +1780,11 @@
         "stationNumber": "DT15",
         "stationCode": "CPMN",
         "position": {
-          "latitude": 1.016276020207056,
-          "longitude": 103.58268494174723
+          "type": "Point",
+          "coordinates": [
+            103.8609991558873,
+            1.293218051489324
+          ]
         }
       },
       {
@@ -1413,8 +1793,11 @@
         "tamilStationName": "பேஃபிரண்ட்",
         "stationNumber": "DT16",
         "position": {
-          "latitude": 1.016275920565796,
-          "longitude": 103.58268492582343
+          "type": "Point",
+          "coordinates": [
+            103.85907976513259,
+            1.281873788491535
+          ]
         }
       },
       {
@@ -1423,8 +1806,11 @@
         "tamilStationName": "டௌன்டவுன்",
         "stationNumber": "DT17",
         "position": {
-          "latitude": 1.016275898607242,
-          "longitude": 103.58268486976813
+          "type": "Point",
+          "coordinates": [
+            103.85284044403966,
+            1.279446190378719
+          ]
         }
       },
       {
@@ -1433,8 +1819,11 @@
         "tamilStationName": "தெலுக் ஆயர்",
         "stationNumber": "DT18",
         "position": {
-          "latitude": 1.016275924318081,
-          "longitude": 103.58268482899788
+          "type": "Point",
+          "coordinates": [
+            103.84830280619302,
+            1.282289536192252
+          ]
         }
       },
       {
@@ -1443,8 +1832,11 @@
         "tamilStationName": "சைனாடவுன்",
         "stationNumber": "DT19",
         "position": {
-          "latitude": 1.016275946557454,
-          "longitude": 103.58268479439153
+          "type": "Point",
+          "coordinates": [
+            103.84445120071658,
+            1.28474896906149
+          ]
         }
       },
       {
@@ -1453,8 +1845,11 @@
         "tamilStationName": "ஃபோர்ட் கெனிங்",
         "stationNumber": "DT20",
         "position": {
-          "latitude": 1.016276016463862,
-          "longitude": 103.58268479328167
+          "type": "Point",
+          "coordinates": [
+            103.84432826960975,
+            1.292478927917479
+          ]
         }
       },
       {
@@ -1463,8 +1858,11 @@
         "tamilStationName": "பென்கூலன்",
         "stationNumber": "DT21",
         "position": {
-          "latitude": 1.016276074214461,
-          "longitude": 103.58268484768703
+          "type": "Point",
+          "coordinates": [
+            103.85038425491673,
+            1.298864270417356
+          ]
         }
       },
       {
@@ -1473,8 +1871,11 @@
         "tamilStationName": "ஜாலான் புசார்",
         "stationNumber": "DT22",
         "position": {
-          "latitude": 1.016276133357361,
-          "longitude": 103.58268489343826
+          "type": "Point",
+          "coordinates": [
+            103.85547701633952,
+            1.30540364222325
+          ]
         }
       },
       {
@@ -1483,8 +1884,11 @@
         "tamilStationName": "பெண்டிமியர்",
         "stationNumber": "DT23",
         "position": {
-          "latitude": 1.016276208140275,
-          "longitude": 103.58268496082472
+          "type": "Point",
+          "coordinates": [
+            103.8629779874747,
+            1.313672232544493
+          ]
         }
       },
       {
@@ -1493,8 +1897,11 @@
         "tamilStationName": "கேலாங் பாரு",
         "stationNumber": "DT24",
         "position": {
-          "latitude": 1.016276278990366,
-          "longitude": 103.58268504098444
+          "type": "Point",
+          "coordinates": [
+            103.87190062570669,
+            1.321505838017602
+          ]
         }
       },
       {
@@ -1503,8 +1910,11 @@
         "tamilStationName": "மாத்தார்",
         "stationNumber": "DT25",
         "position": {
-          "latitude": 1.016276327570277,
-          "longitude": 103.58268514292644
+          "type": "Point",
+          "coordinates": [
+            103.88324750918024,
+            1.326876714712611
+          ]
         }
       },
       {
@@ -1513,8 +1923,11 @@
         "tamilStationName": "மெக்பர்சன்",
         "stationNumber": "DT26",
         "position": {
-          "latitude": 1.016276320341217,
-          "longitude": 103.58268519775994
+          "type": "Point",
+          "coordinates": [
+            103.88935059010909,
+            1.326076882922539
+          ]
         }
       },
       {
@@ -1523,8 +1936,11 @@
         "tamilStationName": "உபி",
         "stationNumber": "DT27",
         "position": {
-          "latitude": 1.016276355436735,
-          "longitude": 103.58268528672087
+          "type": "Point",
+          "coordinates": [
+            103.89925252497748,
+            1.329956825703839
+          ]
         }
       },
       {
@@ -1533,8 +1949,11 @@
         "tamilStationName": "காக்கி புக்கிட்",
         "stationNumber": "DT28",
         "position": {
-          "latitude": 1.01627640075583,
-          "longitude": 103.58268536943929
+          "type": "Point",
+          "coordinates": [
+            103.90845973446471,
+            1.334967301564284
+          ]
         }
       },
       {
@@ -1543,8 +1962,11 @@
         "tamilStationName": "பிடோக் நார்த்",
         "stationNumber": "DT29",
         "position": {
-          "latitude": 1.016276398726033,
-          "longitude": 103.58268545495898
+          "type": "Point",
+          "coordinates": [
+            103.91797832977372,
+            1.334742116758396
+          ]
         }
       },
       {
@@ -1553,8 +1975,11 @@
         "tamilStationName": "பிடோக் ரெசவோர்",
         "stationNumber": "DT30",
         "position": {
-          "latitude": 1.01627641560876,
-          "longitude": 103.58268558304293
+          "type": "Point",
+          "coordinates": [
+            103.93223462362494,
+            1.336607829810489
+          ]
         }
       },
       {
@@ -1563,8 +1988,11 @@
         "tamilStationName": "தெம்பினிஸ் வெஸ்ட்",
         "stationNumber": "DT31",
         "position": {
-          "latitude": 1.016276496168571,
-          "longitude": 103.58268563876152
+          "type": "Point",
+          "coordinates": [
+            103.93843697135362,
+            1.345515305301687
+          ]
         }
       },
       {
@@ -1573,8 +2001,11 @@
         "tamilStationName": "தெம்பினிஸ்",
         "stationNumber": "DT32",
         "position": {
-          "latitude": 1.016276582647637,
-          "longitude": 103.58268568029479
+          "type": "Point",
+          "coordinates": [
+            103.9430604974614,
+            1.355077428995993
+          ]
         }
       },
       {
@@ -1583,8 +2014,11 @@
         "tamilStationName": "தெம்பினிஸ் ஈஸ்ட்",
         "stationNumber": "DT33",
         "position": {
-          "latitude": 1.016276592730794,
-          "longitude": 103.58268578427995
+          "type": "Point",
+          "coordinates": [
+            103.95463446292972,
+            1.356191483036999
+          ]
         }
       },
       {
@@ -1593,8 +2027,11 @@
         "tamilStationName": "அப்பர் சாங்கி",
         "stationNumber": "DT34",
         "position": {
-          "latitude": 1.016276462019708,
-          "longitude": 103.58268584571978
+          "type": "Point",
+          "coordinates": [
+            103.96147178867871,
+            1.341737483893194
+          ]
         }
       },
       {
@@ -1603,8 +2040,11 @@
         "tamilStationName": "எக்ஸ்போ",
         "stationNumber": "DT35",
         "position": {
-          "latitude": 1.016276404545263,
-          "longitude": 103.58268585384543
+          "type": "Point",
+          "coordinates": [
+            103.96237570744738,
+            1.335382137333549
+          ]
         }
       },
       {
@@ -1624,14 +2064,18 @@
   "Bukit Panjang LRT": {
     "name": "Bukit Panjang LRT",
     "chineseName": "武吉班让轻轨线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Choa Chu Kang",
         "chineseStationName": "蔡厝港",
         "tamilStationName": "சுவா சூ காங்",
         "stationNumber": "BP1",
         "position": {
-          "latitude": 1.01627685163559,
-          "longitude": 103.58268389679593
+          "type": "Point",
+          "coordinates": [
+            103.74455373124138,
+            1.384836359965823
+          ]
         }
       },
       {
@@ -1640,8 +2084,11 @@
         "tamilStationName": "சவுத் வியூ",
         "stationNumber": "BP2",
         "position": {
-          "latitude": 1.016276810595689,
-          "longitude": 103.58268390343025
+          "type": "Point",
+          "coordinates": [
+            103.74529180004261,
+            1.380298287217279
+          ]
         }
       },
       {
@@ -1650,8 +2097,11 @@
         "tamilStationName": "கியட் ஹோங்",
         "stationNumber": "BP3",
         "position": {
-          "latitude": 1.016276795264749,
-          "longitude": 103.58268393724646
+          "type": "Point",
+          "coordinates": [
+            103.74905551939962,
+            1.378602765983023
+          ]
         }
       },
       {
@@ -1660,8 +2110,11 @@
         "tamilStationName": "டெக் வாய்",
         "stationNumber": "BP4",
         "position": {
-          "latitude": 1.016276777921649,
-          "longitude": 103.58268397908589
+          "type": "Point",
+          "coordinates": [
+            103.75371223219975,
+            1.376684679443904
+          ]
         }
       },
       {
@@ -1670,8 +2123,11 @@
         "tamilStationName": "ஃபீனிக்ஸ்",
         "stationNumber": "BP5",
         "position": {
-          "latitude": 1.016276795416456,
-          "longitude": 103.58268401791422
+          "type": "Point",
+          "coordinates": [
+            103.75803409838676,
+            1.378618844452898
+          ]
         }
       },
       {
@@ -1680,8 +2136,11 @@
         "tamilStationName": "புக்கிட் பாஞ்சாங்",
         "stationNumber": "BP6",
         "position": {
-          "latitude": 1.016276789008537,
-          "longitude": 103.5826840626532
+          "type": "Point",
+          "coordinates": [
+            103.76153511473322,
+            1.379002116717665
+          ]
         }
       },
       {
@@ -1690,8 +2149,11 @@
         "tamilStationName": "பெட்டீர்",
         "stationNumber": "BP7",
         "position": {
-          "latitude": 1.01627678756807,
-          "longitude": 103.58268409549449
+          "type": "Point",
+          "coordinates": [
+            103.76666896022329,
+            1.377750333817219
+          ]
         }
       },
       {
@@ -1700,8 +2162,11 @@
         "tamilStationName": "பெண்டிங்",
         "stationNumber": "BP8",
         "position": {
-          "latitude": 1.016276773034189,
-          "longitude": 103.58268413683511
+          "type": "Point",
+          "coordinates": [
+            103.77127017861254,
+            1.376142882785045
+          ]
         }
       },
       {
@@ -1710,8 +2175,11 @@
         "tamilStationName": "பங்கிட்",
         "stationNumber": "BP9",
         "position": {
-          "latitude": 1.016276808079156,
-          "longitude": 103.58268414922105
+          "type": "Point",
+          "coordinates": [
+            103.77264907257145,
+            1.380017897242089
+          ]
         }
       },
       {
@@ -1720,8 +2188,11 @@
         "tamilStationName": "ஃபஜார்",
         "stationNumber": "BP10",
         "position": {
-          "latitude": 1.016276848800187,
-          "longitude": 103.58268413268208
+          "type": "Point",
+          "coordinates": [
+            103.7708085825089,
+            1.38452079617522
+          ]
         }
       },
       {
@@ -1730,8 +2201,11 @@
         "tamilStationName": "செகார்",
         "stationNumber": "BP11",
         "position": {
-          "latitude": 1.01627687820304,
-          "longitude": 103.58268412180693
+          "type": "Point",
+          "coordinates": [
+            103.76959839678054,
+            1.387772130860871
+          ]
         }
       },
       {
@@ -1740,8 +2214,11 @@
         "tamilStationName": "ஜெலப்பாங்",
         "stationNumber": "BP12",
         "position": {
-          "latitude": 1.016276868530922,
-          "longitude": 103.58268407603127
+          "type": "Point",
+          "coordinates": [
+            103.7645033381591,
+            1.386703025013918
+          ]
         }
       },
       {
@@ -1750,8 +2227,11 @@
         "tamilStationName": "சென்ஜா",
         "stationNumber": "BP13",
         "position": {
-          "latitude": 1.016276832258077,
-          "longitude": 103.58268405684224
+          "type": "Point",
+          "coordinates": [
+            103.76236722595077,
+            1.382692295824158
+          ]
         }
       },
       {
@@ -1760,8 +2240,11 @@
         "tamilStationName": "பத்தாம் கல் சந்திப்பு",
         "stationNumber": "BP14",
         "position": {
-          "latitude": 1.016276810811589,
-          "longitude": 103.58268403683144
+          "type": "Point",
+          "coordinates": [
+            103.76013977735609,
+            1.380321008493098
+          ]
         }
       }
     ]
@@ -1769,11 +2252,19 @@
   "Sengkang LRT East Loop": {
     "name": "Sengkang LRT East Loop",
     "chineseName": "盛港轻轨线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Sengkang",
         "chineseStationName": "盛港",
         "tamilStationName": "செங்காங்",
-        "stationNumber": "STC"
+        "stationNumber": "STC",
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.8954846941606,
+            1.391694626098985
+          ]
+        }
       },
       {
         "stationName": "Compassvale",
@@ -1781,8 +2272,11 @@
         "tamilStationName": "கம்பஸ்வேல்",
         "stationNumber": "SE1",
         "position": {
-          "latitude": 1.016276939076018,
-          "longitude": 103.58268529781597
+          "type": "Point",
+          "coordinates": [
+            103.90049245062794,
+            1.394493046198061
+          ]
         }
       },
       {
@@ -1791,8 +2285,11 @@
         "tamilStationName": "ரூம்பியா",
         "stationNumber": "SE2",
         "position": {
-          "latitude": 1.016276911727113,
-          "longitude": 103.58268534706326
+          "type": "Point",
+          "coordinates": [
+            103.90597359531117,
+            1.391468496838552
+          ]
         }
       },
       {
@@ -1801,8 +2298,11 @@
         "tamilStationName": "பக்காவ்",
         "stationNumber": "SE3",
         "position": {
-          "latitude": 1.016276881197487,
-          "longitude": 103.58268534226349
+          "type": "Point",
+          "coordinates": [
+            103.90543910424037,
+            1.388092703775107
+          ]
         }
       },
       {
@@ -1811,8 +2311,11 @@
         "tamilStationName": "கங்கார்",
         "stationNumber": "SE4",
         "position": {
-          "latitude": 1.016276843991702,
-          "longitude": 103.58268531293102
+          "type": "Point",
+          "coordinates": [
+            103.90217398876607,
+            1.383978901833536
+          ]
         }
       },
       {
@@ -1821,8 +2324,11 @@
         "tamilStationName": "ரங்கோங்",
         "stationNumber": "SE5",
         "position": {
-          "latitude": 1.016276846291235,
-          "longitude": 103.5826852681943
+          "type": "Point",
+          "coordinates": [
+            103.89719466951304,
+            1.384233560670579
+          ]
         }
       }
     ]
@@ -1830,14 +2336,18 @@
   "Sengkang LRT West Loop": {
     "name": "Sengkang LRT West Loop",
     "chineseName": "盛港轻轨线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Sengkang",
         "chineseStationName": "盛港",
         "tamilStationName": "செங்காங்",
         "stationNumber": "STC",
         "position": {
-          "latitude": 1.016276912993665,
-          "longitude": 103.5826852524476
+          "type": "Point",
+          "coordinates": [
+            103.8954846941606,
+            1.391694626098985
+          ]
         }
       },
       {
@@ -1846,8 +2356,11 @@
         "tamilStationName": "செங் லிம்",
         "stationNumber": "SW1",
         "position": {
-          "latitude": 1.016276955210357,
-          "longitude": 103.58268523766128
+          "type": "Point",
+          "coordinates": [
+            103.89379718083637,
+            1.396277631335806
+          ]
         }
       },
       {
@@ -1856,8 +2369,11 @@
         "tamilStationName": "ஃபாம்வே",
         "stationNumber": "SW2",
         "position": {
-          "latitude": 1.016276963279188,
-          "longitude": 103.58268519729909
+          "type": "Point",
+          "coordinates": [
+            103.88930481043603,
+            1.39717019645804
+          ]
         }
       },
       {
@@ -1866,8 +2382,11 @@
         "tamilStationName": "கூப்பாங்",
         "stationNumber": "SW3",
         "position": {
-          "latitude": 1.016276972702665,
-          "longitude": 103.58268512498606
+          "type": "Point",
+          "coordinates": [
+            103.88125622197445,
+            1.398212828397173
+          ]
         }
       },
       {
@@ -1876,8 +2395,11 @@
         "tamilStationName": "தங்கம்",
         "stationNumber": "SW4",
         "position": {
-          "latitude": 1.016276964607671,
-          "longitude": 103.58268507448437
+          "type": "Point",
+          "coordinates": [
+            103.87563515645598,
+            1.39731815499522
+          ]
         }
       },
       {
@@ -1886,8 +2408,11 @@
         "tamilStationName": "ஃபொ்ன்வேல்",
         "stationNumber": "SW5",
         "position": {
-          "latitude": 1.016276915481005,
-          "longitude": 103.5826850805388
+          "type": "Point",
+          "coordinates": [
+            103.87630861136874,
+            1.391885887744099
+          ]
         }
       },
       {
@@ -1896,8 +2421,11 @@
         "tamilStationName": "லாயார்",
         "stationNumber": "SW6",
         "position": {
-          "latitude": 1.016276917237628,
-          "longitude": 103.58268511396979
+          "type": "Point",
+          "coordinates": [
+            103.88002960034994,
+            1.392079838772596
+          ]
         }
       },
       {
@@ -1906,8 +2434,11 @@
         "tamilStationName": "தொங்காங்",
         "stationNumber": "SW7",
         "position": {
-          "latitude": 1.016276892535682,
-          "longitude": 103.58268516621233
+          "type": "Point",
+          "coordinates": [
+            103.88584414990797,
+            1.389347952959691
+          ]
         }
       },
       {
@@ -1916,8 +2447,11 @@
         "tamilStationName": "ரெஞ்சோங்",
         "stationNumber": "SW8",
         "position": {
-          "latitude": 1.016276868808341,
-          "longitude": 103.58268520839873
+          "type": "Point",
+          "coordinates": [
+            103.8905394271554,
+            1.386723921527997
+          ]
         }
       }
     ]
@@ -1925,11 +2459,19 @@
   "Punggol LRT East Loop": {
     "name": "Punggol LRT East Loop",
     "chineseName": "榜鹅轻轨线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Punggol",
         "chineseStationName": "榜鹅",
         "tamilStationName": "பொங்கோல்",
-        "stationNumber": "PTC"
+        "stationNumber": "PTC",
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.90207263840723,
+            1.404546727787945
+          ]
+        }
       },
       {
         "stationName": "Cove",
@@ -1937,8 +2479,11 @@
         "tamilStationName": "கோவ்",
         "stationNumber": "PE1",
         "position": {
-          "latitude": 1.016276982389003,
-          "longitude": 103.58268534695313
+          "type": "Point",
+          "coordinates": [
+            103.9059619440767,
+            1.399281985019929
+          ]
         }
       },
       {
@@ -1947,8 +2492,11 @@
         "tamilStationName": "மெரிடியன்",
         "stationNumber": "PE2",
         "position": {
-          "latitude": 1.016276960958433,
-          "longitude": 103.58268537380283
+          "type": "Point",
+          "coordinates": [
+            103.90895021696649,
+            1.396912053063271
+          ]
         }
       },
       {
@@ -1957,8 +2505,11 @@
         "tamilStationName": "கோரல் எட்ஜ்",
         "stationNumber": "PE3",
         "position": {
-          "latitude": 1.016276933804678,
-          "longitude": 103.58268540642428
+          "type": "Point",
+          "coordinates": [
+            103.9125808548096,
+            1.393909226117483
+          ]
         }
       },
       {
@@ -1967,8 +2518,11 @@
         "tamilStationName": "ரிவியாரா",
         "stationNumber": "PE4",
         "position": {
-          "latitude": 1.016276939371433,
-          "longitude": 103.58268543863501
+          "type": "Point",
+          "coordinates": [
+            103.91616605898795,
+            1.394524495769009
+          ]
         }
       },
       {
@@ -1977,18 +2531,24 @@
         "tamilStationName": "கடலூர்",
         "stationNumber": "PE5",
         "position": {
-          "latitude": 1.016276985135397,
-          "longitude": 103.58268544151193
+          "type": "Point",
+          "coordinates": [
+            103.91648666197361,
+            1.399584852761106
+          ]
         }
       },
       {
-        "stationName": "Osais",
+        "stationName": "Oasis",
         "chineseStationName": "绿洲",
         "tamilStationName": "ஓய்சிஸ்",
         "stationNumber": "PE6",
         "position": {
-          "latitude": 1.016277009566924,
-          "longitude": 103.58268540773467
+          "type": "Point",
+          "coordinates": [
+            103.91272735563106,
+            1.402286677493705
+          ]
         }
       },
       {
@@ -1997,8 +2557,11 @@
         "tamilStationName": "டாமாய்",
         "stationNumber": "PE7",
         "position": {
-          "latitude": 1.016277036225937,
-          "longitude": 103.58268537068236
+          "type": "Point",
+          "coordinates": [
+            103.90860354364457,
+            1.405234836171988
+          ]
         }
       }
     ]
@@ -2006,14 +2569,18 @@
   "Punggol LRT West Loop": {
     "name": "Punggol LRT West Loop",
     "chineseName": "榜鹅轻轨线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Punggol",
         "chineseStationName": "榜鹅",
         "tamilStationName": "பொங்கோல்",
         "stationNumber": "PTC",
         "position": {
-          "latitude": 1.016277035858629,
-          "longitude": 103.58268531505385
+          "type": "Point",
+          "coordinates": [
+            103.90207263840723,
+            1.404546727787945
+          ]
         }
       },
       {
@@ -2022,8 +2589,11 @@
         "tamilStationName": "சாம் கீ",
         "stationNumber": "PW1",
         "position": {
-          "latitude": 1.016277075814713,
-          "longitude": 103.58268533678994
+          "type": "Point",
+          "coordinates": [
+            103.90483155051894,
+            1.409612685086604
+          ]
         }
       },
       {
@@ -2033,8 +2603,11 @@
         "stationNumber": "PW2",
         "operational": false,
         "position": {
-          "latitude": 1.016277104377449,
-          "longitude": 103.58268535247527
+          "type": "Point",
+          "coordinates": [
+            103.90657762270217,
+            1.412770893863544
+          ]
         }
       },
       {
@@ -2043,8 +2616,11 @@
         "tamilStationName": "பொங்கோல் பாயிண்ட்",
         "stationNumber": "PW3",
         "position": {
-          "latitude": 1.016277141253839,
-          "longitude": 103.5826853531298
+          "type": "Point",
+          "coordinates": [
+            103.90665079046647,
+            1.416848520495764
+          ]
         }
       },
       {
@@ -2053,8 +2629,11 @@
         "tamilStationName": "சமுத்திரா",
         "stationNumber": "PW4",
         "position": {
-          "latitude": 1.016277132688215,
-          "longitude": 103.58268531275
+          "type": "Point",
+          "coordinates": [
+            103.90215631639113,
+            1.415901719438764
+          ]
         }
       },
       {
@@ -2063,8 +2642,11 @@
         "tamilStationName": "நிபொங்",
         "stationNumber": "PW5",
         "position": {
-          "latitude": 1.016277096229895,
-          "longitude": 103.58268529619893
+          "type": "Point",
+          "coordinates": [
+            103.90031381767346,
+            1.411870458453224
+          ]
         }
       },
       {
@@ -2073,8 +2655,11 @@
         "tamilStationName": "சுமாங்",
         "stationNumber": "PW6",
         "position": {
-          "latitude": 1.016277065317414,
-          "longitude": 103.5826852804303
+          "type": "Point",
+          "coordinates": [
+            103.89855845405019,
+            1.408452425647692
+          ]
         }
       },
       {
@@ -2083,8 +2668,11 @@
         "tamilStationName": "சூ டெக்",
         "stationNumber": "PW7",
         "position": {
-          "latitude": 1.016277034895307,
-          "longitude": 103.58268526831435
+          "type": "Point",
+          "coordinates": [
+            103.8972096503177,
+            1.405088584853961
+          ]
         }
       }
     ]
@@ -2092,15 +2680,19 @@
   "Thomson-East Coast Line": {
     "name": "Thomson-East Coast Line",
     "chineseName": "汤申-东海岸地铁线",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Woodlands North",
         "chineseStationName": "兀兰北",
         "tamilStationName": "உட்லண்ட்ஸ் நார்த்",
         "stationNumber": "TE1",
         "stationCode": "WDN",
         "position": {
-          "latitude": 1.448185,
-          "longitude": 103.785194
+          "type": "Point",
+          "coordinates": [
+            103.78569270000007,
+            1.448292500000037
+          ]
         }
       },
       {
@@ -2110,8 +2702,11 @@
         "stationNumber": "TE2",
         "stationCode": "WDL",
         "position": {
-          "latitude": 1.016277314974203,
-          "longitude": 103.58268428648026
+          "type": "Point",
+          "coordinates": [
+            103.78793080705852,
+            1.436066981292872
+          ]
         }
       },
       {
@@ -2121,8 +2716,11 @@
         "stationNumber": "TE3",
         "stationCode": "WDS",
         "position": {
-          "latitude": 1.016277235331533,
-          "longitude": 103.58268433967523
+          "type": "Point",
+          "coordinates": [
+            103.79385089243809,
+            1.427259978711243
+          ]
         }
       },
       {
@@ -2171,7 +2769,14 @@
         "tamilStationName": "கால்டிகாட்",
         "stationNumber": "TE9",
         "stationCode": "CDT",
-        "operational": false
+        "operational": false,
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.83952982076408,
+            1.337674508044336
+          ]
+        }
       },
       {
         "stationName": "Mount Pleasant",
@@ -2187,7 +2792,14 @@
         "tamilStationName": "ஸ்டீவன்ஸ்",
         "stationNumber": "TE11",
         "stationCode": "STV",
-        "operational": false
+        "operational": false,
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.82602440224409,
+            1.320065557006726
+          ]
+        }
       },
       {
         "stationName": "Napier",
@@ -2211,7 +2823,14 @@
         "tamilStationName": "ஆர்ச்சர்ட்",
         "stationNumber": "TE14",
         "stationCode": "ORC",
-        "operational": false
+        "operational": false,
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.83224145206776,
+            1.303981012436874
+          ]
+        }
       },
       {
         "stationName": "Great World",
@@ -2235,7 +2854,14 @@
         "tamilStationName": "ஊட்ரம் பார்க்",
         "stationNumber": "TE17",
         "stationCode": "OTP",
-        "operational": false
+        "operational": false,
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.83912649758389,
+            1.281404978130134
+          ]
+        }
       },
       {
         "stationName": "Maxwell",
@@ -2259,7 +2885,14 @@
         "tamilStationName": "மரீனா பே",
         "stationNumber": "TE20",
         "stationCode": "MRB",
-        "operational": false
+        "operational": false,
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.85509398222223,
+            1.276150636616983
+          ]
+        }
       },
       {
         "stationName": "Marina South",
@@ -2354,7 +2987,8 @@
   "Jurong Region Line (East)": {
     "name": "Jurong Region Line (East)",
     "chineseName": "裕廊区域线（东）",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Tengah Plantation",
         "chineseStationName": "登加种植",
         "tamilStationName": "",
@@ -2388,7 +3022,14 @@
         "tamilStationName": "ஜூரோங் கிழக்கு",
         "stationNumber": "JE5",
         "stationCode": "JUR",
-        "operational": false
+        "operational": false,
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.74228654400498,
+            1.333152619894062
+          ]
+        }
       },
       {
         "stationName": "Jurong Town Hall",
@@ -2409,13 +3050,21 @@
   "Jurong Region Line (South)": {
     "name": "Jurong Region Line (South)",
     "chineseName": "裕廊区域线（南）",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Choa Chu Kang",
         "chineseStationName": "蔡厝港",
         "tamilStationName": "சுவா சூ காங்",
         "stationNumber": "JS1",
         "stationCode": "CCK",
-        "operational": false
+        "operational": false,
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.74455373124138,
+            1.384836359965823
+          ]
+        }
       },
       {
         "stationName": "Choa Chu Kang West",
@@ -2465,7 +3114,14 @@
         "tamilStationName": "பூன் லே",
         "stationNumber": "JS8",
         "stationCode": "BNL",
-        "operational": false
+        "operational": false,
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.70606462259627,
+            1.338604054503271
+          ]
+        }
       },
       {
         "stationName": "Enterprise",
@@ -2500,7 +3156,8 @@
   "Jurong Region Line (West)": {
     "name": "Jurong Region Line (West)",
     "chineseName": "裕廊区域线（西）",
-    "stations": [{
+    "stations": [
+      {
         "stationName": "Gek Poh",
         "chineseStationName": "玉宝",
         "tamilStationName": "",

@@ -1,0 +1,20 @@
+-
+  let stopCSSClasses = {
+    'bus': 'busStop',
+    'mrt': 'mrtStation'
+  }
+
+for stop in stops
+  -
+    let url = ''
+    if (stop.mode === 'bus')
+      url = `/bus/timings/${stop.stopCode}`
+    else if (stop.mode === 'mrt')
+      url = `/mrt/timings/${stop.codedStopName}`
+  a(href=url class=`result ${stopCSSClasses[stop.mode]}`)
+    div.leftContainer.miniIcon
+      img(src=`/static/images/clear-icons/${stop.mode}.svg`)
+      span.distance=stop.smallestDistance + ' metres'
+    div.resultDetails
+      span.description=stop.type
+      span.name=stop.stopName

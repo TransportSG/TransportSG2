@@ -1,0 +1,18 @@
+extends ../layout
+
+block head
+  title TransportSG - Stops Nearby
+  
+  link(rel='preload' href='/static/images/clear-icons/bus.svg' as='image')
+  link(rel='preload' href='/static/images/clear-icons/mrt.svg' as='image')
+    
+block title
+  span Stops Nearby
+
+block scripts
+  script(src='/static/scripts/nearby.js')
+
+block style
+  link(rel='stylesheet' href='/static/css/search.css')
+  link(rel='stylesheet' href='/static/css/timings/base-style.css')
+  link(rel='stylesheet' href='/static/css/content-error.css')
