@@ -1,103 +1,135 @@
 .sbst {
-    background-color: #b845be;
+  background-color: #b845be;
 }
 
 div.departure:nth-child(even) .sbst {
-    background-color: #9d3ba2;
+  background-color: #9d3ba2;
 }
 
 .smrt {
-    background-color: #c63d3d;
+  background-color: #c63d3d;
 }
 
 div.departure:nth-child(even) .smrt {
-    background-color: #b43535;
+  background-color: #b43535;
 }
 
 .ttsg {
-    background-color: #4ebe45;
+  background-color: #4ebe45;
 }
 
 div.departure:nth-child(even) .ttsg {
-    background-color: #43a93b;
+  background-color: #43a93b;
 }
 
 .gasg {
-    background-color: #d7832c;
+  background-color: #d7832c;
 }
 
 div.departure:nth-child(even) .gasg {
-    background-color: #c47625;
+  background-color: #c47625;
 }
 
 .tibs {
-    background-color: #d4ce24;
+  background-color: #d4ce24;
 }
 
 div.bus:nth-child(even) .tibs {
-    background-color: #c3bd23;
+  background-color: #c3bd23;
 }
 
 .sbs {
-    background-color: #76b7e9;
+  background-color: #76b7e9;
 }
 
 div.bus:nth-child(even) .sbs {
-    background-color: #4291cd;
+  background-color: #4291cd;
 }
 
 .lta {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
 
 div.bus:nth-child(even) .lta {
-    background-color: #c9c9c9;
+  background-color: #c9c9c9;
 }
 
 .css {
-    background-color: #ccac78;
+  background-color: #ccac78;
 }
 
 div.bus:nth-child(even) .css {
-    background-color: #b49755;
+  background-color: #b49755;
 }
 
 .sentosa {
-    background-color: #ea8814;
+  background-color: #ea8814;
 }
 
 div.bus:nth-child(even) .sentosa {
-    background-color: #bd6e10;
+  background-color: #bd6e10;
 }
 
 div.departure .north-south-line {
-    background-color: #c63d3d;
+  background-color: #c63d3d;
 }
 
 div.departure:nth-child(even) .north-south-line {
-    background-color: #b43535;
+  background-color: #b43535;
 }
 
 div.departure .east-west-line {
-    background-color: #4ebe45;
+  background-color: #4ebe45;
 }
 
 div.departure:nth-child(even) .east-west-line {
-    background-color: #43a93b;
+  background-color: #43a93b;
 }
 
 div.departure .circle-line {
-    background-color: #d7832c;
+  background-color: #d7832c;
 }
 
 div.departure:nth-child(even) .circle-line {
-    background-color: #c47625;
+  background-color: #c47625;
 }
 
 div.departure .thomson-east-coast-line {
-    background-color: #9D5B25;
+  background-color: #9d5b25;
 }
 
 div.departure:nth-child(even) .thomson-east-coast-line {
-    background-color: #844b1d;
+  background-color: #844b1d;
+}
+
+div.departure .downtown-line {
+  background-color: #0358b2;
+}
+
+div.departure:nth-child(even) .downtown-line {
+  background-color: #064d99;
+}
+
+div.departure .north-east-line {
+  background-color: #8e039e;
+}
+
+div.departure:nth-child(even) .north-east-line {
+  background-color: #790287;
+}
+
+div.departure .jurong-region-line {
+  background-color: #0496a3;
+}
+
+div.departure:nth-child(even) .jurong-region-line {
+  background-color: #048591;
+}
+
+div.departure .cross-island-line {
+  background-color: #83bc07;
+}
+
+div.departure:nth-child(even) .cross-island-line {
+  background-color: #73a506;
 }

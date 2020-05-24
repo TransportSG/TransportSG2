@@ -185,19 +185,19 @@ div.departure:nth-child(odd) div.timing.seating-sea:nth-child(even) {
 }
 
 div.departure:nth-child(odd) div.timing.seating-sda:nth-child(odd) {
-  background-color: #be9f14;
-}
-
-div.departure:nth-child(odd) div.timing.seating-sda:nth-child(even) {
   background-color: #d0ae16;
 }
 
+div.departure:nth-child(odd) div.timing.seating-sda:nth-child(even) {
+  background-color: #be9f14;
+}
+
 div.departure:nth-child(odd) div.timing.seating-lsd:nth-child(odd) {
-  background-color: #c93e29;
+  background-color: #db3d25;
 }
 
 div.departure:nth-child(odd) div.timing.seating-lsd:nth-child(even) {
-  background-color: #bd3825;
+  background-color: #c63825;
 }
 
 
@@ -211,17 +211,17 @@ div.departure:nth-child(even) div.timing.seating-sea:nth-child(odd) {
 }
 
 div.departure:nth-child(even) div.timing.seating-sda:nth-child(even) {
-  background-color: #be9f14;
-}
-
-div.departure:nth-child(even) div.timing.seating-sda:nth-child(odd) {
   background-color: #d0ae16;
 }
 
+div.departure:nth-child(even) div.timing.seating-sda:nth-child(odd) {
+  background-color: #be9f14;
+}
+
 div.departure:nth-child(even) div.timing.seating-lsd:nth-child(even) {
-  background-color: #c93e29;
+  background-color: #db3d25;
 }
 
 div.departure:nth-child(even) div.timing.seating-lsd:nth-child(odd) {
-  background-color: #bd3825;
+  background-color: #c63825;
 }

@@ -28,7 +28,6 @@ map.on('load', function () {
           'line-width': 7
           }
       })
-      console.log([bbox.geometry.coordinates[0][0], bbox.geometry.coordinates[0][2]])
       map.fitBounds([bbox.geometry.coordinates[0][0], bbox.geometry.coordinates[0][2]])
     })
   })
