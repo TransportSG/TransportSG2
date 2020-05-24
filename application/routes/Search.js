@@ -4,7 +4,7 @@ const router = new express.Router()
 const safeRegex = require('safe-regex')
 
 router.get('/', async (req, res) => {
-  res.render('search/index')
+  res.render('search/index', { placeholder: 'MRT Station or Bus Stop' })
 })
 
 async function prioritySearch(db, query) {
