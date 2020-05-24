@@ -24,7 +24,7 @@ map.on('load', function () {
           'line-cap': 'round'
           },
           paint: {
-          'line-color': '#ed810e',
+          'line-color': '#3caa2e',
           'line-width': 7
           }
       })
