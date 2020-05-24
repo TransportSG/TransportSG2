@@ -87,11 +87,11 @@ div.departure:nth-child(even) .east-west-line {
 }
 
 div.departure .circle-line {
-  background-color: #d7832c;
+  background-color: #d88a0d;
 }
 
 div.departure:nth-child(even) .circle-line {
-  background-color: #c47625;
+  background-color: #c17d0f;
 }
 
 div.departure .thomson-east-coast-line {
