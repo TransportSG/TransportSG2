@@ -193,11 +193,11 @@ div.departure:nth-child(odd) div.timing.seating-sda:nth-child(even) {
 }
 
 div.departure:nth-child(odd) div.timing.seating-lsd:nth-child(odd) {
-  background-color: #db3d25;
+  background-color: #f51227;
 }
 
 div.departure:nth-child(odd) div.timing.seating-lsd:nth-child(even) {
-  background-color: #c63825;
+  background-color: #d41b2d;
 }
 
 
@@ -219,9 +219,9 @@ div.departure:nth-child(even) div.timing.seating-sda:nth-child(odd) {
 }
 
 div.departure:nth-child(even) div.timing.seating-lsd:nth-child(even) {
-  background-color: #db3d25;
+  background-color: #f51227;
 }
 
 div.departure:nth-child(even) div.timing.seating-lsd:nth-child(odd) {
-  background-color: #c63825;
+  background-color: #d41b2d;
 }
