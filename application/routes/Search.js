@@ -69,7 +69,8 @@ async function performSearch(db, query) {
     'East West Line',
     'Circle Line',
     'Circle Line Extension',
-    'Changi Airport Branch Line'
+    'Changi Airport Branch Line',
+    'Thomson-East Coast Line'
   ]
 
   return prioritySearchResults.concat(remainingResults).concat(lowPriorityResults).filter(stop => {
