@@ -8,10 +8,14 @@ const config = require('../config')
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 
+let publicBusRegos = ['TIB', 'SBS', 'SMB', 'SG']
+
 let operator = process.argv[2]
 let fileData = fs.readFileSync(path.join(__dirname, 'data', operator + '.csv')).toString()
 let header = 'id,checksum,make,model,bodywork,operator,vin,lifespanExpiry,roadTaxExpiry,livery,notes,depot,service,batch,gearbox,eds,chair,door,aircon,advertisement,registrationDate\n'
-fileData = header + fileData.slice(fileData.indexOf('\n') + 1)
+let privateHeader = 'id,checksum,make,model,bodywork,operator,vin,lifespanExpiry,livery,notes,depot,service,batch,gearbox,eds,chair,door,aircon,advertisement,registrationDate\n'
+
+fileData = (publicBusRegos.includes(operator) ? header : privateHeader) + fileData.slice(fileData.indexOf('\n') + 1)
 
 database.connect({
   poolSize: 100
