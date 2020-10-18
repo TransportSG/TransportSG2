@@ -25,6 +25,7 @@ async function getLinks() {
       return 'https://sgwiki.com' + $('a', parts[0]).attr('href')
     })
   }).reduce((a, e) => a.concat(e), [])
+  .filter((e, i, a) => a.indexOf(e) === i)
 }
 
 async function fetchURL(url, buses) {
