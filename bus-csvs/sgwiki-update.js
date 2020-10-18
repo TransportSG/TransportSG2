@@ -7,6 +7,25 @@ const cheerio = require('cheerio')
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 
 let busesUpdated = 0
+let basePage = 'https://sgwiki.com/wiki/Bus_Deployments'
+
+async function getLinks() {
+  let data = await utils.request({
+    url: basePage
+  })
+
+  let $ = cheerio.load(data)
+
+  let tables = Array.from($('table.toccolours'))
+
+  return tables.map(table => {
+    let rows = Array.from($('tr', table)).slice(1)
+    return rows.map(row => {
+      let parts = Array.from($('td', row))
+      return 'https://sgwiki.com' + $('a', parts[0]).attr('href')
+    })
+  }).reduce((a, e) => a.concat(e), [])
+}
 
 async function fetchURL(url, buses) {
   let data = await utils.request({
@@ -55,6 +74,8 @@ database.connect({
 }, async err => {
   let buses = database.getCollection('buses')
 
+  let urls = await getLinks()
+
   await async.forEachOf(urls, async (u, i) => {
     await new Promise(r => setTimeout(r, i * 500))
     await fetchURL(u, buses)
@@ -63,40 +84,3 @@ database.connect({
   console.log('completed updating bus data - ' + busesUpdated + ' buses')
   process.exit()
 })
-
-let urls = [
-  'https://sgwiki.com/wiki/BYD_C6',
-  'https://sgwiki.com/wiki/Yutong_ZK6128BEVG',
-  'https://sgwiki.com/wiki/BYD_K9_(Gemilang)',
-  'https://sgwiki.com/wiki/Volvo_B5LH',
-  'https://sgwiki.com/wiki/Volvo_B8L_(Wright_Eclipse_Gemini_3)',
-  'https://sgwiki.com/wiki/Volvo_B9TL_(CDGE)',
-  'https://sgwiki.com/wiki/Volvo_B9TL_(Wright_Eclipse_Gemini_2)_(Batch_1)',
-  'https://sgwiki.com/wiki/Volvo_B9TL_(Wright_Eclipse_Gemini_2)_(Batch_2)',
-  'https://sgwiki.com/wiki/Volvo_B9TL_(Wright_Eclipse_Gemini_2)_(Batch_3)',
-  'https://sgwiki.com/wiki/Volvo_B9TL_(Wright_Eclipse_Gemini_2)_(Batch_4)',
-  'https://sgwiki.com/wiki/Volvo_B10TL_(CDGE)',
-  'https://sgwiki.com/wiki/Mercedes-Benz_O530_Citaro_(Batch_SMRT)',
-  'https://sgwiki.com/wiki/Mercedes-Benz_O530_Citaro_(Batch_1)',
-  'https://sgwiki.com/wiki/Mercedes-Benz_O530_Citaro_(Batch_2)',
-  'https://sgwiki.com/wiki/Mercedes-Benz_O530_Citaro_(Batch_3)',
-  'https://sgwiki.com/wiki/MAN_NL323F_(Batch_1)',
-  'https://sgwiki.com/wiki/MAN_NL323F_(Batch_2)',
-  'https://sgwiki.com/wiki/MAN_NL323F_(Batch_3)',
-  'https://sgwiki.com/wiki/MAN_NL323F_(Batch_4)',
-  'https://sgwiki.com/wiki/MAN_ND323F_(Batch_1)',
-  'https://sgwiki.com/wiki/MAN_ND323F_(Batch_2)',
-  'https://sgwiki.com/wiki/MAN_ND323F_(Batch_3)',
-  'https://sgwiki.com/wiki/MAN_ND323F_(Batch_4)',
-  'https://sgwiki.com/wiki/MAN_ND323F_(Batch_5)',
-  'https://sgwiki.com/wiki/Scania_K230UB_(Euro_IV_Batch_1)',
-  'https://sgwiki.com/wiki/Scania_K230UB_(Euro_IV_Batch_2)',
-  'https://sgwiki.com/wiki/Scania_K230UB_(Euro_V_Batch_1)',
-  'https://sgwiki.com/wiki/Scania_K230UB_(Euro_V_Batch_2)',
-  'https://sgwiki.com/wiki/Alexander_Dennis_Enviro500_(Batch_1)',
-  'https://sgwiki.com/wiki/Alexander_Dennis_Enviro500_(Batch_2)',
-  'https://sgwiki.com/wiki/MAN_NG363F',
-  'https://sgwiki.com/wiki/Mercedes-Benz_OC500LE',
-  'https://sgwiki.com/wiki/Mercedes-Benz_O405G_(Hispano_Habit)',
-  'https://sgwiki.com/wiki/Mercedes-Benz_O530_Citaro_Hybrid'
-]

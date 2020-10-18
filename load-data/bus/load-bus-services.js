@@ -53,11 +53,8 @@ database.connect({
       loopingPoint = ['Woodlands Circle', 'Woodlands Avenue 3']
     if (busService.ServiceNo === '964')
       loopingPoint = 'Woodlands Link'
-    if (busService.ServiceNo === '972')
-      loopingPoint = {
-        actual: 'Orchard Road',
-        display: 'Bencoolen Street'
-      }
+    if (busService.ServiceNo.startsWith('972'))
+      loopingPoint = 'Orchard Road'
     if (busService.ServiceNo === '983')
       loopingPoint = {
         actual: 'Upper Bukit Timah Road',
