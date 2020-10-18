@@ -1,7 +1,7 @@
 - let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
 
 for bus in buses
-  div(class=`bus ${operatorCSS[bus.operator]}`)
+  div(class=`bus ${operatorCSS[bus.operator] || 'unknown'}`)
     label(for=bus.rego)
       span.rego=bus.rego
     if buses.length == 1

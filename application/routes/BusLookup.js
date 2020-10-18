@@ -12,7 +12,7 @@ let operatorCSS = {
   'LTA Storage': 'lta',
   'Trans Island Buses': 'tibs',
   'Singapore Bus Services': 'sbs',
-  'Sentosa': 'sentosa',
+  'Sentosa': 'sentosa'
 }
 
 async function findBusesByRegoNumber(number, buses) {

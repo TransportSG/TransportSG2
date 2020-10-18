@@ -221,10 +221,7 @@ module.exports = {
   },
   pad: (data, length, filler='0') => Array(length).fill(filler).concat([...data.toString()]).slice(-length).join(''),
   getYYYYMMDD: time => {
-    let cloned = time.clone()
-    if (cloned.get('hours') < 3) // 3am PT day :((((
-      cloned.add(-1, 'days')
-    return cloned.format('YYYYMMDD')
+    return time.format('YYYYMMDD')
   },
   getYYYYMMDDNow: () => module.exports.getYYYYMMDD(module.exports.now()),
   now: () => moment.tz('Asia/Singapore'),
