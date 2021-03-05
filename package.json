@@ -21,7 +21,7 @@
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.31",
     "mongodb": "^3.6.2",
-    "pug": "^2.0.4",
+    "pug": "^3.0.0",
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
     "safe-regex": "^2.1.1",
