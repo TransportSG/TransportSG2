@@ -6,15 +6,15 @@ const config = require('../config.json')
 module.exports = class HTTPSRedirectServer {
   app (req, res) {
     if (req.url.startsWith('/.well-known')) {
-      req.url = url.URL(req.url)
-      const filePath = path.join(config.webrootPath, req.url.path)
+      try {
+        let filePath = path.join(config.webrootPath, req.url)
+        fs.createReadStream(filePath).pipe(res)
 
-      fs.createReadStream(filePath).pipe(res)
-
-      return
+        return
+      } catch (e) {}
     }
 
-    const redirectedURL = `https://${config.websiteDNSName}${url.parse(req.url).path}`
+    let redirectedURL = `https://${config.websiteDNSName}${url.parse(req.url).path}`
 
     res.writeHead(308, { Location: redirectedURL })
     res.end()
