@@ -1,3 +1,4 @@
 /config.json
 /node_modules
 /bus-csvs/data/
+.DS_Store
