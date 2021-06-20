@@ -5,12 +5,14 @@ const getBusTimings = require('../timings/bus')
 const async = require('async')
 const moment = require('moment')
 
-router.get('/:busStopCode', async (req, res) => {
+async function loadDepartures(req, res) {
   let {busStopCode} = req.params
   let stops = res.db.getCollection('stops')
   let busStop = await stops.findDocument({ stopCode: busStopCode })
 
-  if (!busStop) throw new Error('no bus stop')
+  if (!busStop) {
+    return res.status(404).render('errors/no-stop')
+  }
 
   let similarStops = await stops.distinct('stopCode', {
     position: {
@@ -68,14 +70,21 @@ router.get('/:busStopCode', async (req, res) => {
   services = services.sort((a, b) => a.sortIndex - b.sortIndex).map(e => e.displayService)
   .filter((e, i, a) => a.indexOf(e) === i)
 
-  let now = utils.now()
-
-  res.render('bus/timings', {
+  return {
     services,
     timings: mergedTimings,
     busStop,
     timeDifference: utils.prettyTimeToArrival
-  })
+  }
+}
+
+router.get('/:busStopCode', async (req, res) => {
+  let response = await loadDepartures(req, res)
+  if (response) res.render('bus/timings', response)
+})
+
+router.post('/:busStopCode', async (req, res) => {
+  res.render('bus/template', await loadDepartures(req, res))
 })
 
 
