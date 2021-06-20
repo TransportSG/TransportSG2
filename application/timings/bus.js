@@ -142,8 +142,7 @@ module.exports = async function getBusTimings(busStopCode, db) {
       let berth
       if (berths[busStopCode]) {
         berth = berths[busStopCode][ServiceNo]
-          if (berth && berth[destination])
-            berth = berth[destination]
+        if (berth && berth[destination]) berth = berth[destination]
       }
 
       let serviceNumber = utils.getServiceNumber(displayService),
@@ -172,9 +171,9 @@ module.exports = async function getBusTimings(busStopCode, db) {
       if (!['SMRT', 'SBST'].includes(operator))
         wheelchairAccessible = true
 
-        let estimatedDepartureTime = moment.tz(bus.EstimatedArrival, 'Asia/Singapore')
-        if (subtract30s)
-          estimatedDepartureTime.subtract(30, 'seconds')
+      let estimatedDepartureTime = moment.tz(bus.EstimatedArrival, 'Asia/Singapore')
+      if (subtract30s)
+        estimatedDepartureTime.subtract(30, 'seconds')
 
       return {
         fullService: displayService,
