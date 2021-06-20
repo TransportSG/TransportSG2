@@ -1,4 +1,4 @@
-const version = '13'
+const version = '14'
 const cacheName = `transportsg-${version}`
 
 function cacheFiles(files) {
@@ -33,7 +33,7 @@ self.addEventListener('install', e => {
       '/static/css/search.css',
       '/static/css/textbar-style.css',
 
-      '/static/fonts/Nunito.ttf',
+      '/static/fonts/Nunito.woff2',
 
       '/static/images/decals/wheelchair.svg',
       '/static/images/decals/non-wheelchair.svg',
@@ -54,7 +54,7 @@ self.addEventListener('install', e => {
       '/static/scripts/nearby.js',
       '/static/scripts/search.js',
       '/static/scripts/sw-load.js',
-      // '/static/scripts/timings.js',
+      '/static/scripts/timings.js',
       '/static/scripts/util.js',
 
       '/',
