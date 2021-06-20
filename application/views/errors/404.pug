@@ -1,0 +1,17 @@
+extends ../layout
+
+block head
+  title TransportSG - 404
+
+block title
+  span 404!
+
+append content
+  div.errorPage
+    h2 404: Looks like you're lost...
+    img(src='/static/images/home/404.svg')
+    div
+      a(href='/') Try going home
+      span  Or 
+      a(href='/search') Searching for a stop
+    

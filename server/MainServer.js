@@ -125,13 +125,10 @@ module.exports = class MainServer {
 
     app.use((err, req, res, next) => {
       if (err.message === '404') {
-        res.render('error', { code: 404 })
+        res.status(404).render('errors/404')
       } else {
-        res.render('error', { code: 500 })
-
-        if (process.env['NODE_ENV'] !== 'prod') {
-          console.log(err)
-        }
+        res.status(500).render('errors/500')
+        console.err(req.url, err)
       }
     })
   }

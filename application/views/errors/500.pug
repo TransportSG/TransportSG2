@@ -1,0 +1,17 @@
+extends ../layout
+
+block head
+  title TransportSG - 500
+
+block title
+  span 500!
+
+append content
+  div.errorPage
+    h2 500: Something's gone wrong...
+    img(src='/static/images/home/500.svg')
+    div
+      a(href='/') Try going home
+      span  Or 
+      a(href='javascript:history.back()') Going back a page
+    
