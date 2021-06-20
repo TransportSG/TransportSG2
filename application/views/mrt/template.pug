@@ -1,0 +1,12 @@
+for departure in departures
+  div.departure
+    a(class=`leftContainer ${departure.codedLineName}`)
+      span.topText Platform
+      span.serviceNumber=departure.platform || '?'
+    a.departureInfo
+      span.towards=`${departure.routeName} towards`
+      span.destination=departure.destination
+    div.timings
+      div(class='timing seating-sea')
+        span #{timeDifference(departure.estimatedDepartureTime)}
+        span #{departure.estimatedDepartureTime.format('HH:mm')}

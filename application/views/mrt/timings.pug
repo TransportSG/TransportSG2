@@ -1,12 +1,13 @@
 extends ../layout
 
 block head
-  title TransportSG - Next 2: #{station.stopName}
+  title TransportSG - #{station.stopName}
 
 block title
   span Next 2: #{station.stopName}
 
 block scripts
+  script(src='/static/scripts/timings.js' async)
   
 block style
   link(rel='stylesheet' href='/static/css/combined-colours.css')
@@ -14,15 +15,4 @@ block style
 
 block content
   div#departures
-    for departure in departures
-      div.departure
-        a(class=`leftContainer ${departure.codedLineName}`)
-          span.topText Platform
-          span.serviceNumber=departure.platform || '?'
-        a.departureInfo
-          span.towards=`${departure.routeName} towards`
-          span.destination=departure.destination
-        div.timings
-          div(class='timing seating-sea')
-            span #{timeDifference(departure.estimatedDepartureTime)}
-            span #{departure.estimatedDepartureTime.format('HH:mm')}
+    include template
