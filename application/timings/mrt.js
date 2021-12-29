@@ -148,6 +148,8 @@ async function getDepartures(stationData) {
       departure.codedLineName = 'no-line'
     }
 
+    departure.destination = departure.destination.replace('(Interchange)', '').trim()
+
     let {routeName, destination} = departure
     if (routeName === 'no-line') {
       // if (departure.isCCLPlatform)

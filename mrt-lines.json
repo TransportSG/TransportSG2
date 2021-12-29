@@ -2729,7 +2729,13 @@
         "tamilStationName": "ஸ்பிரிங்லீஃவ்",
         "stationNumber": "TE4",
         "stationCode": "SPL",
-        "operational": false
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.8184896,
+            1.3973981
+          ]
+        }
       },
       {
         "stationName": "Lentor",
@@ -2737,7 +2743,13 @@
         "tamilStationName": "லென்ட்டோர்",
         "stationNumber": "TE5",
         "stationCode": "LTR",
-        "operational": false
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.836810,
+            1.384402
+          ]
+        }
       },
       {
         "stationName": "Mayflower",
@@ -2745,7 +2757,13 @@
         "tamilStationName": "மேஃபிளவர்",
         "stationNumber": "TE6",
         "stationCode": "MFL",
-        "operational": false
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.836897,
+            1.372794
+          ]
+        }
       },
       {
         "stationName": "Bright Hill",
@@ -2753,7 +2771,13 @@
         "tamilStationName": "பிரைட் ஹில்",
         "stationNumber": "TE7",
         "stationCode": "BRH",
-        "operational": false
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.833247,
+            1.363198
+          ]
+        }
       },
       {
         "stationName": "Upper Thomson",
@@ -2761,7 +2785,13 @@
         "tamilStationName": "அப்பர் தாம்சன்",
         "stationNumber": "TE8",
         "stationCode": "UTS",
-        "operational": false
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            103.833814,
+            1.353981
+          ]
+        }
       },
       {
         "stationName": "Caldecott",
@@ -2769,7 +2799,6 @@
         "tamilStationName": "கால்டிகாட்",
         "stationNumber": "TE9",
         "stationCode": "CDT",
-        "operational": false,
         "position": {
           "type": "Point",
           "coordinates": [
@@ -2991,14 +3020,14 @@
       {
         "stationName": "Tengah Plantation",
         "chineseStationName": "登加种植",
-        "tamilStationName": "",
+        "tamilStationName": "தெங்கா தோட்டம்",
         "stationNumber": "JE1",
         "operational": false
       },
       {
         "stationName": "Tengah Park",
         "chineseStationName": "登加园",
-        "tamilStationName": "",
+        "tamilStationName": "தெங்கா பூங்கா",
         "stationNumber": "JE2",
         "operational": false
       },
@@ -3012,7 +3041,7 @@
       {
         "stationName": "Toh Guan",
         "chineseStationName": "卓源",
-        "tamilStationName": "",
+        "tamilStationName": "டோ குவான்",
         "stationNumber": "JE4",
         "operational": false
       },
@@ -3034,14 +3063,14 @@
       {
         "stationName": "Jurong Town Hall",
         "chineseStationName": "裕廊镇大会堂",
-        "tamilStationName": "",
+        "tamilStationName": "ஜுராங் டவுன் ஹால்",
         "stationNumber": "JE6",
         "operational": false
       },
       {
         "stationName": "Pandan Reservoir",
         "chineseStationName": "班丹蓄水池",
-        "tamilStationName": "",
+        "tamilStationName": "பாண்டன் ரெசவோர்",
         "stationNumber": "JE7",
         "operational": false
       }
@@ -3076,21 +3105,21 @@
       {
         "stationName": "Tengah",
         "chineseStationName": "登加",
-        "tamilStationName": "",
+        "tamilStationName": "தெங்கா",
         "stationNumber": "JS3",
         "operational": false
       },
       {
         "stationName": "Hong Kah",
         "chineseStationName": "丰嘉",
-        "tamilStationName": "",
+        "tamilStationName": "ஹோங் காஹ்",
         "stationNumber": "JS4",
         "operational": false
       },
       {
         "stationName": "Corporation",
         "chineseStationName": "企业",
-        "tamilStationName": "",
+        "tamilStationName": "கார்ப்பரெஷன்",
         "stationNumber": "JS5",
         "operational": false
       },
@@ -3104,7 +3133,7 @@
       {
         "stationName": "Bahar Junction",
         "chineseStationName": "巴哈路口",
-        "tamilStationName": "",
+        "tamilStationName": "பஹார் சந்திப்பு",
         "stationNumber": "JS7",
         "operational": false
       },
@@ -3126,28 +3155,28 @@
       {
         "stationName": "Enterprise",
         "chineseStationName": "事业",
-        "tamilStationName": "",
+        "tamilStationName": "எண்டர்பிரைஸ்",
         "stationNumber": "JS9",
         "operational": false
       },
       {
         "stationName": "Tukang",
         "chineseStationName": "都康",
-        "tamilStationName": "",
+        "tamilStationName": "துக்காங்",
         "stationNumber": "JS10",
         "operational": false
       },
       {
         "stationName": "Jurong Hill",
         "chineseStationName": "裕廊山",
-        "tamilStationName": "",
+        "tamilStationName": "ஜூரோங் ஹில்",
         "stationNumber": "JS11",
         "operational": false
       },
       {
         "stationName": "Jurong Pier",
         "chineseStationName": "裕廊渡头",
-        "tamilStationName": "",
+        "tamilStationName": "ஜூரோங் பியர்",
         "stationNumber": "JS12",
         "operational": false
       }
@@ -3160,35 +3189,35 @@
       {
         "stationName": "Gek Poh",
         "chineseStationName": "玉宝",
-        "tamilStationName": "",
+        "tamilStationName": "ஜெக் போ",
         "stationNumber": "JW1",
         "operational": false
       },
       {
         "stationName": "Tawas",
         "chineseStationName": "大华士",
-        "tamilStationName": "",
+        "tamilStationName": "தாவாஸ்",
         "stationNumber": "JW2",
         "operational": false
       },
       {
         "stationName": "Nanyang Gateway",
         "chineseStationName": "南洋门",
-        "tamilStationName": "",
+        "tamilStationName": "நன்யாங் கேட்வே",
         "stationNumber": "JW3",
         "operational": false
       },
       {
         "stationName": "Nanyang Cresent",
         "chineseStationName": "南洋弯",
-        "tamilStationName": "",
+        "tamilStationName": "நன்யாங் க்ரெஸ்ஸன்",
         "stationNumber": "JW4",
         "operational": false
       },
       {
         "stationName": "Pang Kang Hill",
         "chineseStationName": "秉光山",
-        "tamilStationName": "",
+        "tamilStationName": "பெங் காங் ஹில்",
         "stationNumber": "JW5",
         "operational": false
       }

@@ -37,16 +37,19 @@ module.exports = async function getBusTimings(busStopCode, db) {
       let displayService = ServiceNo
 
       if (DestinationCode === '02089') // Pan Pacific Hotel
-        DestinationCode = '02099'
+        DestinationCode = '02099' // Marina Centre Terminal
 
       if (DestinationCode === '03218') // Opposite MAS Building
-        DestinationCode = '03239'
+        DestinationCode = '03239' // Shenton Way Terminal
 
       if (DestinationCode === '46101') // Woodlands Checkpoint
-        DestinationCode = '46239'
+        DestinationCode = '46239' // Larkin Terminal
 
       if (DestinationCode === '46008') // Woodlands Temporary Interchange
         DestinationCode = '46009'
+
+      if (DestinationCode === '44051') // Opposite Block 632 Carpark
+        DestinationCode = '44989' // Gali Batu Terminal
 
       if (DestinationCode === '55009' && ServiceNo === 'CT8') // Ang Mo Kio Depot
         DestinationCode = '55151'
@@ -156,20 +159,11 @@ module.exports = async function getBusTimings(busStopCode, db) {
       if (destinationOverrides.generic[destination])
         destination = destinationOverrides.generic[destination]
 
-      let wheelchairAccessible = bus.Feature === 'WAB'
+      let wheelchairAccessible = true // All buses are now WAB
       let operator = serviceDepartures.Operator
 
       if (operator === 'TTS') operator = 'TTSG'
       if (operator === 'GAS') operator = 'GASG'
-
-      // fix issues on nwab routes (188r and friends)
-
-      if (bus.Type === 'SD')
-        wheelchairAccessible = true
-      if (operator === 'SMRT' && bus.Type !== 'BD')
-        wheelchairAccessible = true
-      if (!['SMRT', 'SBST'].includes(operator))
-        wheelchairAccessible = true
 
       let estimatedDepartureTime = moment.tz(bus.EstimatedArrival, 'Asia/Singapore')
       if (subtract30s)
