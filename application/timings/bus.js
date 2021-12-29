@@ -193,7 +193,7 @@ module.exports = async function getBusTimings(busStopCode, db) {
     }))
   })
 
-  departures.forEach(departure => {
+  departures.filter(Boolean).forEach(departure => {
     let id = `${departure.fullService}:${departure.destination}`
     if (!busTimings[id]) busTimings[id] = []
     busTimings[id].push(departure)

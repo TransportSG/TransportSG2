@@ -80,7 +80,7 @@ async function applyDeregDateInfo(bus, buses) {
 }
 
 router.get('/', async (req, res) => {
-  res.render('lookup/index')
+  res.render('lookup/index', { placeholder: 'Bus Registration Number' })
 })
 
 router.post('/', async (req, res) => {
