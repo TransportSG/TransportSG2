@@ -11,5 +11,5 @@ for busStop in results.filter(stop => stop.mode === 'bus')
     div.leftContainer
       img(src='/static/images/clear-icons/bus.svg')
     div.resultDetails
-      span.description Bus stop on #{busStop.roadName}
-      span.name #{busStop.stopName}
+      span.description Bus Stop on #{busStop.roadName}
+      span.name #{busStop.stopCode}: #{busStop.stopName}

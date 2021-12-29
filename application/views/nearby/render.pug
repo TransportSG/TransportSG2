@@ -14,7 +14,11 @@ for stop in stops
   a(href=url class=`result ${stopCSSClasses[stop.mode]}`)
     div.leftContainer.miniIcon
       img(src=`/static/images/clear-icons/${stop.mode}.svg`)
-      span.distance=stop.smallestDistance + ' metres'
+      span.distance #{stop.smallestDistance} metres
     div.resultDetails
-      span.description=stop.type
-      span.name=stop.stopName
+      if stop.type === 'Bus Stop'
+        span.description Bus Stop on #{stop.roadName}
+        span.name #{stop.stopCode}: #{stop.stopName}
+      else
+        span.description #{stop.type}
+        span.name #{stop.stopName}

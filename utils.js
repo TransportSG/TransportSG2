@@ -109,6 +109,7 @@ module.exports = {
     .replace(/CP(\b)/g, 'Carpark$1')
     .replace(/Poly(\b)/g, 'Polytechnic$1')
     .replace(/Veh(\b)/g, 'Vehicle$1')
+    .replace(/Ind$/g, 'Industries')
     .replace(/Ind(\b)/g, 'Industrial$1')
     .replace(/Est(\b)/g, 'Estate$1')
     .replace(/W'(L|l)ands/g, 'Woodlands')
@@ -209,6 +210,13 @@ module.exports = {
     .replace('Kh Plaza', 'KH Plaza')
     .replace('Ite', 'ITE')
     .replace('UWCSEA', 'United World College of South East Asia')
+    .replace(/(\b)S Army(\b)/, '$1Salvation Army$2')
+    .replace(/(\b)Vadapathira K(\b)/, '$1Vadapathira Kaliamman$2')
+    .replace(/(\b)Snr(\b)/, '$1Senior$2')
+    .replace(/(\b)Waseda S(\b)/, '$1Waseda Shibuya$2')
+    .replace(/(\b)Princess E(\b)/, '$1Princess Elizabeth$2')
+    .replace(/(\b)Hougang G\.(\b)/, '$1Hougang Green$2')
+    .replace(/(\b)Shop Mall(\b)/, '$1Shopping Mall$2')
 
     if (name === name.toUpperCase() && name.length > 5) {
       name = name.slice(0, 1) + name.slice(1).toLowerCase()
