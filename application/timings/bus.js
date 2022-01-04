@@ -85,6 +85,11 @@ module.exports = async function getBusTimings(busStopCode, db) {
 
       let destination = destinationStop.stopName
 
+      let plate
+      if (plates[ServiceNo]) {
+        plate = plates[ServiceNo][destination]
+      }
+
       if (service.loopingPoint) {
         let {loopingStops} = service
         let stopCodes = service.stops.map(stop => stop.stopCode)
@@ -135,11 +140,6 @@ module.exports = async function getBusTimings(busStopCode, db) {
           type: 'Point',
           coordinates: [bus.Longitude, bus.Latitude]
         }
-      }
-
-      let plate
-      if (plates[ServiceNo]) {
-        plate = plates[ServiceNo][destination]
       }
 
       let berth
