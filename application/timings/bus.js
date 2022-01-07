@@ -84,6 +84,7 @@ module.exports = async function getBusTimings(busStopCode, db) {
       }
 
       let destination = destinationStop.stopName
+      let destinationInfo = null
 
       let plate
       if (plates[ServiceNo]) {
@@ -108,6 +109,7 @@ module.exports = async function getBusTimings(busStopCode, db) {
               stopCode: loopingStop
             })
 
+            destinationInfo = `Returns to ${destinationStop.stopName}`
             if (loopingStopData.stopName.includes('Terminal')
             || loopingStopData.stopName.includes('Interchange')) {
               destination = loopingStopData.stopName
@@ -152,7 +154,6 @@ module.exports = async function getBusTimings(busStopCode, db) {
       serviceVariant = utils.getServiceVariant(displayService)
 
       let originalDestination = destination
-      let destinationInfo = null
 
       if (destinationOverrides.services[displayService]) {
         if (destinationOverrides.services[displayService][destination])
