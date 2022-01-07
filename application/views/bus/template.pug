@@ -12,7 +12,9 @@ for service in services
           span.berth Berth#{(berth.includes && berth.includes('-')) ? 's' : ''} #{berth}
       a(href=`/bus/timings/${departures[0].destinationBusStopCode}`).departureInfo
         span.towards Towards
-        span.destination=destination
+        span.destination #{destination}
+        if departures[0].destinationInfo
+          span.destinationInfo #{departures[0].destinationInfo}
       if departures[0].plate
         div.plateContainer
           div(class=`plate ${departures[0].plate.toLowerCase()}`)

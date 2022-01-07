@@ -1,3 +1,4 @@
+
 const moment = require('moment')
 require('moment-timezone')
 moment.tz.setDefault('Asia/Singapore')
@@ -209,6 +210,7 @@ module.exports = {
     .replace('Met YMCA', 'Metropolitan YMCA')
     .replace('Kh Plaza', 'KH Plaza')
     .replace('Ite', 'ITE')
+    .replace('Sbst', 'SBST')
     .replace('UWCSEA', 'United World College of South East Asia')
     .replace(/(\b)S Army(\b)/, '$1Salvation Army$2')
     .replace(/(\b)Vadapathira K(\b)/, '$1Vadapathira Kaliamman$2')

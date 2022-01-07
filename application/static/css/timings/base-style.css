@@ -83,6 +83,12 @@ a.departureInfo span.destination {
 
   color: #c5c5c5;
 }
+a.departureInfo span.destinationInfo {
+  font-size: calc(1vw + 1vh);
+  margin-top: calc(0.1vw + 0.1vh);
+
+  color: #c5c5c5;
+}
 
 div.plateContainer {
   margin-left: calc(0.5vw + 0.5vh);

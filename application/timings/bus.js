@@ -151,6 +151,9 @@ module.exports = async function getBusTimings(busStopCode, db) {
       let serviceNumber = utils.getServiceNumber(displayService),
       serviceVariant = utils.getServiceVariant(displayService)
 
+      let originalDestination = destination
+      let destinationInfo = null
+
       if (destinationOverrides.services[displayService]) {
         if (destinationOverrides.services[displayService][destination])
           destination = destinationOverrides.services[displayService][destination]
@@ -158,6 +161,11 @@ module.exports = async function getBusTimings(busStopCode, db) {
 
       if (destinationOverrides.generic[destination])
         destination = destinationOverrides.generic[destination]
+
+      if (displayService.match(/[ABCD]$/) && !service.loopingPoint && destination === originalDestination) {
+        destination = destinationStop.roadName
+        destinationInfo = destinationStop.stopName
+      }
 
       let wheelchairAccessible = true // All buses are now WAB
       let operator = serviceDepartures.Operator
@@ -174,6 +182,7 @@ module.exports = async function getBusTimings(busStopCode, db) {
         serviceNumber,
         serviceVariant,
         destination,
+        destinationInfo,
         estimatedDepartureTime,
         wheelchairAccessible,
         busType: bus.Type,
