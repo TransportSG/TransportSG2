@@ -313,5 +313,11 @@ module.exports = {
     }
 
     return prettyTime
+  },
+  shortenStopName: stopName => {
+    return stopName.replace(/ Interchange/g, '')
+      .replace(/ Terminal/g, '')
+      .replace(/  +/g, ' ')
+      .trim()
   }
 }
