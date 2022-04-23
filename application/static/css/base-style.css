@@ -17,6 +17,8 @@ html, body {
   padding: 0;
 
   font-family: Default-Font;
+  letter-spacing: calc(-0.025vw - 0.025vh);
+
   color: #c5c5c5;
   background-color: #1e1e1e;
 
@@ -24,7 +26,7 @@ html, body {
   -moz-user-select: none;
   -webkit-user-select: none;
 
-  overflow-x: hidden;
+  overflow-x: none;
 }
 
 div.errorPage {
@@ -89,14 +91,18 @@ div#header {
 
 div#header > span {
   font-size: calc((100vw + 100vh) * 0.013);
-  margin: calc(-0.3vw - 0.3vh) 0 0 calc(1vw + 1vh);
+  margin: calc(1vw + 1vh);
 }
 
 div#header-right {
   margin-left: auto;
   margin-right: calc(1vw + 1vh);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #content {
-  overflow-y: hidden;
+  overflow: hidden;
 }

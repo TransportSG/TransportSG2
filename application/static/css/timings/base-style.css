@@ -41,9 +41,10 @@ a.leftContainer span.topText {
 }
 
 a.leftContainer span.serviceNumber {
-  font-size: calc(3vw + 3vh);
-  line-height: calc(3vw + 3vh);
-  letter-spacing: calc(-0.15vw - 0.15vh);
+  font-size: calc(3.2vw + 2.5vh);
+  height: calc(4.5vw + 3.2vh);
+  line-height: calc(4.5vw + 3.6vh);
+  letter-spacing: calc(-.15vw - .15vh);
 }
 
 a.leftContainer span.serviceVariant {
@@ -54,7 +55,6 @@ a.leftContainer span.serviceVariant {
 }
 
 a.leftContainer span.berth {
-  margin-top: calc(0.1vw + 0.1vh);
   font-size: calc(0.9vw + 0.9vh);
 }
 
@@ -83,11 +83,11 @@ a.departureInfo span.destination {
 
   color: #c5c5c5;
 }
-a.departureInfo span.destinationInfo {
-  font-size: calc(1vw + 1vh);
-  margin-top: calc(0.1vw + 0.1vh);
 
-  color: #c5c5c5;
+a.departureInfo span.destinationInfo {
+  font-size: calc(0.9vw + 0.9vh);
+
+  color: #bababa;
 }
 
 div.plateContainer {
@@ -141,7 +141,7 @@ div.timing {
 }
 
 div.timing.mini {
-  width: calc(3.25vw + 3.25vh);
+  width: calc(3.2vw + 3.2vh);
   font-size: calc(1vw + 1vh);
 }
 
@@ -183,51 +183,51 @@ div.timing span {
 
 
 div.departure:nth-child(odd) div.timing.seating-sea:nth-child(odd) {
-  background-color: #60bd29;
+  background-color: var(--green-odd);
 }
 
 div.departure:nth-child(odd) div.timing.seating-sea:nth-child(even) {
-  background-color: #58ad25;
+  background-color: var(--green-even);
 }
 
 div.departure:nth-child(odd) div.timing.seating-sda:nth-child(odd) {
-  background-color: #d0ae16;
+  background-color: var(--yellow-odd);
 }
 
 div.departure:nth-child(odd) div.timing.seating-sda:nth-child(even) {
-  background-color: #be9f14;
+  background-color: var(--yellow-even);
 }
 
 div.departure:nth-child(odd) div.timing.seating-lsd:nth-child(odd) {
-  background-color: #f51227;
+  background-color: var(--red-odd);
 }
 
 div.departure:nth-child(odd) div.timing.seating-lsd:nth-child(even) {
-  background-color: #d41b2d;
+  background-color: var(--red-even);
 }
 
 
 
 div.departure:nth-child(even) div.timing.seating-sea:nth-child(even) {
-  background-color: #60bd29;
+  background-color: var(--green-odd);
 }
 
 div.departure:nth-child(even) div.timing.seating-sea:nth-child(odd) {
-  background-color: #58ad25;
+  background-color: var(--green-even);
 }
 
 div.departure:nth-child(even) div.timing.seating-sda:nth-child(even) {
-  background-color: #d0ae16;
+  background-color: var(--yellow-odd);
 }
 
 div.departure:nth-child(even) div.timing.seating-sda:nth-child(odd) {
-  background-color: #be9f14;
+  background-color: var(--yellow-even);
 }
 
 div.departure:nth-child(even) div.timing.seating-lsd:nth-child(even) {
-  background-color: #f51227;
+  background-color: var(--red-odd);
 }
 
 div.departure:nth-child(even) div.timing.seating-lsd:nth-child(odd) {
-  background-color: #d41b2d;
+  background-color: var(--red-even);
 }
