@@ -73,11 +73,8 @@ async function getDepartures(stationData) {
   }
 
   let url = 'https://' + host + path
-  let body = JSON.parse(await utils.request({
-    method: 'GET',
-    url,
-    headers,
-    gzip: true
+  let body = JSON.parse(await utils.request(url, {
+    headers
   }))
 
   let departures = []

@@ -10,9 +10,7 @@ let busesUpdated = 0
 let basePage = 'https://sgwiki.com/wiki/Bus_Deployments'
 
 async function getLinks() {
-  let data = await utils.request({
-    url: basePage
-  })
+  let data = await utils.request(basePage)
 
   let $ = cheerio.load(data)
 
@@ -29,8 +27,7 @@ async function getLinks() {
 }
 
 async function fetchURL(url, buses) {
-  let data = await utils.request({
-    url,
+  let data = await utils.request(url, {
     method: 'POST'
   })
 

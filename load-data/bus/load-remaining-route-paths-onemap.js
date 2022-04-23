@@ -18,12 +18,15 @@ database.connect({
   let allBusServices = await services.distinct('fullService')
   let allBusShapes = await shapes.distinct('fullService')
 
-  let token = JSON.parse(await utils.request({
-    url: authURL,
+  let token = JSON.parse(await utils.request(authURL, {
     method: 'POST',
-    formData: {
+    body: JSON.stringify({
       email: config.oneMapEmail,
-      password: config.oneMapPassword,
+      password: config.oneMapPassword
+    }),
+    headers: {
+      'cache-control': 'no-cache, max-age=0',
+      'content-type': 'application/json'
     }
   })).access_token
 
@@ -41,18 +44,17 @@ database.connect({
       let data = JSON.parse(await utils.request(
         `${busRouteURL}?busNo=${fullService}&direction=${i}&token=${token}`
       ))
-      if (data.RESULT === 'This bus service has got no available route.' && i === 1)
+      if (data.RESULT === 'This bus service has got no available route.' && i === 1) {
         data = JSON.parse(await utils.request(
           `${busRouteURL}?busNo=${fullService}&direction=2&token=${token}`
         ))
+      }
 
       let sequences = data['BUS_DIRECTION_' + (i === 1 ? 'ONE' : 'TWO')]
       if (!sequences) {
-        console.log('Failed', {
-          fullService, direction: i
-        })
+        console.log('Failed', { fullService, direction: i })
         continue
-    }
+      }
 
       let fullRoute = sequences.map(sequence => {
         return polyline.decode(sequence.GEOMETRIES)

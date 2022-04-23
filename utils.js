@@ -1,8 +1,7 @@
-
 const moment = require('moment')
 require('moment-timezone')
 moment.tz.setDefault('Asia/Singapore')
-const request = require('request-promise')
+const fetch = require('node-fetch')
 
 const daysOfWeek = ['Sun', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat']
 
@@ -235,25 +234,44 @@ module.exports = {
   },
   getYYYYMMDDNow: () => module.exports.getYYYYMMDD(module.exports.now()),
   now: () => moment.tz('Asia/Singapore'),
-  request: async (...options) => {
+  request: async (url, options={}) => {
     let start = +new Date()
-    let url = typeof options[0] === 'string' ? options[0] : options[0].url
 
-    try {
-      let body = await request(...options)
+    let body
+    let error
 
-      let end = +new Date()
-      let diff = end - start
-      console.log(`${diff}ms ${url}`)
+    let maxRetries = (options ? options.maxRetries : null) || 3
 
-      return body
-    } catch (e) {
-      let end = +new Date()
-      let diff = end - start
-      console.log(`${diff}ms ${url}`)
-
-      throw e
+    let fullOptions = {
+      timeout: 5000,
+      compress: true,
+      highWaterMark: 1024 * 1024,
+      ...options
     }
+
+    for (let i = 0; i < maxRetries; i++) {
+      try {
+        body = await fetch(url, fullOptions)
+
+        break
+      } catch (e) {
+        error = e
+      }
+    }
+
+    if (!body && error) throw error
+
+    let end = +new Date()
+    let diff = end - start
+
+    let size = body.headers.get('content-length')
+    let returnData = await (options.raw ? body.buffer() : body.text())
+    if (!size) size = returnData.length
+
+    let logMessage = `${diff}ms ${url} ${size}R`
+    console.log(logMessage)
+
+    return returnData
   },
   getDistanceFromLatLon: (lat1, lon1, lat2, lon2) => {
     var R = 6371 // Radius of the earth in km

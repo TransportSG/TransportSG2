@@ -5,10 +5,10 @@ const config = require('../../config')
 const async = require('async')
 const turf = require('@turf/turf')
 
-let baseURL = 'https://www.mytransport.sg/content/mytransport/home/commuting/busservices.html'
-let serviceSearch = '.Bus_Service_no option[value!=""][busn=""]'
-let kmlURL = 'https://www.mytransport.sg/kml/busroutes/{0}-{1}.kml'
-let coordinateSearch = 'kml > Document > Placemark > LineString > coordinates'
+let baseURL = 'https://www.lta.gov.sg/map/busService/bus_services.xml'
+let serviceSearch = 'CITYDIRECT bus_service, TRUNK bus_service'
+let kmlURL = 'https://www.lta.gov.sg/map/busService/bus_route_kml/{0}-{1}.kml'
+let coordinateSearch = 'kml > Document > Placemark LineString > coordinates'
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 
@@ -23,26 +23,24 @@ database.connect({
   }, {name: 'shape index'})
   // shapes.deleteDocuments({})
 
-  let baseURLData = await utils.request({
-    url: baseURL,
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:72.0) Gecko/20100101 Firefox/72.0',
-      'Host': 'www.mytransport.sg'
-    }
-  })
+  let baseURLData = await utils.request(baseURL)
+
   let $ = cheerio.load(baseURLData)
 
-  let busServices = Array.from($(serviceSearch)).map(serviceOption => {
-    return serviceOption.value
-  }).filter(serviceData => serviceData && serviceData.length < 8).map(serviceData => {
-    if (!serviceData.includes('_')) serviceData += '_2'
-    let serviceDataParts = serviceData.split('_')
-    let [serviceNumber, kmlCount] = serviceDataParts
-    return {serviceNumber, kmlCount}
+  let busServices = Array.from($(serviceSearch)).filter(serviceData => {
+    let serviceNumber = $('number', serviceData).text()
+    return serviceNumber[0] !== '-' && !serviceNumber.endsWith('T')
+  }).map(serviceData => {
+    let serviceNumber = $('number', serviceData).text()
+    let files = Array.from($('kmlFile file', serviceData))
+
+    return { serviceNumber, kmlCount: files.length }
   }).reduce((acc, serviceData) => {
     let {serviceNumber, kmlCount} = serviceData
 
     acc[serviceNumber] = kmlCount
+
+    return acc
   }, {})
 
   let allBusServices = await services.distinct('fullService')
@@ -50,18 +48,19 @@ database.connect({
   let totalKMLCount = 0
 
   async function fetchKMLData(fullService, direction) {
-    return await utils.request({
-      url: kmlURL.format(fullService.toUpperCase(), direction),
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:72.0) Gecko/20100101 Firefox/72.0',
-        'Host': 'www.mytransport.sg'
-      }
+    return await utils.request(kmlURL.format(fullService.toUpperCase(), direction), {
+      timeout: 30000
     })
   }
 
   function match(allCoords) {
-    if (allCoords.length !== 1) throw Error()
-    return allCoords.text().split(' ').map(cpair => cpair.split(',').map(coord => parseFloat(coord)))
+    let allTexts = Array.from(allCoords).map(coord => $(coord).text())
+    let deduped = allTexts.filter((e, i, a) => a.indexOf(e) === i)
+    let joint = deduped.join(' ')
+    let merged = joint.split(' ').filter((e, i, a) => a.indexOf(e) === i)
+
+    if (allCoords.length === 0) throw Error()
+    return merged.map(cpair => cpair.split(',').map(coord => parseFloat(coord)))
   }
 
   function shiftLines(coordinates) {
@@ -99,6 +98,7 @@ database.connect({
         let $1 = cheerio.load(kmlDataD1)
         coordinatesD1 = match($1(coordinateSearch))
       } catch (e) {
+        console.log(e);
         console.log('Could not fetch KML data for ' + fullService + ', trying D2')
 
         let kmlDataD1 = await fetchKMLData(fullService, 2)
@@ -144,6 +144,7 @@ database.connect({
 
       }
     } catch (e) {
+      console.log(e);
       console.log('Failed to fetch KML data for', fullService)
     }
   })
