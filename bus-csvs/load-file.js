@@ -30,6 +30,9 @@ database.connect({
     rego: 1
   }, {name: 'rego index', unique: true})
   buses.createIndex({
+    id: 1
+  }, {name: 'id index'})
+  buses.createIndex({
     depot: 1,
     service: 1
   }, {name: 'deployment index'})
