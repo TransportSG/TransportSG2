@@ -31,6 +31,10 @@ async function getStop(busStopCode, stops) {
   } else return stopCache[busStopCode]
 }
 
+function addColonToTime(time) {
+  return time.slice(0, 2) + ':' + time.slice(2)
+}
+
 database.connect({
   poolSize: 100
 }, async err => {
@@ -55,14 +59,14 @@ database.connect({
       stopName: busStop.stopName,
       roadName: busStop.roadName,
       firstBus: {
-        weekday: WD_FirstBus,
-        saturday: SAT_FirstBus,
-        sunday: SUN_FirstBus
+        weekday: addColonToTime(WD_FirstBus),
+        saturday: addColonToTime(SAT_FirstBus),
+        sunday: addColonToTime(SUN_FirstBus)
       },
       lastBus: {
-        weekday: WD_LastBus,
-        saturday: SAT_LastBus,
-        sunday: SUN_LastBus
+        weekday: addColonToTime(WD_LastBus),
+        saturday: addColonToTime(SAT_LastBus),
+        sunday: addColonToTime(SUN_LastBus)
       }
     })
 

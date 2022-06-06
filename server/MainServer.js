@@ -96,7 +96,8 @@ module.exports = class MainServer {
       Next2Trains: '/mrt/timings',
       Search: '/search',
       BusLookup: '/lookup',
-      StopsNearby: '/nearby'
+      StopsNearby: '/nearby',
+      RouteView: '/bus/route'
     }
 
     Object.keys(routers).forEach(routerName => {

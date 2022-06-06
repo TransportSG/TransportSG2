@@ -8,12 +8,6 @@ router.get('/', async (req, res) => {
   res.render('index')
 })
 
-router.get('/timings/:busStopCode', async (req, res) => {
-  let {busStopCode} = req.params
-  let timings = await getBusTimings(busStopCode, res.db)
-  res.json(timings)
-})
-
 router.get('/map/:fullService', async (req, res) => {
   res.render('map')
 })

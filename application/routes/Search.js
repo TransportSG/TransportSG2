@@ -29,7 +29,7 @@ async function prioritySearch(db, query) {
   return stopCodeMatch.concat(priorityStopsByName)
 }
 
-async function performSearch(db, query) {
+async function findStops(db, query) {
   let search
 
   let prioritySearchResults = await prioritySearch(db, query)
@@ -81,16 +81,38 @@ async function performSearch(db, query) {
   })
 }
 
+async function findRoutes(db, query) {
+  if (query.length) {
+    return (await db.getCollection('services').findDocuments({
+      serviceNumber: query.toUpperCase(),
+      direction: 1
+    }).toArray()).map(route => {
+      route.origin = route.stops[0].stopName
+      if (route.loopingPoint) {
+        let loopingPoint = route.loopingPoint.display || route.loopingPoint
+        route.destination = utils.getDestination(loopingPoint, route.fullService)
+      } else route.destination = utils.getDestination(route.stops[route.stops.length - 1].stopName, route.fullService)
+
+      route.operatorCSS = utils.operators[route.operator]
+
+      return route
+    })
+  } else {
+    return []
+  }
+}
+
 router.post('/', async (req, res) => {
   let query = req.body.query.trim()
   if (!safeRegex(query) || query === '') {
     return res.end('')
   }
 
-  const results = await performSearch(res.db, query)
+  let stops = await findStops(res.db, query)
+  let routes = await findRoutes(res.db, query)
 
   res.render('search/results', {
-    results
+    stops, routes
   })
 })
 

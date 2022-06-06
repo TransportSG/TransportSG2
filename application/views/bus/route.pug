@@ -1,0 +1,85 @@
+extends ../layout
+
+block head
+  title TransportSG - Bus #{routeNumber}
+
+//- block header-right
+  a#mapLink(href=`/route-preview/${route.routeGTFSID}`)
+    img#mapIcon(src='/static/images/decals/map.svg' alt='map icon')
+
+block title
+  span Bus #{routeNumber}
+
+block style
+  link(rel='stylesheet' href='/static/css/routes/base-style.css')
+  link(rel='stylesheet' href='/static/css/combined-colours.css')
+
+block content
+  div#routeSummary
+    a(class=operators[route.operator] href=otherDirectionURL)#routeNumber
+      span#routeType #{route.category}
+      span#routeText #{route.fullService}
+    div#terminals
+      a().coloured-row
+        span.destination #{origin}
+      a().coloured-row
+        span.destination #{route.loopingPoint ? '(Loop)' : ''} #{destination}
+  div#serviceTimings
+    div#keyTimings
+      div.table-header.table-data
+        span Days
+        span First Bus
+        span Last Bus
+      div.coloured-row.table-data
+        span Weekdays
+        span=route.stops[0].firstBus.weekday
+        span=route.stops[0].lastBus.weekday
+      div.coloured-row.table-data
+        span Saturday / PH
+        span=route.stops[0].firstBus.saturday
+        span=route.stops[0].lastBus.saturday
+      div.coloured-row.table-data
+        span Sundays
+        span=route.stops[0].firstBus.sunday
+        span=route.stops[0].lastBus.sunday
+    div#frequency
+      div.table-header.table-data
+        span Time Of Day
+        span Min Freq
+        span Max Freq
+      div.coloured-row.table-data
+        div.freqTime
+          span.time 05:30 - 08:30
+          span.desc Morning Peak
+        span #{route.frequency.morningPeak.min} min
+        span #{route.frequency.morningPeak.max} min
+      div.coloured-row.table-data
+        div.freqTime
+          span.time 08:30 - 17:00
+          span.desc Morning/Afternoon
+        span #{route.frequency.morningOffpeak.min} min
+        span #{route.frequency.morningOffpeak.max} min
+      div.coloured-row.table-data
+        div.freqTime
+          span.time 17:00 - 19:00
+          span.desc Evening Peak
+        span #{route.frequency.afternoonPeak.min} min
+        span #{route.frequency.afternoonPeak.max} min
+      div.coloured-row.table-data
+        div.freqTime
+          span.time 19:00 - 23:00
+          span.desc Night
+        span #{route.frequency.afternoonOffpeak.min} min
+        span #{route.frequency.afternoonOffpeak.max} min
+  div#stops
+    div.table-header.table-data.spacing2
+      span.distance Distance
+      span.stopName Bus Stop    
+    
+    for stop in route.stops
+      div.coloured-row
+        div.stop.table-data.spacing2
+          span.suburb #{stop.distance}km
+          div.stopNameData.stopName
+            span #{stop.roadName}
+            span #{stop.stopName}

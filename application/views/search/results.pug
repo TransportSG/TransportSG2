@@ -1,15 +1,25 @@
-for mrtStation in results.filter(stop => stop.mode === 'mrt')
+for mrtStation in stops.filter(stop => stop.mode === 'mrt')
   a(href=`/mrt/timings/${mrtStation.codedStopName}`).mrtStation.result
     div.leftContainer
       img(src='/static/images/clear-icons/mrt.svg')
     div.resultDetails
       span.description MRT Station
       span.name #{mrtStation.stopName}
-      
-for busStop in results.filter(stop => stop.mode === 'bus')
+
+for busStop in stops.filter(stop => stop.mode === 'bus')
   a(href=`/bus/timings/${busStop.stopCode}`).busStop.result
     div.leftContainer
       img(src='/static/images/clear-icons/bus.svg')
     div.resultDetails
       span.description Bus Stop on #{busStop.roadName}
       span.name #{busStop.stopCode}: #{busStop.stopName}
+
+for route in routes.filter(route => route.mode === 'bus')
+  a(href=`/bus/route/${route.fullService}`).route.result
+    div(class=`leftContainer ${route.operatorCSS}`)
+      span.serviceNumber #{route.serviceNumber}
+      if route.serviceVariant
+        span.serviceVariant #{route.serviceVariant}
+    div.resultDetails
+      span.description Bus Route
+      span.name #{route.origin} - #{route.destination}

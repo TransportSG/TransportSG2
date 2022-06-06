@@ -2,6 +2,7 @@ const moment = require('moment')
 require('moment-timezone')
 moment.tz.setDefault('Asia/Singapore')
 const fetch = require('node-fetch')
+const destinationOverrides = require('./destination-overrides.json')
 
 const daysOfWeek = ['Sun', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat']
 
@@ -177,6 +178,7 @@ module.exports = {
     .replace(/Br(\b)/, 'Bridge$1')
     .replace(/Govt(\b)/, 'Government$1')
     .replace(/Blk(\d+)/, 'Block $1')
+    .replace(/Block (\d+)([a-z])/, (_, num, letter) => `Block ${num}${letter.toUpperCase()}`)
     .replace('(Pr)', '(Primary)')
     .replace('(Sec)', '(Secondary)')
     .replace(/Meth(\b)/g, 'Methodist$1')
@@ -184,6 +186,8 @@ module.exports = {
     .replace(/Rv(\b)/g, 'RV$1')
     .replace(/Adm(\b)/g, 'Administration$1')
     .replace(/Div(\b)/g, 'Divison$1')
+    .replace(/Inst(\b)/g, 'Institute$1')
+    .replace(/Lk(\b)/g, 'Link$1')
     .replace(/(\w{4,}) St(\b)/, txt => {
       let match = txt.match(/(\w{4,}) St(\b)/)
       if (['Opposite', 'Before', 'After'].includes(match[1])) return txt
@@ -210,6 +214,7 @@ module.exports = {
     .replace('Kh Plaza', 'KH Plaza')
     .replace('Ite', 'ITE')
     .replace('Sbst', 'SBST')
+    .replace(/Lrt(\b)/, 'LRT$1')
     .replace('UWCSEA', 'United World College of South East Asia')
     .replace(/(\b)S Army(\b)/, '$1Salvation Army$2')
     .replace(/(\b)Vadapathira K(\b)/, '$1Vadapathira Kaliamman$2')
@@ -337,5 +342,19 @@ module.exports = {
       .replace(/ Terminal/g, '')
       .replace(/  +/g, ' ')
       .trim()
+  },
+  getDestination: (destination, routeNumber) => {
+    if (destinationOverrides.services[routeNumber] && destinationOverrides.services[routeNumber][destination]) {
+      return destinationOverrides.services[routeNumber][destination]
+    }
+
+    if (destinationOverrides.generic[destination]) return destinationOverrides.generic[destination]
+    return destination
+  },
+  operators: {
+    'GAS': 'gasg',
+    'SBST': 'sbst',
+    'SMRT': 'smrt',
+    'TTS': 'ttsg'
   }
 }
