@@ -1,4 +1,4 @@
-const {ltaAccountKey} = require('./config.json')
+const {ltaAccountKey} = require('./config')
 const utils = require('./utils')
 
 async function makeRequest(url) {

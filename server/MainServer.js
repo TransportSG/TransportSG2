@@ -8,7 +8,7 @@ const uglifyEs = require('uglify-es')
 
 const DatabaseConnection = require('../database/DatabaseConnection')
 
-const config = require('../config.json')
+const config = require('../config')
 
 module.exports = class MainServer {
   constructor () {
