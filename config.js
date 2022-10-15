@@ -10,8 +10,10 @@ if (process.env.DATABASE_URL) {
   config.databaseName = parts.pathname.slice(1)
 }
 
-if (process.env.PORT) {
-  config.httpPort = process.env.PORT
-}
+if (process.env.PORT) config.httpPort = process.env.PORT
+
+if (process.env.LTA_KEY) config.ltaAccountKey = process.env.LTA_KEY
+if (process.env.ONEMAP_EMAIL) config.oneMapEmail = process.env.ONEMAP_EMAIL
+if (process.env.ONEMAP_PASSWORD) config.oneMapPassword = process.env.ONEMAP_PASSWORD
 
 module.exports = config

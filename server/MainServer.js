@@ -97,7 +97,9 @@ module.exports = class MainServer {
       Search: '/search',
       BusLookup: '/lookup',
       StopsNearby: '/nearby',
-      RouteView: '/bus/route'
+      RouteView: '/bus/route',
+
+      WebsiteAdmin: '/admin'
     }
 
     Object.keys(routers).forEach(routerName => {

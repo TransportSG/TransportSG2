@@ -3,6 +3,7 @@ require('moment-timezone')
 moment.tz.setDefault('Asia/Singapore')
 const fetch = require('node-fetch')
 const destinationOverrides = require('./destination-overrides.json')
+const { spawn } = require('child_process')
 
 const daysOfWeek = ['Sun', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat']
 
@@ -356,5 +357,22 @@ module.exports = {
     'SBST': 'sbst',
     'SMRT': 'smrt',
     'TTS': 'ttsg'
+  },
+  spawnProcess: async (path, args, finish) => {
+    return await new Promise(resolve => {
+      let childProcess = spawn(path, args)
+
+      childProcess.stdout.on('data', data => {
+        process.stdout.write(data.toString())
+      })
+
+      childProcess.stderr.on('data', data => {
+        process.stderr.write(data.toString())
+      })
+
+      childProcess.on('close', code => {
+        resolve()
+      })
+    })
   }
 }
