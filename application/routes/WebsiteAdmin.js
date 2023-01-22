@@ -26,6 +26,19 @@ router.get('/trigger-bus-stop-update', async (req, res) => {
 router.get('/trigger-bus-service-update', async (req, res) => {
   try {
     await utils.spawnProcess('node', [l('bus/load-bus-services.js')])
+    res.json({
+      status: 'ok'
+    })
+  } catch (e) {
+    res.json({
+      status: 'error',
+      message: e.toString()
+    })
+  }
+})
+
+router.get('/trigger-bus-service-stops-update', async (req, res) => {
+  try {
     await utils.spawnProcess('node', [l('bus/load-bus-service-stops.js')])
     res.json({
       status: 'ok'
