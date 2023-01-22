@@ -10,6 +10,8 @@ function l(p) {
   return path.join(__dirname, '../../load-data', p)
 }
 
+router.get('/ping', (req, res) => res.end(''))
+
 router.get('/trigger-bus-stop-update', async (req, res) => {
   try {
     await utils.spawnProcess('node', [l('bus/load-bus-stops.js')])

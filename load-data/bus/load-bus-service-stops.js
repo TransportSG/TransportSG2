@@ -44,10 +44,6 @@ database.connect({
 
   let data = await tempDbCollection.findDocuments({}).toArray()
 
-  // let data = (await async.mapLimit([[10000, 0], [20000, 10000], [Infinity, 20000]], 2, async params => {
-  //   return await ltaAPI.paginatedRequest('/BusRoutes', params[0], params[1])
-  // })).reduce((a, e) => a.concat(e))
-
   let expandedData = await async.reduce(data, {}, async (acc, busRouteStop) => {
     let {ServiceNo, Direction, BusStopCode, Distance, StopSequence,
       WD_FirstBus, WD_LastBus, SAT_FirstBus, SAT_LastBus, SUN_FirstBus, SUN_LastBus} = busRouteStop
