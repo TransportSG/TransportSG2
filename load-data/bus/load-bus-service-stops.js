@@ -41,7 +41,9 @@ database.connect({
   let services = database.getCollection('services')
   let stops = database.getCollection('stops')
 
-  let data = await ltaAPI.paginatedRequest('/BusRoutes')
+  let data = (await async.map([[10000, 0], [Infinity, 10000]], async params => {
+    return await ltaAPI.paginatedRequest('/BusRoutes', params[0], params[1])
+  })).reduce((a, e) => a.concat(e))
 
   let expandedData = await async.reduce(data, {}, async (acc, busRouteStop) => {
     let {ServiceNo, Direction, BusStopCode, Distance, StopSequence,
