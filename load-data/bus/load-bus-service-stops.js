@@ -40,9 +40,8 @@ database.connect({
 }, async err => {
   let services = database.getCollection('services')
   let stops = database.getCollection('stops')
-  let tempDbCollection = database.getCollection('loading bus service stops')
 
-  let data = await tempDbCollection.findDocuments({}).toArray()
+  let data = await ltaAPI.paginatedRequest('/BusRoutes')
 
   let expandedData = await async.reduce(data, {}, async (acc, busRouteStop) => {
     let {ServiceNo, Direction, BusStopCode, Distance, StopSequence,

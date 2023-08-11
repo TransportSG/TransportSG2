@@ -27,6 +27,8 @@ database.connect({
     let loopingPoint = utils.expandStopName(busService.LoopDesc)
     if (busService.ServiceNo === '34A')
       loopingPoint = ''
+    if (busService.ServiceNo === '36' || busService.ServiceNo === '36A' || busService.ServiceNo === '36B')
+      loopingPoint = 'Tomlinson Road'
     if (busService.ServiceNo === '62A')
       loopingPoint = ''
     if (busService.ServiceNo === '180')
