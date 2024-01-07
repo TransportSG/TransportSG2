@@ -35,6 +35,9 @@ async function fetchURL(url, buses) {
 
   let tables = Array.from($('table.toccolours'))
   await async.forEach(tables, async table => {
+    let header = $('tr', table)[0]
+    if ($(header).text().includes('served')) return
+    
     let rows = Array.from($('tr', table)).slice(1)
     let lastAdvert = 'N/A'
 
@@ -73,7 +76,7 @@ database.connect({
   let buses = database.getCollection('buses')
 
   let urls = await getLinks()
-
+  
   await async.forEachOf(urls, async (u, i) => {
     await new Promise(r => setTimeout(r, i * 500))
     await fetchURL(u, buses)
