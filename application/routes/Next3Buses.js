@@ -3,6 +3,7 @@ const utils = require('../../utils')
 const router = new express.Router()
 const getBusTimings = require('../timings/bus')
 const async = require('async')
+const { destination } = require('@turf/turf')
 
 async function loadDepartures(busStopCode, db,  req, res) {
   let stops = db.getCollection('stops')
@@ -101,23 +102,25 @@ router.get('/:busStopCode/json/minified', async (req, res) => {
   let response = await loadDepartures(req.params.busStopCode, res.db)
   
   if (response.error === 'no-stop') res.status(404)
-  res.json(Object.keys(response.timings).reduce((resp, svc) => {
+  res.json(response.services.map(svc => {
     let data = response.timings[svc]
     let directions = Object.keys(data)
 
-    resp[svc] = directions.reduce((acc, dir) => {
+    return directions.map(dir => {
       let destinationInfo = data[dir][0].destinationInfo
-      acc[dir + (destinationInfo ? '_' + destinationInfo : '')] = data[dir].map(dep => ({
-        e: dep.estimatedDepartureTime,
-        b: dep.busType[0],
-        a: dep.seatsAvailable[1]
-      }))
 
-      return acc
-    }, {})
-
-    return resp
-  }, {}))
+      return {
+        s: svc,
+        d: dir,
+        i: destinationInfo,
+        b: data[dir].map(dep => ({
+          e: dep.estimatedDepartureTime,
+          b: dep.busType[0],
+          a: dep.seatsAvailable[1]
+        }))
+      }
+    })
+  }).reduce((acc, svc) => acc.concat(svc), []))
 })
 
 
