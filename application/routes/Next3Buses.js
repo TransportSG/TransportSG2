@@ -102,25 +102,28 @@ router.get('/:busStopCode/json/minified', async (req, res) => {
   let response = await loadDepartures(req.params.busStopCode, res.db)
   
   if (response.error === 'no-stop') res.status(404)
-  res.json(response.services.map(svc => {
-    let data = response.timings[svc]
-    let directions = Object.keys(data)
+  res.json({
+    n: response.busStop.stopName,
+    s: response.services.map(svc => {
+      let data = response.timings[svc]
+      let directions = Object.keys(data)
 
-    return directions.map(dir => {
-      let destinationInfo = data[dir][0].destinationInfo
+      return directions.map(dir => {
+        let destinationInfo = data[dir][0].destinationInfo
 
-      return {
-        s: svc,
-        d: dir,
-        i: destinationInfo,
-        b: data[dir].map(dep => ({
-          e: dep.estimatedDepartureTime,
-          b: dep.busType[0],
-          a: dep.seatsAvailable[1]
-        }))
-      }
-    })
-  }).reduce((acc, svc) => acc.concat(svc), []))
+        return {
+          s: svc,
+          d: dir,
+          i: destinationInfo,
+          b: data[dir].map(dep => ({
+            e: dep.estimatedDepartureTime,
+            b: dep.busType[0],
+            a: dep.seatsAvailable[1]
+          }))
+        }
+      })
+    }).reduce((acc, svc) => acc.concat(svc), [])
+  })
 })
 
 
