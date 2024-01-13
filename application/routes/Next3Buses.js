@@ -3,15 +3,13 @@ const utils = require('../../utils')
 const router = new express.Router()
 const getBusTimings = require('../timings/bus')
 const async = require('async')
-const moment = require('moment')
 
-async function loadDepartures(req, res) {
-  let {busStopCode} = req.params
-  let stops = res.db.getCollection('stops')
+async function loadDepartures(busStopCode, db,  req, res) {
+  let stops = db.getCollection('stops')
   let busStop = await stops.findDocument({ stopCode: busStopCode })
 
   if (!busStop) {
-    return res.status(404).render('errors/no-stop')
+    return { error: 'no-stop' }
   }
 
   let similarStops = await stops.distinct('stopCode', {
@@ -27,7 +25,7 @@ async function loadDepartures(req, res) {
   let stopTimings = {}
 
   await async.forEach(similarStops, async stopCode => {
-    let timings = await getBusTimings(stopCode, res.db)
+    let timings = await getBusTimings(stopCode, db)
     stopTimings[stopCode] = timings
   })
 
@@ -79,12 +77,47 @@ async function loadDepartures(req, res) {
 }
 
 router.get('/:busStopCode', async (req, res) => {
-  let response = await loadDepartures(req, res)
-  if (response) res.render('bus/timings', response)
+  let response = await loadDepartures(req.params.busStopCode, res.db)
+
+  if (response.error === 'no-stop') res.status(404).render('errors/no-stop')
+  else res.render('bus/timings', response)
 })
 
 router.post('/:busStopCode', async (req, res) => {
-  res.render('bus/template', await loadDepartures(req, res))
+  let response = await loadDepartures(req.params.busStopCode, res.db)
+  
+  if (response.error === 'no-stop') res.status(404).render('errors/no-stop')
+  else res.render('bus/template', response)
+})
+
+router.get('/:busStopCode/json', async (req, res) => {
+  let response = await loadDepartures(req.params.busStopCode, res.db)
+  
+  if (response.error === 'no-stop') res.status(404)
+  res.json(response)
+})
+
+router.get('/:busStopCode/json/minified', async (req, res) => {
+  let response = await loadDepartures(req.params.busStopCode, res.db)
+  
+  if (response.error === 'no-stop') res.status(404)
+  res.json(Object.keys(response.timings).reduce((resp, svc) => {
+    let data = response.timings[svc]
+    let directions = Object.keys(data)
+
+    resp[svc] = directions.reduce((acc, dir) => {
+      let destinationInfo = data[dir][0].destinationInfo
+      acc[dir + (destinationInfo ? '_' + destinationInfo : '')] = data[dir].map(dep => ({
+        e: dep.estimatedDepartureTime,
+        b: dep.busType[0],
+        a: dep.seatsAvailable[1]
+      }))
+
+      return acc
+    }, {})
+
+    return resp
+  }, {}))
 })
 
 
