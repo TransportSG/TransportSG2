@@ -116,7 +116,7 @@ router.get('/:busStopCode/json/minified', async (req, res) => {
           d: dir,
           i: destinationInfo,
           b: data[dir].map(dep => ({
-            e: dep.estimatedDepartureTime,
+            e: +dep.estimatedDepartureTime,
             b: dep.busType[0],
             a: dep.seatsAvailable[1]
           }))
