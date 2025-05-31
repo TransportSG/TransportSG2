@@ -2,7 +2,7 @@ const {ltaAccountKey} = require('./config')
 const utils = require('./utils')
 
 async function makeRequest(url) {
-  let data = await utils.request('http://datamall2.mytransport.sg/ltaodataservice' + url, {
+  let data = await utils.request('https://datamall2.mytransport.sg/ltaodataservice' + url, {
     headers: {
       AccountKey: ltaAccountKey,
       Accept: 'application/json'

@@ -9,7 +9,7 @@ const utils = require('../../utils')
 
 const departuresCache = new TimedCache({ defaultTtl: 1000 * 60 })
 
-let url = '/BusArrivalv2?BusStopCode='
+let url = '/v3/BusArrival?BusStopCode='
 
 module.exports = async function getBusTimings(busStopCode, db) {
   let services = db.getCollection('services')
