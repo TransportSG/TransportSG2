@@ -1,66 +1,64 @@
-import DatabaseConnection from '../../database/DatabaseConnection.js'
+import { MongoDatabaseConnection } from '@transportme/database'
 import { paginatedRequest } from '../../lta-api.mjs'
 import utils from '../../utils.mjs'
 import config from '../../config.json' with { type: 'json' }
 
-const database = new DatabaseConnection(config.databaseURL, config.databaseName)
+const database = new MongoDatabaseConnection(config.databaseURL, config.databaseName)
 
-database.connect({
-  poolSize: 100
-}, async err => {
-  let stops = database.getCollection('stops')
-  stops.createIndex({
-    mode: 1,
-    roadName: 1,
-    stopName: 1,
-    stopCode: 1,
-    position: '2dsphere'
-  }, {name: 'stop index', unique: 1})
-  stops.createIndex({
-    stopName: 1
-  }, {name: 'stop name index'})
-  stops.createIndex({
-    roadName: 1
-  }, {name: 'road name index'})
-  stops.createIndex({
-    stopCode: 1
-  }, {name: 'stop code index'})
-  stops.createIndex({
-    position: '2dsphere'
-  }, {name: 'position index'})
+await database.connect()
 
-  let data = await paginatedRequest('/BusStops')
+let stops = database.getCollection('stops')
+stops.createIndex({
+  mode: 1,
+  roadName: 1,
+  stopName: 1,
+  stopCode: 1,
+  position: '2dsphere'
+}, {name: 'stop index', unique: 1})
+stops.createIndex({
+  stopName: 1
+}, {name: 'stop name index'})
+stops.createIndex({
+  roadName: 1
+}, {name: 'road name index'})
+stops.createIndex({
+  stopCode: 1
+}, {name: 'stop code index'})
+stops.createIndex({
+  position: '2dsphere'
+}, {name: 'position index'})
 
-  let expandedData = data.map(busStop => {
-    busStop.RoadName = utils.expandStopName(busStop.RoadName)
-    busStop.Description  = utils.expandStopName(busStop.Description)
+let data = await paginatedRequest('/BusStops')
 
-    if (busStop.BusStopCode === '68239')
-      busStop.RoadName = 'Seletar Aerospace Avenue'
-    if (busStop.BusStopCode === '96371')
-      busStop.RoadName = 'Changi Business Park Avenue 3'
+let expandedData = data.map(busStop => {
+  busStop.RoadName = utils.expandStopName(busStop.RoadName)
+  busStop.Description  = utils.expandStopName(busStop.Description)
 
-    return {
-      mode: 'bus',
-      stopCode: busStop.BusStopCode,
-      roadName: busStop.RoadName,
-      stopName: busStop.Description,
-      position: {
-        type: 'Point',
-        coordinates: [busStop.Longitude, busStop.Latitude]
-      }
+  if (busStop.BusStopCode === '68239')
+    busStop.RoadName = 'Seletar Aerospace Avenue'
+  if (busStop.BusStopCode === '96371')
+    busStop.RoadName = 'Changi Business Park Avenue 3'
+
+  return {
+    mode: 'bus',
+    stopCode: busStop.BusStopCode,
+    roadName: busStop.RoadName,
+    stopName: busStop.Description,
+    position: {
+      type: 'Point',
+      coordinates: [busStop.Longitude, busStop.Latitude]
     }
-  })
-
-  await stops.deleteDocuments({ mode: 'bus' })
-  await stops.bulkWrite(expandedData.map(busStop => ({
-    insertOne: {
-      document: busStop
-    }
-  })), {
-    ordered: false
-  })
-
-  console.log('Completed loading in ' + expandedData.length + ' bus stops')
-  process.exit()
+  }
 })
+
+await stops.deleteDocuments({ mode: 'bus' })
+await stops.bulkWrite(expandedData.map(busStop => ({
+  insertOne: {
+    document: busStop
+  }
+})), {
+  ordered: false
+})
+
+console.log('Completed loading in ' + expandedData.length + ' bus stops')
+process.exit()

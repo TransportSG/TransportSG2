@@ -3,10 +3,9 @@ const fs = require('fs')
 const async = require('async')
 const path = require('path')
 const utils = require('../utils')
-const DatabaseConnection = require('../database/DatabaseConnection')
 const config = require('../config')
 
-const database = new DatabaseConnection(config.databaseURL, config.databaseName)
+const database = new MongoDatabaseConnection(config.databaseURL, config.databaseName)
 
 let publicBusRegos = ['TIB', 'SBS', 'SMB', 'SG']
 
@@ -17,10 +16,9 @@ let privateHeader = 'id,checksum,make,model,bodywork,operator,vin,lifespanExpiry
 
 fileData = (publicBusRegos.includes(operator) ? header : privateHeader) + fileData.slice(fileData.indexOf('\n') + 1)
 
-database.connect({
+await database.connect({
   poolSize: 100
-}, async err => {
-  let buses = database.getCollection('buses')
+})  let buses = database.getCollection('buses')
 
   buses.createIndex({
     regoPrefix: 1,

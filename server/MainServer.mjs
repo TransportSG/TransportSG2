@@ -6,8 +6,8 @@ import url from 'url'
 import minify from 'express-minify'
 import fs from 'fs'
 import uglifyEs from 'uglify-es'
-import DatabaseConnection from '../database/DatabaseConnection.js'
 import config from '../config.json' with { type: 'json' }
+import { MongoDatabaseConnection } from '@transportme/database'
 
 const __filename = url.fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -15,25 +15,20 @@ const __dirname = path.dirname(__filename)
 export default class MainServer {
   constructor () {
     this.app = express()
-    this.initDatabaseConnection(this.app, async () => {
-      this.configMiddleware(this.app)
-      await this.configRoutes(this.app)
+  }
+
+  async initDatabaseConnection () {
+    this.database = new MongoDatabaseConnection(config.databaseURL, config.databaseName)
+    await this.database.connect()
+
+    this.app.use((req, res, next) => {
+      res.db = this.database
+      next()
     })
   }
 
-  initDatabaseConnection (app, callback) {
-    const database = new DatabaseConnection(config.databaseURL, config.databaseName)
-    database.connect(async err => {
-      app.use((req, res, next) => {
-        res.db = database
-        next()
-      })
-
-      callback()
-    })
-  }
-
-  configMiddleware (app) {
+  configMiddleware () {
+    const app = this.app
     const stream = fs.createWriteStream('/tmp/log.txt', { flags: 'a' })
     let excludedURLs = []
 
@@ -91,7 +86,9 @@ export default class MainServer {
     app.set('strict routing', false)
   }
 
-  async configRoutes (app) {
+  async configRoutes () {
+    const app = this.app
+
     let routers = {
       Index: '/',
       Next3Buses: '/bus/timings',

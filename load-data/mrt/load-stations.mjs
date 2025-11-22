@@ -1,9 +1,9 @@
 import utils from '../../utils.mjs'
 import lines from '../../mrt-lines.json' with { type: 'json' }
-import DatabaseConnection from '../../database/DatabaseConnection.js'
+import { MongoDatabaseConnection } from '@transportme/database'
 import config from '../../config.json' with { type: 'json' }
 
-const database = new DatabaseConnection(config.databaseURL, config.databaseName)
+const database = new MongoDatabaseConnection(config.databaseURL, config.databaseName)
 
 let mergedStations = {}
 
@@ -36,20 +36,18 @@ Object.keys(lines).forEach(lineName => {
 
 let stations = Object.values(mergedStations)
 
-database.connect({
-  poolSize: 100
-}, async err => {
-  let stops = database.getCollection('stops')
+await database.connect()
 
-  await stops.deleteDocuments({ mode: 'mrt' })
-  await stops.bulkWrite(stations.map(mrtStation => ({
-    insertOne: {
-      document: mrtStation
-    }
-  })), {
-    ordered: false
-  })
+let stops = database.getCollection('stops')
 
-  console.log('Completed loading in ' + stations.length + ' MRT stations')
-  process.exit()
+await stops.deleteDocuments({ mode: 'mrt' })
+await stops.bulkWrite(stations.map(mrtStation => ({
+  insertOne: {
+    document: mrtStation
+  }
+})), {
+  ordered: false
 })
+
+console.log('Completed loading in ' + stations.length + ' MRT stations')
+process.exit()

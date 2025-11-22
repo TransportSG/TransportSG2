@@ -1,22 +1,20 @@
-import DatabaseConnection from './database/DatabaseConnection.js'
+import { MongoDatabaseConnection } from '@transportme/database'
 import config from './config.json' with { type: 'json' }
 import async from 'async'
 import getBusTimings from './application/timings/bus.mjs'
 
-const database = new DatabaseConnection(config.databaseURL, config.databaseName)
+const database = new MongoDatabaseConnection(config.databaseURL, config.databaseName)
 
-database.connect({
-  poolSize: 100
-}, async err => {
-  let stops = database.getCollection('stops')
-  let terminals = await stops.findDocuments({
-    stopName: /(Terminal|Interchange)/
-  }).toArray()
+await database.connect()
 
-  await async.forEachSeries(terminals, async terminal => {
-    console.log('Getting data for', terminal.stopCode, terminal.stopName)
-    await getBusTimings(terminal.stopCode, database)
-  })
+let stops = database.getCollection('stops')
+let terminals = await stops.findDocuments({
+  stopName: /(Terminal|Interchange)/
+}).toArray()
 
-  process.exit(0)
+await async.forEachSeries(terminals, async terminal => {
+  console.log('Getting data for', terminal.stopCode, terminal.stopName)
+  await getBusTimings(terminal.stopCode, database)
 })
+
+process.exit(0)

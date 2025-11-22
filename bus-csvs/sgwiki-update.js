@@ -4,7 +4,7 @@ const DatabaseConnection = require('../database/DatabaseConnection')
 const config = require('../config')
 const cheerio = require('cheerio')
 
-const database = new DatabaseConnection(config.databaseURL, config.databaseName)
+const database = new MongoDatabaseConnection(config.databaseURL, config.databaseName)
 
 let busesUpdated = 0
 let basePage = 'https://sgwiki.com/wiki/Bus_Deployments'
@@ -70,10 +70,9 @@ async function fetchURL(url, buses) {
   })
 }
 
-database.connect({
+await database.connect({
   poolSize: 100
-}, async err => {
-  let buses = database.getCollection('buses')
+})  let buses = database.getCollection('buses')
 
   let urls = await getLinks()
   

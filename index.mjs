@@ -4,7 +4,12 @@ import _ from './utils.mjs'
 import config from './config.json' with { type: 'json' }
 import MainServer from './server/MainServer.mjs'
 
-let mainServer = new MainServer()
+const mainServer = new MainServer()
+
+await mainServer.initDatabaseConnection()
+mainServer.configMiddleware()
+await mainServer.configRoutes()
+
 mainServer.app.listen(config.httpPort)
 
 process.on('uncaughtException', (err) => {

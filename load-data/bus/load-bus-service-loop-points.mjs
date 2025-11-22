@@ -1,39 +1,37 @@
-import DatabaseConnection from '../../database/DatabaseConnection.js'
+import { MongoDatabaseConnection } from '@transportme/database'
 import config from '../../config.json' with { type: 'json' }
 import async from 'async'
 
-const database = new DatabaseConnection(config.databaseURL, config.databaseName)
+const database = new MongoDatabaseConnection(config.databaseURL, config.databaseName)
 
-database.connect({
-  poolSize: 100
-}, async err => {
-  let services = database.getCollection('services')
+await database.connect()
 
-  let loopingServices = await services.findDocuments({
-    loopingPoint: {
-      $ne: ""
-    }
-  }).toArray()
+let services = database.getCollection('services')
 
-  await async.forEach(loopingServices, async service => {
-    let loopingStops = []
-    let {loopingPoint, stops} = service
-    if (!(loopingPoint instanceof Array)) loopingPoint = [loopingPoint]
+let loopingServices = await services.findDocuments({
+  loopingPoint: {
+    $ne: ""
+  }
+}).toArray()
 
-    loopingPoint.forEach(loopingStreet => {
-      if (loopingStreet.actual) loopingStreet = loopingStreet.actual
+await async.forEach(loopingServices, async service => {
+  let loopingStops = []
+  let {loopingPoint, stops} = service
+  if (!(loopingPoint instanceof Array)) loopingPoint = [loopingPoint]
 
-      let firstLoopingStop = stops.find(stop => stop.roadName === loopingStreet)
-      loopingStops.push(firstLoopingStop.stopCode)
-    })
+  loopingPoint.forEach(loopingStreet => {
+    if (loopingStreet.actual) loopingStreet = loopingStreet.actual
 
-    await services.updateDocument({ _id: service._id }, {
-      $set: {
-        loopingStops
-      }
-    })
+    let firstLoopingStop = stops.find(stop => stop.roadName === loopingStreet)
+    loopingStops.push(firstLoopingStop.stopCode)
   })
 
-  console.log('Completed updating in ' + loopingServices.length + ' bus services')
-  process.exit()
+  await services.updateDocument({ _id: service._id }, {
+    $set: {
+      loopingStops
+    }
+  })
 })
+
+console.log('Completed updating in ' + loopingServices.length + ' bus services')
+process.exit()

@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@mapbox/polyline": "^1.1.1",
+    "@transportme/database": "^1.0.50",
     "@turf/turf": "^5.1.6",
     "async": "^3.2.3",
     "body-parser": "^1.20.0",
