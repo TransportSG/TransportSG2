@@ -2,3 +2,4 @@
 /node_modules
 /bus-csvs/data/
 .DS_Store
+.env

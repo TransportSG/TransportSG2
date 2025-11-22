@@ -1,9 +1,7 @@
 #!/bin/bash
 DIRNAME=$(dirname "$0")
 
-# Note: we do not want sudo or we cannot kill the process
-if [ "$KEEP_LOGS" == "0" ]; then
-  NODE_ENV=prod node $DIRNAME/index.js
-else
-  NODE_ENV=prod node $DIRNAME/index.js >> $DIRNAME/../log 2>> $DIRNAME/../err
-fi
+cd $DIRNAME
+. $DIRNAME/.env
+
+node $DIRNAME/index.mjs
