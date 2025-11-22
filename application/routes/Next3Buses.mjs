@@ -1,9 +1,9 @@
-const express = require('express')
-const utils = require('../../utils')
+import express from 'express'
+import utils from '../../utils.js'
+import getBusTimings from '../timings/bus.js'
+import async from 'async'
+
 const router = new express.Router()
-const getBusTimings = require('../timings/bus')
-const async = require('async')
-const { destination } = require('@turf/turf')
 
 async function loadDepartures(busStopCode, db,  req, res) {
   let stops = db.getCollection('stops')
@@ -126,5 +126,4 @@ router.get('/:busStopCode/json/minified', async (req, res) => {
   })
 })
 
-
-module.exports = router
+export default router

@@ -1,7 +1,8 @@
-const express = require('express')
-const utils = require('../../utils')
+import express from 'express'
+import utils from '../../utils.js'
+import safeRegex from 'safe-regex'
+
 const router = new express.Router()
-const safeRegex = require('safe-regex')
 
 router.get('/', async (req, res) => {
   res.render('search/index', { placeholder: 'MRT Station or Bus Stop' })
@@ -116,4 +117,4 @@ router.post('/', async (req, res) => {
   })
 })
 
-module.exports = router
+export default router

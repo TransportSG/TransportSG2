@@ -1,5 +1,6 @@
-const express = require('express')
-const utils = require('../../utils')
+import  express from 'express'
+import  utils from '../../utils.js'
+
 const router = new express.Router()
 
 router.get('/:routeNumber', async (req, res, next) => {
@@ -57,4 +58,4 @@ router.get('/:routeNumber/:direction', async (req, res, next) => {
   res.render('bus/route', { route: matchingRoute, operators: utils.operators, destinations, origin, destination, otherDirectionURL })
 })
 
-module.exports = router
+export default router

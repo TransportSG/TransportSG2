@@ -1,21 +1,23 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const compression = require('compression')
-const path = require('path')
-const minify = require('express-minify')
-const fs = require('fs')
-const uglifyEs = require('uglify-es')
+import express from 'express'
+import bodyParser from 'body-parser'
+import compression from 'compression'
+import path from 'path'
+import url from 'url'
+import minify from 'express-minify'
+import fs from 'fs'
+import uglifyEs from 'uglify-es'
+import DatabaseConnection from '../database/DatabaseConnection.js'
+import config from '../config.js'
 
-const DatabaseConnection = require('../database/DatabaseConnection')
+const __filename = url.fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
-const config = require('../config')
-
-module.exports = class MainServer {
+export default class MainServer {
   constructor () {
     this.app = express()
-    this.initDatabaseConnection(this.app, () => {
+    this.initDatabaseConnection(this.app, async () => {
       this.configMiddleware(this.app)
-      this.configRoutes(this.app)
+      await this.configRoutes(this.app)
     })
   }
 
@@ -89,7 +91,7 @@ module.exports = class MainServer {
     app.set('strict routing', false)
   }
 
-  configRoutes (app) {
+  async configRoutes (app) {
     let routers = {
       Index: '/',
       Next3Buses: '/bus/timings',
@@ -97,15 +99,14 @@ module.exports = class MainServer {
       Search: '/search',
       BusLookup: '/lookup',
       StopsNearby: '/nearby',
-      RouteView: '/bus/route',
-
-      WebsiteAdmin: '/admin'
+      RouteView: '/bus/route'
     }
 
-    Object.keys(routers).forEach(routerName => {
-      let router = require(`../application/routes/${routerName}`)
+    for (const routerName of Object.keys(routers)) {
+      const routerData = await import(path.join(__dirname, '..', 'application', 'routes', routerName + '.mjs'))
+      const router = routerData.default
       app.use(routers[routerName], router)
-    })
+    }
 
     app.get('/sw.js', (req, res) => {
       res.setHeader('Cache-Control', 'no-cache')

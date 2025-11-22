@@ -1,4 +1,5 @@
-const express = require('express')
+import express from 'express'
+
 const router = new express.Router()
 
 function getDistanceFromLatLon(lat1, lon1, lat2, lon2) {
@@ -61,4 +62,4 @@ router.post('/', async (req, res) => {
   res.render('nearby/render', {stops})
 })
 
-module.exports = router
+export default router

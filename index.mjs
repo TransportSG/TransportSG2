@@ -1,8 +1,8 @@
 global.startTime = +new Date()
-require('./utils')
 
-const config = require('./config')
-const MainServer = require('./server/MainServer')
+import _ from './utils.js'
+import config from './config.js'
+import MainServer from './server/MainServer.mjs'
 
 let mainServer = new MainServer()
 mainServer.app.listen(config.httpPort)

@@ -1,8 +1,9 @@
-const express = require('express')
-const utils = require('../../utils')
+import express from 'express'
+import utils from '../../utils.js'
+import async from 'async'
+import moment from 'moment'
+
 const router = new express.Router()
-const async = require('async')
-const moment = require('moment')
 
 let operatorCSS = {
   'SBS Transit': 'sbst',
@@ -94,4 +95,4 @@ router.post('/', async (req, res) => {
   })
 })
 
-module.exports = router
+export default router

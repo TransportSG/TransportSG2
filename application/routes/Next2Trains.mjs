@@ -1,8 +1,8 @@
-const express = require('express')
-const utils = require('../../utils')
+import express from 'express'
+import utils from '../../utils.js'
+import getDepartures from '../timings/mrt.js'
+ 
 const router = new express.Router()
-const getDepartures = require('../timings/mrt')
-const async = require('async')
 
 async function loadDepartures(req, res) {
   let stops = res.db.getCollection('stops')
@@ -34,4 +34,4 @@ router.post('/:codedStationName', async (req, res) => {
 })
 
 
-module.exports = router
+export default router
