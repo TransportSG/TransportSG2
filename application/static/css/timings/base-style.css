@@ -134,7 +134,7 @@ div.timing {
   flex-direction: column;
 
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
   font-size: calc(1.05vw + 1.05vh);
   color: #101010;
@@ -145,13 +145,15 @@ div.timing.mini {
   font-size: calc(1vw + 1vh);
 }
 
+div.timing.mini > div.details {
+  display: flex;
+  flex-direction: column;
+}
+
 div.timing.mini > div.stats {
-  height: calc(1vw + 1vh);
   width: calc(3.25vw + 3.25vh);
 
   position: relative;
-  margin-top: calc(2vw + 2vh);
-  margin-bottom: calc(0.4vw + 0.4vh);
 
   font-size: calc(0.8vw + 0.8vh);
 
@@ -164,7 +166,6 @@ div.timing.mini > div.stats {
 div.timing.mini > div.stats > img {
   width: calc(0.95vw + 0.95vh);
   margin-top: calc(0.2vw + 0.2vh);
-  margin-bottom: calc(1vw + 1vh);
 }
 
 div.timing.mini span {
