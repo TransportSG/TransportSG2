@@ -1,7 +1,7 @@
 global.startTime = +new Date()
 
-import _ from './utils.js'
-import config from './config.js'
+import _ from './utils.mjs'
+import config from './config.json' with { type: 'json' }
 import MainServer from './server/MainServer.mjs'
 
 let mainServer = new MainServer()

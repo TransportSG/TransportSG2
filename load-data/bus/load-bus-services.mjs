@@ -1,7 +1,7 @@
 import DatabaseConnection from '../../database/DatabaseConnection.js'
-import ltaAPI from '../../lta-api.js'
-import utils from '../../utils.js'
-import config from '../../config.js'
+import { paginatedRequest } from '../../lta-api.mjs'
+import utils from '../../utils.mjs'
+import config from '../../config.json' with { type: 'json' }
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 
@@ -21,7 +21,7 @@ database.connect({
     loopingPoint: 1
   }, {name: 'service index', unique: 1})
 
-  let data = await ltaAPI.paginatedRequest('/BusServices')
+  let data = await paginatedRequest('/BusServices')
 
   let expandedData = data.map(busService => {
     let loopingPoint = utils.expandStopName(busService.LoopDesc)

@@ -1,7 +1,7 @@
-import utils from '../../utils.js'
+import utils from '../../utils.mjs'
 import lines from '../../mrt-lines.json' with { type: 'json' }
 import DatabaseConnection from '../../database/DatabaseConnection.js'
-import config from '../../config.js'
+import config from '../../config.json' with { type: 'json' }
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 

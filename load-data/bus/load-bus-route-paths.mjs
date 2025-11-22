@@ -1,7 +1,7 @@
 import cheerio from 'cheerio'
 import DatabaseConnection from '../../database/DatabaseConnection.js'
-import utils from '../../utils.js'
-import config from '../../config.js'
+import utils from '../../utils.mjs'
+import config from '../../config.json' with { type: 'json' }
 import async from 'async'
 import turf from '@turf/turf'
 

@@ -1,5 +1,5 @@
 import express from 'express'
-import utils from '../../utils.js'
+import utils from '../../utils.mjs'
 import async from 'async'
 import moment from 'moment'
 

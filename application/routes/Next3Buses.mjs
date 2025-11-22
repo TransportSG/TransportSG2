@@ -1,11 +1,11 @@
 import express from 'express'
-import utils from '../../utils.js'
-import getBusTimings from '../timings/bus.js'
+import utils from '../../utils.mjs'
+import getBusTimings from '../timings/bus.mjs'
 import async from 'async'
 
 const router = new express.Router()
 
-async function loadDepartures(busStopCode, db,  req, res) {
+async function loadDepartures(busStopCode, db, req, res) {
   let stops = db.getCollection('stops')
   let busStop = await stops.findDocument({ stopCode: busStopCode })
 

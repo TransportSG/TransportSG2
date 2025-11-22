@@ -1,7 +1,7 @@
 import DatabaseConnection from '../../database/DatabaseConnection.js'
-import ltaAPI from '../../lta-api.js'
-import utils from '../../utils.js'
-import config from '../../config.js'
+import { paginatedRequest } from '../../lta-api.mjs'
+import utils from '../../utils.mjs'
+import config from '../../config.json' with { type: 'json' }
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 
@@ -29,7 +29,7 @@ database.connect({
     position: '2dsphere'
   }, {name: 'position index'})
 
-  let data = await ltaAPI.paginatedRequest('/BusStops')
+  let data = await paginatedRequest('/BusStops')
 
   let expandedData = data.map(busStop => {
     busStop.RoadName = utils.expandStopName(busStop.RoadName)

@@ -1,5 +1,7 @@
-const {ltaAccountKey} = require('./config')
-const utils = require('./utils')
+import config from './config.json' with { type: 'json' }
+import utils from './utils.mjs'
+
+const { ltaAccountKey } = config
 
 async function makeRequest(url) {
   let data = await utils.request('https://datamall2.mytransport.sg/ltaodataservice' + url, {
@@ -14,7 +16,7 @@ async function makeRequest(url) {
   return parsed.value || parsed.Services
 }
 
-async function paginatedRequest(url, limit=Infinity, skip=0) {
+export async function paginatedRequest(url, limit=Infinity, skip=0) {
   let completedData = []
 
   while (true) {
@@ -26,5 +28,4 @@ async function paginatedRequest(url, limit=Infinity, skip=0) {
   return completedData
 }
 
-module.exports = makeRequest
-module.exports.paginatedRequest = paginatedRequest
+export default makeRequest

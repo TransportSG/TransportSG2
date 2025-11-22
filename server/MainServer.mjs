@@ -7,7 +7,7 @@ import minify from 'express-minify'
 import fs from 'fs'
 import uglifyEs from 'uglify-es'
 import DatabaseConnection from '../database/DatabaseConnection.js'
-import config from '../config.js'
+import config from '../config.json' with { type: 'json' }
 
 const __filename = url.fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)

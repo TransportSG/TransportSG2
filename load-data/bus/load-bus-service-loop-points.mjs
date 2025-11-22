@@ -1,5 +1,5 @@
 import DatabaseConnection from '../../database/DatabaseConnection.js'
-import config from '../../config.js'
+import config from '../../config.json' with { type: 'json' }
 import async from 'async'
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)

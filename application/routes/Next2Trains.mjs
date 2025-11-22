@@ -1,6 +1,6 @@
 import express from 'express'
-import utils from '../../utils.js'
-import getDepartures from '../timings/mrt.js'
+import utils from '../../utils.mjs'
+import getDepartures from '../timings/mrt.mjs'
  
 const router = new express.Router()
 

@@ -1,8 +1,8 @@
 import async from 'async'
 import polyline from '@mapbox/polyline'
 import DatabaseConnection from '../../database/DatabaseConnection.js'
-import utils from '../../utils.js'
-import config from '../../config.js'
+import utils from '../../utils.mjs'
+import config from '../../config.json' with { type: 'json' }
 
 let authURL = 'https://developers.onemap.sg/privateapi/auth/post/getToken'
 let busRouteURL = 'https://developers.onemap.sg/publicapi/busexp/getOneBusRoute'

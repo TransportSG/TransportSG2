@@ -1,17 +1,17 @@
-const async = require('async')
-const moment = require('moment')
-const TimedCache = require('timed-cache')
-const ltaAPI = require('../../lta-api')
-const plates = require('../../red-white-plate.json')
-const berths = require('../../bus-berths.json')
-const destinationOverrides = require('../../destination-overrides.json')
-const utils = require('../../utils')
+import async from 'async'
+import moment from 'moment'
+import TimedCache from 'timed-cache'
+import ltaAPI from '../../lta-api.mjs'
+import plates from '../../red-white-plate.json' with { type: 'json' }
+import berths from '../../bus-berths.json' with { type: 'json' }
+import destinationOverrides from '../../destination-overrides.json' with { type: 'json' }
+import utils from '../../utils.mjs'
 
 const departuresCache = new TimedCache({ defaultTtl: 1000 * 60 })
 
-let url = '/v3/BusArrival?BusStopCode='
+const url = '/v3/BusArrival?BusStopCode='
 
-module.exports = async function getBusTimings(busStopCode, db) {
+export default async function getBusTimings(busStopCode, db) {
   let services = db.getCollection('services')
   let stops = db.getCollection('stops')
 

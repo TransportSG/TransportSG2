@@ -1,9 +1,9 @@
-const moment = require('moment')
-require('moment-timezone')
+import moment from 'moment-timezone'
+import fetch from 'node-fetch'
+import destinationOverrides from './destination-overrides.json' with { type: 'json' }
+import { spawn } from 'child_process'
+
 moment.tz.setDefault('Asia/Singapore')
-const fetch = require('node-fetch')
-const destinationOverrides = require('./destination-overrides.json')
-const { spawn } = require('child_process')
 
 const daysOfWeek = ['Sun', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat']
 
@@ -20,11 +20,11 @@ String.prototype.format = (function (i, safe, arg) {
   return format
 }())
 
-module.exports = {
+const utils = {
   encodeName: name => name.toLowerCase().replace(/[^\w\d ]/g, '-').replace(/  */g, '-').replace(/--+/g, '-'),
   expandStopName: name => {
     if (name === name.toUpperCase() && name.includes(' ')) {
-      name = module.exports.titleCase(name, anyLength=true)
+      name = utils.titleCase(name, anyLength=true)
     }
 
     let isLikelySaint = name.includes('Church') || name.includes('Convent')
@@ -238,7 +238,7 @@ module.exports = {
   getYYYYMMDD: time => {
     return time.format('YYYYMMDD')
   },
-  getYYYYMMDDNow: () => module.exports.getYYYYMMDD(module.exports.now()),
+  getYYYYMMDDNow: () => utils.getYYYYMMDD(utils.now()),
   now: () => moment.tz('Asia/Singapore'),
   request: async (url, options={}) => {
     let start = +new Date()
@@ -281,11 +281,11 @@ module.exports = {
   },
   getDistanceFromLatLon: (lat1, lon1, lat2, lon2) => {
     var R = 6371 // Radius of the earth in km
-    var dLat = module.exports.deg2rad(lat2-lat1)
-    var dLon = module.exports.deg2rad(lon2-lon1)
+    var dLat = utils.deg2rad(lat2-lat1)
+    var dLon = utils.deg2rad(lon2-lon1)
     var a =
       Math.sin(dLat/2) * Math.sin(dLat/2) +
-      Math.cos(module.exports.deg2rad(lat1)) * Math.cos(module.exports.deg2rad(lat2)) *
+      Math.cos(utils.deg2rad(lat1)) * Math.cos(utils.deg2rad(lat2)) *
       Math.sin(dLon/2) * Math.sin(dLon/2)
 
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
@@ -327,7 +327,7 @@ module.exports = {
     } else return {min: '-', max: '-'}
   },
   prettyTimeToArrival: time => {
-    const timeDifference = moment.utc(time.diff(module.exports.now()))
+    const timeDifference = moment.utc(time.diff(utils.now()))
     let prettyTime
 
     if (+timeDifference <= 60000) prettyTime = 'Now'
@@ -376,3 +376,5 @@ module.exports = {
     })
   }
 }
+
+export default utils

@@ -1,9 +1,7 @@
-const DatabaseConnection = require('./database/DatabaseConnection')
-const ltaAPI = require('./lta-api')
-const utils = require('./utils')
-const config = require('./config')
-const async = require('async')
-const getBusTimings = require('./application/timings/bus')
+import DatabaseConnection from './database/DatabaseConnection.js'
+import config from './config.json' with { type: 'json' }
+import async from 'async'
+import getBusTimings from './application/timings/bus.mjs'
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 

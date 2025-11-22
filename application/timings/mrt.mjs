@@ -1,8 +1,6 @@
-const crypto = require('crypto')
-const TimedCache = require('timed-cache')
-const moment = require('moment')
-const async = require('async')
-const utils = require('../../utils')
+import crypto from 'crypto'
+import TimedCache from 'timed-cache'
+import utils from '../../utils.mjs'
 
 const departuresCache = new TimedCache({ defaultTtl: 1000 * 60 })
 
@@ -186,4 +184,4 @@ async function getDepartures(stationData) {
   return departures
 }
 
-module.exports = getDepartures
+export default getDepartures

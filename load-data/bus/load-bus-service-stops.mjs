@@ -1,6 +1,6 @@
 import DatabaseConnection from '../../database/DatabaseConnection.js'
-import ltaAPI from '../../lta-api.js'
-import config from '../../config.js'
+import { paginatedRequest } from '../../lta-api.mjs'
+import config from '../../config.json' with { type: 'json' }
 import EventEmitter from 'events'
 import async from 'async'
 
@@ -40,7 +40,7 @@ database.connect({
   let services = database.getCollection('services')
   let stops = database.getCollection('stops')
 
-  let data = await ltaAPI.paginatedRequest('/BusRoutes')
+  let data = await paginatedRequest('/BusRoutes')
 
   let expandedData = await async.reduce(data, {}, async (acc, busRouteStop) => {
     let {ServiceNo, Direction, BusStopCode, Distance, StopSequence,
