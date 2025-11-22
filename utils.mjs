@@ -24,7 +24,7 @@ const utils = {
   encodeName: name => name.toLowerCase().replace(/[^\w\d ]/g, '-').replace(/  */g, '-').replace(/--+/g, '-'),
   expandStopName: name => {
     if (name === name.toUpperCase() && name.includes(' ')) {
-      name = utils.titleCase(name, anyLength=true)
+      name = utils.titleCase(name, true)
     }
 
     let isLikelySaint = name.includes('Church') || name.includes('Convent')
