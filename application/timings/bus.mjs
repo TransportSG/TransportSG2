@@ -80,7 +80,7 @@ export default async function getBusTimings(busStopCode, db) {
       let destinationStop = service.stops.slice(-1)[0]
 
       if (destinationStop.stopCode !== DestinationCode) {
-        destinationStop = service.stops.find(stop => stop.stopCode === DestinationCode)
+        destinationStop = service.stops.find(stop => stop.stopCode === DestinationCode) || destinationStop
       }
 
       let destination = destinationStop.stopName
