@@ -1,8 +1,7 @@
-const async = require('async')
-const turf = require('@turf/turf')
-const DatabaseConnection = require('../../database/DatabaseConnection')
-const utils = require('../../utils')
-const config = require('../../config')
+import async from 'async'
+import turf from '@turf/turf'
+import DatabaseConnection from '../../database/DatabaseConnection.js'
+import config from '../../config.js'
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 

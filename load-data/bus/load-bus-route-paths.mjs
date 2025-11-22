@@ -1,9 +1,9 @@
-const cheerio = require('cheerio')
-const DatabaseConnection = require('../../database/DatabaseConnection')
-const utils = require('../../utils')
-const config = require('../../config')
-const async = require('async')
-const turf = require('@turf/turf')
+import cheerio from 'cheerio'
+import DatabaseConnection from '../../database/DatabaseConnection.js'
+import utils from '../../utils.js'
+import config from '../../config.js'
+import async from 'async'
+import turf from '@turf/turf'
 
 let baseURL = 'https://www.lta.gov.sg/map/busService/bus_services.xml'
 let serviceSearch = 'CITYDIRECT bus_service, TRUNK bus_service'

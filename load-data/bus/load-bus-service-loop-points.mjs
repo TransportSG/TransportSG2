@@ -1,8 +1,6 @@
-const DatabaseConnection = require('../../database/DatabaseConnection')
-const ltaAPI = require('../../lta-api')
-const utils = require('../../utils')
-const config = require('../../config')
-const async = require('async')
+import DatabaseConnection from '../../database/DatabaseConnection.js'
+import config from '../../config.js'
+import async from 'async'
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 

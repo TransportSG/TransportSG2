@@ -1,8 +1,7 @@
-const async = require('async')
-const utils = require('../../utils')
-const lines = require('../../mrt-lines.json')
-const DatabaseConnection = require('../../database/DatabaseConnection')
-const config = require('../../config')
+import utils from '../../utils.js'
+import lines from '../../mrt-lines.json' with { type: 'json' }
+import DatabaseConnection from '../../database/DatabaseConnection.js'
+import config from '../../config.js'
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 

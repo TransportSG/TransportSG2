@@ -1,7 +1,7 @@
-const DatabaseConnection = require('../../database/DatabaseConnection')
-const ltaAPI = require('../../lta-api')
-const utils = require('../../utils')
-const config = require('../../config')
+import DatabaseConnection from '../../database/DatabaseConnection.js'
+import ltaAPI from '../../lta-api.js'
+import utils from '../../utils.js'
+import config from '../../config.js'
 
 const database = new DatabaseConnection(config.databaseURL, config.databaseName)
 
