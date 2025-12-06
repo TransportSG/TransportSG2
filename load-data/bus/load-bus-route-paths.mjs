@@ -1,4 +1,4 @@
-import cheerio from 'cheerio'
+import { load } from 'cheerio'
 import { MongoDatabaseConnection } from '@transportme/database'
 import utils from '../../utils.mjs'
 import config from '../../config.json' with { type: 'json' }
@@ -24,7 +24,7 @@ shapes.createIndex({
 
 let baseURLData = await utils.request(baseURL)
 
-let $ = cheerio.load(baseURLData)
+let $ = load(baseURLData)
 
 let busServices = Array.from($(serviceSearch)).filter(serviceData => {
   let serviceNumber = $('number', serviceData).text()
@@ -53,13 +53,13 @@ async function fetchKMLData(fullService, direction) {
 }
 
 function match(allCoords) {
-  let allTexts = Array.from(allCoords).map(coord => $(coord).text())
-  let deduped = allTexts.filter((e, i, a) => a.indexOf(e) === i)
-  let joint = deduped.join(' ')
-  let merged = joint.split(' ').filter((e, i, a) => a.indexOf(e) === i)
+  const data = Array.from(allCoords)
+    .map(coord => $(coord).text())
+    .flatMap(text => text.split(' '))
+    .map(cpair => cpair.split(',').map(coord => parseFloat(coord)))
 
-  if (allCoords.length === 0) throw Error()
-  return merged.map(cpair => cpair.split(',').map(coord => parseFloat(coord)))
+  if (data.length === 0) throw new Error()
+  return data
 }
 
 function shiftLines(coordinates) {
@@ -94,14 +94,14 @@ await async.forEachOf(allBusServices, async (fullService, i) => {
     let coordinatesD1
     try {
       let kmlDataD1 = await fetchKMLData(fullService, 1)
-      let $1 = cheerio.load(kmlDataD1)
+      let $1 = load(kmlDataD1)
       coordinatesD1 = match($1(coordinateSearch))
     } catch (e) {
       console.log(e);
       console.log('Could not fetch KML data for ' + fullService + ', trying D2')
 
       let kmlDataD1 = await fetchKMLData(fullService, 2)
-      let $1 = cheerio.load(kmlDataD1)
+      let $1 = load(kmlDataD1)
       coordinatesD1 = match($1(coordinateSearch)).reverse()
 
       console.log('Using D2 data for D1, reversing route')
@@ -126,7 +126,7 @@ await async.forEachOf(allBusServices, async (fullService, i) => {
       } else {
         totalKMLCount++
         let kmlDataD2 = await fetchKMLData(fullService, 2)
-        let $2 = cheerio.load(kmlDataD2)
+        let $2 = load(kmlDataD2)
         coordinatesD2 = match($2(coordinateSearch))
       }
 
